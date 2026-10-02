@@ -1,0 +1,4 @@
+.env
+session.json
+data/facebook_auth.json
+data/facebook_auth.json.tmp

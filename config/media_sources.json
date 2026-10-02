@@ -1,0 +1,28 @@
+{
+  "news_search": {
+    "enabled": true,
+    "max_results_per_circle": 25,
+    "max_age_days": 30
+  },
+  "youtube": {
+    "enabled": true,
+    "max_results_per_circle": 5,
+    "license": "creativeCommon",
+    "allow_link_only_fallback": true,
+    "embeddable_only": true,
+    "region_code": "VN",
+    "relevance_language": "vi"
+  },
+  "facebook": {
+    "enabled": true,
+    "graph_api_version": "v23.0",
+    "max_results_per_page": 5,
+    "pages": []
+  },
+  "copyright_policy": {
+    "download_video": false,
+    "reupload_video": false,
+    "unknown_license_action": "LINK_ONLY",
+    "require_attribution": true
+  }
+}

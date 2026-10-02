@@ -1,0 +1,257 @@
+{
+  "sources": [
+    {
+      "id": "source_001",
+      "name": "VnExpress",
+      "domain": "vnexpress.net",
+      "rss_urls": [
+        "https://vnexpress.net/rss/tin-moi-nhat.rss",
+        "https://vnexpress.net/rss/thoi-su.rss",
+        "https://vnexpress.net/rss/the-gioi.rss",
+        "https://vnexpress.net/rss/kinh-doanh.rss",
+        "https://vnexpress.net/rss/khoa-hoc.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 92,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_002",
+      "name": "Thanh Niên",
+      "domain": "thanhnien.vn",
+      "rss_urls": [
+        "https://thanhnien.vn/rss/home.rss",
+        "https://thanhnien.vn/rss/thoi-su.rss",
+        "https://thanhnien.vn/rss/the-gioi.rss",
+        "https://thanhnien.vn/rss/kinh-te.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 90,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_003",
+      "name": "VietnamPlus",
+      "domain": "vietnamplus.vn",
+      "rss_urls": [
+        "https://www.vietnamplus.vn/rss/home.rss",
+        "https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss",
+        "https://www.vietnamplus.vn/rss/kinh-te.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 95,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_004",
+      "name": "Báo Chính phủ",
+      "domain": "baochinhphu.vn",
+      "rss_urls": [
+        "https://baochinhphu.vn/rss/home.rss",
+        "https://baochinhphu.vn/rss/tin-noi-bat.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 98,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": false,
+      "language": "vi"
+    },
+    {
+      "id": "source_005",
+      "name": "Tuổi Trẻ",
+      "domain": "tuoitre.vn",
+      "rss_urls": [
+        "https://tuoitre.vn/rss/tin-moi-nhat.rss",
+        "https://tuoitre.vn/rss/thoi-su.rss",
+        "https://tuoitre.vn/rss/the-gioi.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 91,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_006",
+      "name": "Dân Trí",
+      "domain": "dantri.com.vn",
+      "rss_urls": [
+        "https://dantri.com.vn/rss/home.rss",
+        "https://dantri.com.vn/rss/xa-hoi.rss",
+        "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "https://dantri.com.vn/rss/the-gioi.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 88,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_007",
+      "name": "Zing News",
+      "domain": "zingnews.vn",
+      "rss_urls": [
+        "https://zingnews.vn/tech.rss",
+        "https://zingnews.vn/xa-hoi.rss",
+        "https://zingnews.vn/kinh-doanh.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 85,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": false,
+      "language": "vi"
+    },
+    {
+      "id": "source_008",
+      "name": "Nhân Dân",
+      "domain": "nhandan.vn",
+      "rss_urls": [
+        "https://nhandan.vn/rss/feed.rss",
+        "https://nhandan.vn/rss/the-gioi.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 96,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_009",
+      "name": "Lao Động",
+      "domain": "laodong.vn",
+      "rss_urls": [
+        "https://laodong.vn/rss/home.rss",
+        "https://laodong.vn/rss/xa-hoi.rss",
+        "https://laodong.vn/rss/kinh-te.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 87,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": false,
+      "language": "vi"
+    },
+    {
+      "id": "source_010",
+      "name": "VTV News",
+      "domain": "vtv.vn",
+      "rss_urls": [
+        "https://vtv.vn/rss/trong-nuoc.rss",
+        "https://vtv.vn/rss/the-gioi.rss",
+        "https://vtv.vn/rss/kinh-te.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 93,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_011",
+      "name": "Tiền Phong",
+      "domain": "tienphong.vn",
+      "rss_urls": [
+        "https://tienphong.vn/rss/index.rss",
+        "https://tienphong.vn/rss/xa-hoi.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 86,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_012",
+      "name": "Công An Nhân Dân",
+      "domain": "cand.com.vn",
+      "rss_urls": [
+        "https://cand.com.vn/rss/Home.rss",
+        "https://cand.com.vn/rss/Xa-hoi.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 89,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_013",
+      "name": "Báo Mới (tổng hợp)",
+      "domain": "baomoi.com",
+      "rss_urls": [
+        "https://baomoi.com/rss/home.rss",
+        "https://baomoi.com/rss/c/thoisu.rss",
+        "https://baomoi.com/rss/c/thegioi.rss"
+      ],
+      "category": "news",
+      "source_type": "rss",
+      "trust_level": 82,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": false,
+      "language": "vi"
+    },
+    {
+      "id": "source_014",
+      "name": "CafeBiz",
+      "domain": "cafebiz.vn",
+      "rss_urls": [
+        "https://cafebiz.vn/rss/home.rss",
+        "https://cafebiz.vn/rss/vi-mo.rss",
+        "https://cafebiz.vn/rss/cong-nghe.rss"
+      ],
+      "category": "business",
+      "source_type": "rss",
+      "trust_level": 84,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    },
+    {
+      "id": "source_015",
+      "name": "GenK (Công nghệ)",
+      "domain": "genk.vn",
+      "rss_urls": [
+        "https://genk.vn/rss/home.rss"
+      ],
+      "category": "technology",
+      "source_type": "rss",
+      "trust_level": 83,
+      "requires_attribution": true,
+      "image_policy": "DO_NOT_COPY",
+      "enabled": true,
+      "language": "vi"
+    }
+  ]
+}

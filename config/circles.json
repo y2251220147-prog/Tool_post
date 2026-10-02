@@ -1,0 +1,567 @@
+{
+  "circles": [
+    {
+      "circle_id": "circle_tintuc24h",
+      "prompt_profile_id": "tin_tuc_24h",
+      "circle_name": "Tin Tức 24h",
+      "description": "Cập nhật tin tức trong nước và quốc tế mỗi ngày",
+      "topics": [
+        "thời sự",
+        "chính trị",
+        "kinh tế",
+        "xã hội",
+        "thế giới",
+        "công nghệ",
+        "giáo dục",
+        "y tế"
+      ],
+      "persona": {
+        "tone": "trung lập",
+        "style": "ngắn gọn, rõ thông tin",
+        "emoji_level": "ít",
+        "forbidden": [
+          "giật tít",
+          "clickbait",
+          "cảm xúc thái quá"
+        ]
+      },
+      "posts_per_day": 20,
+      "auto_publish_score": 92,
+      "review_score": 75,
+      "reject_score": 74,
+      "enabled": true,
+      "ucircle_circle_id": "https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c",
+      "mode": "fully_auto",
+      "scan_enabled": true,
+      "publish_enabled": true,
+      "content_prompt": "VAI TRÒ: Biên tập viên Tin Tức 24h trung lập, chính xác và ưu tiên thông tin đã kiểm chứng. PHẠM VI: Chỉ chọn sự kiện mới, có tác động rõ đến độc giả Việt Nam thuộc thời sự, chính sách công, kinh tế, xã hội, thế giới, công nghệ, giáo dục, y tế, môi trường hoặc thiên tai. Ưu tiên cơ quan nhà nước, tổ chức chuyên môn và báo chí uy tín; sự kiện đang diễn biến phải phân biệt dữ kiện đã xác nhận với nhận định. LOẠI BỎ: Tin đồn, giật tít, showbiz thuần túy, mẹo vặt, ẩm thực, trận đấu thông thường, quảng cáo trá hình, phát ngôn gây sốc không tạo giá trị và tin cũ gắn nhãn mới. TIÊU ĐỀ: 55-100 ký tự, nêu đúng chủ thể và diễn biến quan trọng nhất, không câu nhấp. TÓM TẮT: 100-180 từ, gồm 2 đoạn; đoạn đầu trả lời ai, việc gì, ở đâu, khi nào; đoạn sau nêu bối cảnh, tác động và điều cần theo dõi. ĐIỂM CHÍNH: 3-5 dữ kiện cụ thể, giữ nguyên tên riêng, thời gian, địa điểm và số liệu. BỐ CỤC BẮT BUỘC: tiêu đề; tóm tắt; Điểm chính; Xem chi tiết với URL gốc; Nguồn; Ảnh từ bài gốc; đúng 5 hashtag liên quan nhất đến sự kiện, nhân vật, địa điểm và lĩnh vực. ẢNH/VIDEO: Chỉ dùng ảnh từ bài gốc hoặc kênh chính thức đúng sự kiện; không dùng ảnh sai người, sai nơi, sai thời điểm; không tải và đăng lại video có bản quyền.",
+      "hashtag_seeds": [
+        "#TinTuc24h",
+        "#ThoiSu",
+        "#VietNam",
+        "#TinMoi",
+        "#CapNhat"
+      ],
+      "ownership_verified": true,
+      "ucircle_role": "owner",
+      "ucircle_format": "fanpage",
+      "ucircle_category": "media_advertising",
+      "ucircle_category_name": "Truyền thông & Quảng cáo",
+      "ucircle_member_count": 2217,
+      "dashboard_visible": true,
+      "display_name": "Tin Tức 24h",
+      "media_platforms": [
+        "news",
+        "youtube",
+        "facebook",
+        "facebook_reel"
+      ],
+      "media_search_query": "tin tức Việt Nam mới nhất thời sự kinh tế xã hội công nghệ giáo dục y tế nguồn chính thống",
+      "fallback_filter": {
+        "all_groups": [],
+        "exclude": [
+          "quảng cáo",
+          "khuyến mãi",
+          "soi kèo",
+          "cá cược"
+        ]
+      }
+    },
+    {
+      "circle_id": "circle_me_hinh_xam_6410c9cd",
+      "prompt_profile_id": "me_hinh_xam",
+      "circle_name": "Mê Hình Xăm",
+      "description": "",
+      "topics": [],
+      "persona": {
+        "tone": "thân thiện, đúng chủ đề",
+        "style": "rõ ràng, hữu ích",
+        "emoji_level": "ít",
+        "forbidden": [
+          "lạc chủ đề",
+          "thông tin không có nguồn"
+        ]
+      },
+      "posts_per_day": 5,
+      "auto_publish_score": 92,
+      "review_score": 75,
+      "reject_score": 74,
+      "enabled": false,
+      "scan_enabled": false,
+      "publish_enabled": false,
+      "content_prompt": "VAI TRÒ: Biên tập viên am hiểu văn hóa, thẩm mỹ và an toàn trong nghệ thuật xăm. PHẠM VI: Chọn nội dung trực tiếp về tattoo như fine line, realism, traditional, neo-traditional, Japanese, blackwork, geometric, minimal, lettering; nghệ sĩ, studio, triển lãm, lịch sử, ý nghĩa biểu tượng, thiết kế, vệ sinh và chăm sóc sau xăm. Ưu tiên tác phẩm có tên nghệ sĩ hoặc studio và nguồn gốc rõ ràng. LOẠI BỎ: Nghệ thuật không liên quan tattoo, ảnh phản cảm hoặc máu me, hướng dẫn tự xăm nguy hiểm, kỳ thị, chẩn đoán hoặc cam kết y khoa, quảng cáo thiếu minh bạch và portfolio không ghi tác giả. TIÊU ĐỀ: 55-100 ký tự, nêu phong cách, tác phẩm, nghệ sĩ hoặc câu chuyện nổi bật. TÓM TẮT: 100-180 từ, 2 đoạn; giải thích điểm độc đáo, bố cục, màu sắc, kỹ thuật và ý nghĩa văn hóa bằng ngôn ngữ dễ hiểu; thông tin sức khỏe phải thận trọng và có nguồn. ĐIỂM CHÍNH: 3-5 ý về phong cách, kỹ thuật, ý nghĩa, tác giả và lưu ý an toàn. BỐ CỤC BẮT BUỘC: tiêu đề; tóm tắt; Điểm chính; Xem chi tiết; Nguồn; Ảnh từ bài gốc; đúng 5 hashtag cụ thể nhất về phong cách, nghệ sĩ, chủ đề và Circle. ẢNH/VIDEO: Ghi công nghệ sĩ hoặc studio, giữ watermark, ưu tiên nguồn chính thức hoặc Creative Commons, không tải lại nội dung có bản quyền.",
+      "hashtag_seeds": [
+        "#MeHinhXam",
+        "#TattooArt",
+        "#NgheThuatXam",
+        "#TattooVietnam",
+        "#TattooStyle"
+      ],
+      "ucircle_circle_id": "https://ucircle.net/app/c/6410c9cd-71d6-4b80-9e76-ef0060da10c0",
+      "mode": "fully_auto",
+      "ownership_verified": true,
+      "ucircle_role": "owner",
+      "ucircle_format": "fanpage",
+      "ucircle_category": "arts_culture",
+      "ucircle_category_name": "Nghệ thuật & Văn hoá",
+      "ucircle_member_count": 2172,
+      "dashboard_visible": false,
+      "display_name": "Mê Hình Xăm",
+      "media_platforms": [
+        "news",
+        "youtube",
+        "facebook",
+        "facebook_reel"
+      ],
+      "media_search_query": "\"hình xăm nghệ thuật\" OR \"tattoo artist\" OR \"phong cách tattoo\" OR \"ý nghĩa hình xăm\" OR \"chăm sóc sau xăm\"",
+      "fallback_filter": {
+        "all_groups": [
+          [
+            "hình xăm",
+            "xăm hình",
+            "nghệ sĩ xăm",
+            "thợ xăm",
+            "tattoo",
+            "tattoo artist",
+            "studio xăm",
+            "sau xăm"
+          ]
+        ],
+        "exclude": [
+          "xăm lốp",
+          "xăm soi",
+          "cá cược"
+        ]
+      }
+    },
+    {
+      "circle_id": "circle_meo_hay_moi_ngay_9e158d37",
+      "prompt_profile_id": "meo_hay_moi_ngay",
+      "circle_name": "Mẹo hay mỗi ngày",
+      "description": "",
+      "topics": [],
+      "persona": {
+        "tone": "thân thiện, đúng chủ đề",
+        "style": "rõ ràng, hữu ích",
+        "emoji_level": "ít",
+        "forbidden": [
+          "lạc chủ đề",
+          "thông tin không có nguồn"
+        ]
+      },
+      "posts_per_day": 5,
+      "auto_publish_score": 92,
+      "review_score": 75,
+      "reject_score": 74,
+      "enabled": true,
+      "scan_enabled": true,
+      "publish_enabled": true,
+      "content_prompt": "VAI TRÒ: Biên tập viên mẹo sống thực tế, an toàn và dễ áp dụng tại Việt Nam. ĐIỀU KIỆN BẮT BUỘC: Nguồn phải mô tả ít nhất một thao tác, quy trình, danh sách bước hoặc cách xử lý cụ thể mà người đọc có thể tự áp dụng; tiêu đề chỉ có chữ 'cách', 'kinh nghiệm' hoặc 'kỹ năng' nhưng không có hướng dẫn thực hành thì không đạt. PHẠM VI: Chỉ chọn mẹo về dọn dẹp nhà cửa, làm sạch và khử mùi an toàn, bảo quản thực phẩm, nấu ăn cơ bản, sử dụng đồ gia dụng, tiết kiệm điện nước, sắp xếp đồ dùng, sử dụng điện thoại hoặc máy tính, an toàn số và chăm sóc bản thân phổ thông không mang tính điều trị. LOẠI BỎ: Tin thời sự; chuyện hôn nhân, tình cảm hoặc đời tư; tin nghệ sĩ; bài truyền cảm hứng nhưng không có hướng dẫn; pha hóa chất tùy tiện; tự sửa điện hoặc gas; mê tín; chữa bệnh; giảm cân thần tốc; tư vấn tài chính hoặc pháp lý chắc chắn; xâm phạm quyền riêng tư; mẹo chỉ gây bất ngờ nhưng không hữu ích. TIÊU ĐỀ: 55-100 ký tự, nêu đúng vấn đề, vật dụng hoặc thao tác và lợi ích cụ thể, không hứa hẹn quá mức. TÓM TẮT: 100-180 từ, 2 đoạn; giải thích mẹo dùng khi nào, cần chuẩn bị gì, cách thực hiện và lưu ý an toàn. ĐIỂM CHÍNH: 3-5 bước hoặc lưu ý có thể làm theo; không thêm nguyên liệu, thời gian hay công dụng ngoài nguồn. BỐ CỤC BẮT BUỘC: tiêu đề; tóm tắt; Điểm chính; Xem chi tiết; Nguồn; Ảnh từ bài gốc; đúng 5 hashtag cụ thể nhất về vấn đề, vật dụng, thao tác, lợi ích và Circle. ẢNH/VIDEO: Ảnh phải đúng thao tác hoặc vật dụng trong bài gốc; ghi nguồn và chỉ dẫn liên kết video có bản quyền.",
+      "hashtag_seeds": [
+        "#MeoHayMoiNgay",
+        "#MeoGiaDinh",
+        "#KyNangSong",
+        "#MeoHuuIch",
+        "#DoiSong"
+      ],
+      "ucircle_circle_id": "https://ucircle.net/app/c/9e158d37-a7f9-4669-8520-07f4d9bbd33f",
+      "mode": "fully_auto",
+      "ownership_verified": true,
+      "ucircle_role": "owner",
+      "ucircle_format": "fanpage",
+      "ucircle_category": "other",
+      "ucircle_category_name": "Lĩnh vực khác",
+      "ucircle_member_count": 2178,
+      "dashboard_visible": true,
+      "display_name": "Mẹo hay mỗi ngày",
+      "media_platforms": [
+        "news",
+        "youtube",
+        "facebook",
+        "facebook_reel"
+      ],
+      "media_search_query": "\"mẹo dọn dẹp nhà cửa\" OR \"mẹo bảo quản thực phẩm\" OR \"mẹo nấu ăn\" OR \"mẹo tiết kiệm điện nước\" OR \"mẹo dùng điện thoại an toàn\"",
+      "fallback_filter": {
+        "all_groups": [
+          [
+            "mẹo",
+            "cách",
+            "cách làm",
+            "cách dùng",
+            "cách xử lý",
+            "hướng dẫn",
+            "gợi ý",
+            "bí quyết",
+            "kinh nghiệm",
+            "lời khuyên",
+            "thói quen",
+            "sai lầm",
+            "lỗi",
+            "các bước",
+            "làm thế nào",
+            "nên làm gì"
+          ],
+          [
+            "dọn dẹp",
+            "vệ sinh",
+            "làm sạch",
+            "khử mùi",
+            "nấu ăn",
+            "bếp",
+            "món ăn",
+            "nồi chiên",
+            "thực phẩm",
+            "bảo quản",
+            "gia dụng",
+            "nhà cửa",
+            "thùng rác",
+            "đồ dùng",
+            "quần áo",
+            "tiết kiệm",
+            "tiết kiệm điện",
+            "tiết kiệm nước",
+            "điện thoại",
+            "máy tính",
+            "công nghệ cá nhân",
+            "an toàn số",
+            "an toàn thiết bị"
+          ]
+        ],
+        "exclude": [
+          "tin tức",
+          "thời sự",
+          "chính trị",
+          "bảo hiểm",
+          "lãi suất",
+          "chứng khoán",
+          "tai nạn",
+          "án mạng",
+          "hôn nhân",
+          "tình cảm",
+          "đời tư",
+          "nghệ sĩ",
+          "kỹ năng sống cho học sinh",
+          "cá cược"
+        ]
+      },
+      "content_prompt_override": "",
+      "media_search_query_override": ""
+    },
+    {
+      "circle_id": "circle_net_ep_bong_a_b5c66623",
+      "prompt_profile_id": "net_dep_bong_da",
+      "circle_name": "Nét đẹp bóng đá",
+      "description": "",
+      "topics": [],
+      "persona": {
+        "tone": "thân thiện, đúng chủ đề",
+        "style": "rõ ràng, hữu ích",
+        "emoji_level": "ít",
+        "forbidden": [
+          "lạc chủ đề",
+          "thông tin không có nguồn"
+        ]
+      },
+      "posts_per_day": 5,
+      "auto_publish_score": 92,
+      "review_score": 75,
+      "reject_score": 74,
+      "enabled": true,
+      "scan_enabled": true,
+      "publish_enabled": true,
+      "content_prompt": "VAI TRÒ: Biên tập viên tin bóng đá chính xác, khách quan và ưu tiên giá trị thông tin. PHẠM VI: Chọn tin mới về đội tuyển, câu lạc bộ Việt Nam, giải chuyên nghiệp trong nước, cầu thủ Việt Nam thi đấu quốc tế, giải lớn, lịch đấu, kết quả, lực lượng, chiến thuật, chấn thương đã xác nhận, quyết định liên đoàn và chuyển nhượng từ nguồn uy tín. LOẠI BỎ: Môn khác, tin đồn không nguồn, cá cược, kích động cổ động viên, đời tư không liên quan chuyên môn, video cũ gắn nhãn mới và clip giải trí thuần túy của Circle Nét đẹp bóng đá hay. TIÊU ĐỀ: 55-100 ký tự, có đội bóng hoặc cầu thủ và diễn biến chính; không giật tít. TÓM TẮT: 100-180 từ, 2 đoạn; đoạn đầu nêu kết quả hoặc thông tin mới, đoạn sau bổ sung bối cảnh và ảnh hưởng chuyên môn. ĐIỂM CHÍNH: 3-5 dữ kiện về giải đấu, hai đội, thời gian, tỷ số, lực lượng hoặc phát biểu có nguồn; không bịa thống kê. BỐ CỤC BẮT BUỘC: tiêu đề; tóm tắt; Điểm chính; Xem chi tiết; Nguồn; Ảnh từ bài gốc; đúng 5 hashtag cụ thể về đội bóng, cầu thủ, giải đấu, sự kiện và Circle. ẢNH/VIDEO: Ưu tiên nguồn chính thức của liên đoàn, giải, câu lạc bộ hoặc cầu thủ; không dùng highlight lậu hoặc tải lại video có bản quyền.",
+      "hashtag_seeds": [
+        "#NetDepBongDa",
+        "#BongDaVietNam",
+        "#TinBongDa",
+        "#DoiTuyenVietNam",
+        "#BongDa"
+      ],
+      "ucircle_circle_id": "https://ucircle.net/app/c/b5c66623-ba26-4e5e-92b6-7aa1442b2caf",
+      "mode": "fully_auto",
+      "ownership_verified": true,
+      "ucircle_role": "owner",
+      "ucircle_format": "fanpage",
+      "ucircle_category": "sports_fitness",
+      "ucircle_category_name": "Thể thao & Thể hình",
+      "ucircle_member_count": 2174,
+      "dashboard_visible": true,
+      "display_name": "Nét đẹp bóng đá",
+      "media_platforms": [
+        "news",
+        "youtube",
+        "facebook",
+        "facebook_reel"
+      ],
+      "media_search_query": "\"bóng đá Việt Nam\" OR \"đội tuyển Việt Nam\" OR \"tin bóng đá\" OR \"lịch thi đấu bóng đá\" OR \"chuyển nhượng chính thức\"",
+      "fallback_filter": {
+        "all_groups": [
+          [
+            "bóng đá",
+            "cầu thủ",
+            "đội tuyển",
+            "v-league",
+            "fifa",
+            "afc",
+            "champions league",
+            "premier league",
+            "la liga",
+            "serie a"
+          ]
+        ],
+        "exclude": [
+          "soi kèo",
+          "tỷ lệ cược",
+          "nhà cái",
+          "cá cược"
+        ]
+      }
+    },
+    {
+      "circle_id": "circle_net_ep_bong_a_hay_aababdcc",
+      "prompt_profile_id": "net_dep_bong_da_hay",
+      "circle_name": "Nét đẹp bóng đá hay",
+      "description": "",
+      "topics": [],
+      "persona": {
+        "tone": "thân thiện, đúng chủ đề",
+        "style": "rõ ràng, hữu ích",
+        "emoji_level": "ít",
+        "forbidden": [
+          "lạc chủ đề",
+          "thông tin không có nguồn"
+        ]
+      },
+      "posts_per_day": 5,
+      "auto_publish_score": 92,
+      "review_score": 75,
+      "reject_score": 74,
+      "enabled": true,
+      "scan_enabled": true,
+      "publish_enabled": true,
+      "content_prompt": "VAI TRÒ: Người kể chuyện về vẻ đẹp, cảm xúc và kỹ thuật trong bóng đá. PHẠM VI: Chỉ chọn bàn thắng đẹp, kiến tạo, cứu thua, kỹ năng, chiến thuật dễ hiểu, lội ngược dòng, fair-play, khoảnh khắc cổ động viên, hậu trường tích cực hoặc câu chuyện truyền cảm hứng có thật. Ưu tiên nội dung có hình ảnh hoặc video gốc rõ ràng và xem độc lập vẫn hiểu. LOẠI BỎ: Bản tin tỷ số hoặc chuyển nhượng thông thường, tin đồn, cá cược, bạo lực, chế giễu cầu thủ, clip sai ngữ cảnh, game FC Online hoặc eFootball, video cũ giả làm sự kiện mới và môn thể thao khác. TIÊU ĐỀ: 55-100 ký tự, gọi đúng cầu thủ, đội hoặc giải đấu và khoảnh khắc nổi bật. TÓM TẮT: 100-180 từ, 2 đoạn; kể bối cảnh rồi giải thích vì sao khoảnh khắc đáng nhớ về kỹ thuật, tinh thần hoặc fair-play; sinh động nhưng không bịa cảm xúc. ĐIỂM CHÍNH: 3-5 dữ kiện gồm cầu thủ, trận đấu, thời điểm, tỷ số và chi tiết kỹ thuật có trong nguồn. BỐ CỤC BẮT BUỘC: tiêu đề; tóm tắt; Điểm chính; Xem chi tiết; Nguồn; Ảnh từ bài gốc; đúng 5 hashtag cụ thể về cầu thủ, đội, giải đấu, loại khoảnh khắc và Circle. ẢNH/VIDEO: Ghi chủ sở hữu và liên kết gốc; chỉ dùng nội dung được phép, không tải lại video có bản quyền.",
+      "hashtag_seeds": [
+        "#NetDepBongDaHay",
+        "#BanThangDep",
+        "#KhoanhKhacBongDa",
+        "#FairPlay",
+        "#BongDaDep"
+      ],
+      "ucircle_circle_id": "https://ucircle.net/app/c/aababdcc-7e2d-44b0-b56c-b1636d774032",
+      "mode": "fully_auto",
+      "ownership_verified": true,
+      "ucircle_role": "owner",
+      "ucircle_format": "channel",
+      "ucircle_category": "sports_fitness",
+      "ucircle_category_name": "Thể thao & Thể hình",
+      "ucircle_member_count": 2170,
+      "dashboard_visible": true,
+      "display_name": "Nét đẹp bóng đá hay",
+      "media_platforms": [
+        "news",
+        "youtube",
+        "facebook",
+        "facebook_reel"
+      ],
+      "media_search_query": "\"bàn thắng đẹp\" OR \"pha bóng hay\" OR \"cứu thua đẹp\" OR \"fair play bóng đá\" OR \"khoảnh khắc bóng đá\"",
+      "fallback_filter": {
+        "all_groups": [
+          [
+            "bóng đá",
+            "cầu thủ",
+            "đội tuyển",
+            "v-league",
+            "v.league",
+            "ngoại hạng anh",
+            "world cup",
+            "bàn thắng",
+            "cứu thua",
+            "kiến tạo",
+            "penalty",
+            "fifa",
+            "afc",
+            "champions league",
+            "premier league",
+            "la liga",
+            "serie a"
+          ],
+          [
+            "bàn thắng",
+            "pha bóng",
+            "cứu thua",
+            "kiến tạo",
+            "fair play",
+            "khoảnh khắc",
+            "kỹ thuật",
+            "lội ngược dòng",
+            "hậu trường",
+            "cổ động viên"
+          ]
+        ],
+        "exclude": [
+          "soi kèo",
+          "tỷ lệ cược",
+          "nhà cái",
+          "cá cược",
+          "fc online",
+          "efootball",
+          "fvpl"
+        ]
+      }
+    },
+    {
+      "circle_id": "circle_qua_tang_cuoc_song_e19c1e0a",
+      "prompt_profile_id": "qua_tang_cuoc_song",
+      "circle_name": "Quà tặng cuộc sống",
+      "description": "",
+      "topics": [],
+      "persona": {
+        "tone": "thân thiện, đúng chủ đề",
+        "style": "rõ ràng, hữu ích",
+        "emoji_level": "ít",
+        "forbidden": [
+          "lạc chủ đề",
+          "thông tin không có nguồn"
+        ]
+      },
+      "posts_per_day": 5,
+      "auto_publish_score": 92,
+      "review_score": 75,
+      "reject_score": 74,
+      "enabled": true,
+      "scan_enabled": true,
+      "publish_enabled": true,
+      "content_prompt": "VAI TRÒ: Người kể chuyện nhân văn, chân thật và có trách nhiệm. PHẠM VI: Chọn câu chuyện có thật về lòng tốt, nghị lực vượt khó, gia đình, tình bạn, cộng đồng, người tốt việc tốt, sáng kiến xã hội hoặc hành động nhỏ tạo ảnh hưởng tích cực. Ưu tiên bài có nhân vật, địa điểm, thời gian và nguồn xác minh rõ. LOẠI BỎ: Truyện hư cấu gắn nhãn thật, câu nói giả, mê tín, ép chia sẻ, khai thác tai nạn hoặc bệnh tật để câu cảm xúc, xâm phạm riêng tư, trẻ em hoặc người yếu thế chưa được bảo vệ và kêu gọi quyên góp thiếu xác thực. TIÊU ĐỀ: 55-100 ký tự, nêu nhân vật và hành động tích cực, không cường điệu. TÓM TẮT: 100-180 từ, 2 đoạn; kể bối cảnh, thử thách, lựa chọn và tác động; kết lại bằng ý nghĩa tự nhiên, không lên lớp và không thêm hội thoại. ĐIỂM CHÍNH: 3-5 dữ kiện về nhân vật, nơi xảy ra, hành động, kết quả và giá trị cộng đồng. BỐ CỤC BẮT BUỘC: tiêu đề; tóm tắt; Điểm chính; Xem chi tiết; Nguồn; Ảnh từ bài gốc; đúng 5 hashtag cụ thể về nhân vật, hành động, địa phương, giá trị và Circle. ẢNH/VIDEO: Tôn trọng quyền riêng tư, tránh hình gây tổn thương, ưu tiên nguồn của tổ chức hoặc nhân vật công khai, không tải lại video có bản quyền.",
+      "hashtag_seeds": [
+        "#QuaTangCuocSong",
+        "#CauChuyenTuTe",
+        "#NguoiTotViecTot",
+        "#LongTot",
+        "#SongDep"
+      ],
+      "ucircle_circle_id": "https://ucircle.net/app/c/e19c1e0a-69c0-4657-83c6-187df3b3565f",
+      "mode": "fully_auto",
+      "ownership_verified": true,
+      "ucircle_role": "owner",
+      "ucircle_format": "fanpage",
+      "ucircle_category": "other",
+      "ucircle_category_name": "Lĩnh vực khác",
+      "ucircle_member_count": 2162,
+      "dashboard_visible": true,
+      "display_name": "Quà tặng cuộc sống",
+      "media_platforms": [
+        "news",
+        "youtube",
+        "facebook",
+        "facebook_reel"
+      ],
+      "media_search_query": "\"người tốt việc tốt\" OR \"câu chuyện tử tế\" OR \"nghị lực vượt khó\" OR \"hành động đẹp\" OR \"lòng tốt\"",
+      "fallback_filter": {
+        "all_groups": [
+          [
+            "nhân văn",
+            "người tốt việc tốt",
+            "lòng tốt",
+            "tử tế",
+            "nghị lực",
+            "vượt khó",
+            "thiện nguyện",
+            "giúp đỡ",
+            "cứu người",
+            "truyền cảm hứng",
+            "hoàn cảnh khó khăn"
+          ]
+        ],
+        "exclude": [
+          "ép chia sẻ",
+          "mê tín",
+          "cá cược",
+          "quảng cáo"
+        ]
+      }
+    },
+    {
+      "circle_id": "circle_a_nang_an_gi_e3500793",
+      "prompt_profile_id": "da_nang_an_gi",
+      "circle_name": "Đà Nẵng ăn gì",
+      "description": "",
+      "topics": [],
+      "persona": {
+        "tone": "thân thiện, đúng chủ đề",
+        "style": "rõ ràng, hữu ích",
+        "emoji_level": "ít",
+        "forbidden": [
+          "lạc chủ đề",
+          "thông tin không có nguồn"
+        ]
+      },
+      "posts_per_day": 5,
+      "auto_publish_score": 92,
+      "review_score": 75,
+      "reject_score": 74,
+      "enabled": true,
+      "scan_enabled": true,
+      "publish_enabled": true,
+      "content_prompt": "VAI TRÒ: Biên tập viên cẩm nang ăn uống địa phương tại Đà Nẵng. PHẠM VI: Chỉ chọn quán ăn, cà phê, nhà hàng, đặc sản, món đường phố, chợ, khu ẩm thực, sự kiện ẩm thực hoặc kinh nghiệm ăn uống nằm tại Đà Nẵng và có nguồn rõ. Ưu tiên thông tin mới, địa chỉ cụ thể, hình đúng quán hoặc món và trải nghiệm có thể kiểm tra. LOẠI BỎ: Địa điểm ngoài Đà Nẵng, bài sao chép, quảng cáo không ghi rõ, đánh giá bịa đặt, giá hoặc giờ cũ bị khẳng định là hiện tại, công kích cơ sở và cam kết vệ sinh khi không có căn cứ. TIÊU ĐỀ: 55-100 ký tự, có tên quán hoặc món và điểm đáng thử. TÓM TẮT: 100-180 từ, 2 đoạn; mô tả hương vị, khẩu phần, không gian, đối tượng phù hợp và thông tin thực tế có trong nguồn. ĐIỂM CHÍNH: 3-5 ý gồm địa chỉ hoặc khu vực, món nổi bật, khoảng giá, giờ tham khảo, chỗ đỗ xe hoặc cách di chuyển nếu nguồn có; nhắc kiểm tra lại giá và giờ. BỐ CỤC BẮT BUỘC: tiêu đề; tóm tắt; Điểm chính; Xem chi tiết; Nguồn; Ảnh từ bài gốc; đúng 5 hashtag cụ thể về tên món, quán, khu vực, ẩm thực Đà Nẵng và Circle. ẢNH/VIDEO: Phải đúng món và địa điểm, ưu tiên bài gốc hoặc trang chính thức, không tải lại video có bản quyền.",
+      "hashtag_seeds": [
+        "#DaNangAnGi",
+        "#AmThucDaNang",
+        "#MonNgonDaNang",
+        "#AnGiDaNang",
+        "#ReviewDaNang"
+      ],
+      "ucircle_circle_id": "https://ucircle.net/app/c/e3500793-72a2-4c0e-b7b0-4d865eddcbe3",
+      "mode": "fully_auto",
+      "ownership_verified": true,
+      "ucircle_role": "owner",
+      "ucircle_format": "fanpage",
+      "ucircle_category": "food_beverage",
+      "ucircle_category_name": "Ăn uống · Cafe · Nhà hàng",
+      "ucircle_member_count": 2181,
+      "dashboard_visible": true,
+      "display_name": "Đà Nẵng ăn gì",
+      "media_platforms": [
+        "news",
+        "youtube",
+        "facebook",
+        "facebook_reel"
+      ],
+      "media_search_query": "\"quán ăn Đà Nẵng\" OR \"đặc sản Đà Nẵng\" OR \"cafe Đà Nẵng\" OR \"ẩm thực Đà Nẵng\" OR \"ăn gì Đà Nẵng\"",
+      "fallback_filter": {
+        "all_groups": [
+          [
+            "đà nẵng",
+            "hải châu",
+            "sơn trà",
+            "ngũ hành sơn",
+            "thanh khê",
+            "liên chiểu",
+            "cẩm lệ"
+          ],
+          [
+            "quán ăn",
+            "ăn gì",
+            "món ăn",
+            "ẩm thực",
+            "đặc sản",
+            "cà phê",
+            "cafe",
+            "nhà hàng",
+            "chợ",
+            "menu"
+          ]
+        ],
+        "exclude": [
+          "quảng cáo",
+          "bất động sản",
+          "tuyển dụng",
+          "tại hà nội",
+          "tại thành phố hồ chí minh",
+          "tại tp.hcm",
+          "tại thanh hóa",
+          "ở thanh hóa"
+        ]
+      }
+    }
+  ]
+}

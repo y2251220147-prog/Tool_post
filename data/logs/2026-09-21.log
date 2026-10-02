@@ -1,0 +1,979 @@
+2026-09-21 14:26:11 [INFO] init_db: 🚀 Bắt đầu khởi tạo cơ sở dữ liệu...
+2026-09-21 14:26:37 [INFO] init_db: 🚀 Bắt đầu khởi tạo cơ sở dữ liệu...
+2026-09-21 14:26:37 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 14:26:37 [INFO] init_db: 📥 Đang nạp 5 nguồn tin vào database...
+2026-09-21 14:26:37 [INFO] init_db:   ✔️ Đã nạp nguồn: VnExpress (vnexpress.net)
+2026-09-21 14:26:37 [INFO] init_db:   ✔️ Đã nạp nguồn: Thanh Niên (thanhnien.vn)
+2026-09-21 14:26:37 [INFO] init_db:   ✔️ Đã nạp nguồn: VietnamPlus (vietnamplus.vn)
+2026-09-21 14:26:37 [INFO] init_db:   ✔️ Đã nạp nguồn: Báo Chính phủ (baochinhphu.vn)
+2026-09-21 14:26:37 [INFO] init_db:   ✔️ Đã nạp nguồn: Tuổi Trẻ (tuoitre.vn)
+2026-09-21 14:26:37 [INFO] init_db: ✨ Khởi tạo database và nạp nguồn tin thành công!
+2026-09-21 14:27:55 [INFO] test_rss: 📡 Bắt đầu kiểm tra kết nối các nguồn RSS...
+2026-09-21 14:27:55 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 14:27:55 [INFO] collector: 🔍 Bắt đầu thu thập từ 4 sources...
+2026-09-21 14:27:55 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 14:27:55 [INFO] collector:   ✅ VnExpress: 49 bài từ https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 14:27:55 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 14:27:55 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 14:27:55 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 14:27:55 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 14:27:55 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 14:27:55 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 14:27:55 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 14:27:56 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 14:27:56 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/home.rss
+2026-09-21 14:27:56 [INFO] collector:   ✅ Thanh Niên: 60 bài từ https://thanhnien.vn/rss/home.rss
+2026-09-21 14:27:56 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 14:27:56 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 14:27:56 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 14:27:57 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 14:27:57 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 14:27:57 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 14:27:57 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 14:27:57 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 14:27:57 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 14:27:57 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 14:27:57 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 14:27:57 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 14:27:57 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/home.rss
+2026-09-21 14:27:58 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/home.rss
+2026-09-21 14:27:58 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 14:27:58 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 14:27:58 [INFO] collector: 📦 Tổng cộng thu thập được: 649 bài
+2026-09-21 14:27:58 [INFO] test_rss: ✅ Thu thập thành công 649 bài viết thô.
+2026-09-21 14:27:58 [INFO] test_rss: 
+--- Xem thử 1 bài viết thô đầu tiên ---
+2026-09-21 14:27:58 [INFO] test_rss: Nguồn: VnExpress
+2026-09-21 14:27:58 [INFO] test_rss: Tiêu đề: Mật độ tinh trùng thấp, điều trị thế nào để có con?
+2026-09-21 14:27:58 [INFO] test_rss: URL: https://vnexpress.net/mat-do-tinh-trung-thap-dieu-tri-the-nao-de-co-con-5122372.html
+2026-09-21 14:27:58 [INFO] test_rss: Ngày đăng: 2026-09-20 08:00:00
+2026-09-21 14:27:58 [INFO] normalizer: 📝 Normalize: 10 bài hợp lệ, 0 bị loại
+2026-09-21 14:27:58 [INFO] test_rss: 
+--- Chuẩn hoá thử 10 bài: 10 bài đạt, 0 bài bị loại ---
+2026-09-21 14:27:58 [INFO] test_rss: Tiêu đề chuẩn hoá: Mật độ tinh trùng thấp, điều trị thế nào để có con?
+2026-09-21 14:27:58 [INFO] test_rss: Lọc từ khoá: True
+2026-09-21 14:27:58 [INFO] test_rss: Mức nhạy cảm: low
+2026-09-21 14:27:58 [INFO] test_rss: 
+🎉 Kiểm tra RSS hoàn tất thành công!
+2026-09-21 14:34:57 [INFO] collection: =======================================================
+2026-09-21 14:34:57 [INFO] collection: [PHASE 1] BAT DAU THU THAP - 21/09/2026 14:34
+2026-09-21 14:34:57 [INFO] collection: =======================================================
+2026-09-21 14:34:57 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 14:34:57 [INFO] collector: 🔍 Bắt đầu thu thập từ 4 sources...
+2026-09-21 14:34:57 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 14:34:57 [INFO] collector:   ✅ VnExpress: 49 bài từ https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 14:34:57 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 14:34:57 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 14:34:57 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 14:34:57 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 14:34:57 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 14:34:57 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 14:34:57 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 14:34:58 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 14:34:58 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/home.rss
+2026-09-21 14:34:58 [INFO] collector:   ✅ Thanh Niên: 60 bài từ https://thanhnien.vn/rss/home.rss
+2026-09-21 14:34:58 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 14:34:59 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 14:34:59 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 14:34:59 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 14:34:59 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 14:34:59 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 14:34:59 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 14:34:59 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 14:34:59 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 14:35:00 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 14:35:00 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 14:35:00 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 14:35:00 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/home.rss
+2026-09-21 14:35:00 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/home.rss
+2026-09-21 14:35:00 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 14:35:00 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 14:35:00 [INFO] collector: 📦 Tổng cộng thu thập được: 649 bài
+2026-09-21 14:35:01 [INFO] normalizer: 📝 Normalize: 649 bài hợp lệ, 0 bị loại
+2026-09-21 14:35:01 [INFO] collection:   Sau Tier-1 keyword filter: 435 bai (bo 214 bai)
+2026-09-21 14:35:40 [INFO] deduplicator: 🔍 Dedup: 334 unique, 101 duplicate
+2026-09-21 14:35:44 [INFO] collection:   Hang doi hien tai: {'QUEUED': 328}
+2026-09-21 14:35:44 [INFO] collection: =======================================================
+2026-09-21 14:35:44 [INFO] collection: [PHASE 1] HOAN THANH: +328 bai moi vao hang doi | Tong QUEUED: 328
+2026-09-21 14:35:44 [INFO] collection: =======================================================
+2026-09-21 14:36:17 [INFO] publish: =======================================================
+2026-09-21 14:36:17 [INFO] publish: [PHASE 2] BAT DAU PUBLISH - 21/09/2026 14:36
+2026-09-21 14:36:17 [INFO] publish:   Mode: manual_review | Dry-run: True
+2026-09-21 14:36:17 [INFO] publish: =======================================================
+2026-09-21 14:36:17 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 14:36:17 [INFO] publish:   Hang doi: {'QUEUED': 328}
+2026-09-21 14:36:17 [INFO] publish:   Bai duoc chon: 'Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý thiên ...'
+2026-09-21 14:36:17 [INFO] publish:   Nguon: VietnamPlus | Trust: 95
+2026-09-21 14:36:17 [INFO] publish:   [1/4] Gemini phan tich bai...
+2026-09-21 14:36:17 [INFO] analyzer: 🤖 Analyzing: Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý t...
+2026-09-21 14:36:17 [ERROR] analyzer: ❌ Gemini Analyzer lỗi (attempt 1): GEMINI_API_KEY chưa được cấu hình trong .env
+2026-09-21 14:36:22 [ERROR] analyzer: ❌ Gemini Analyzer lỗi (attempt 2): GEMINI_API_KEY chưa được cấu hình trong .env
+2026-09-21 14:36:32 [ERROR] analyzer: ❌ Gemini Analyzer lỗi (attempt 3): GEMINI_API_KEY chưa được cấu hình trong .env
+2026-09-21 14:36:32 [ERROR] analyzer: ❌ Không thể phân tích sau 3 lần: Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý t
+2026-09-21 14:36:32 [WARNING] publish:   Gemini khong phan tich duoc. Tra bai ve QUEUED.
+2026-09-21 14:56:14 [INFO] test_gemini: 🤖 Đang kết nối tới Google Gemini API...
+2026-09-21 14:56:15 [ERROR] test_gemini: ❌ Kết nối thất bại: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-09-21 14:57:44 [INFO] test_gemini: 🤖 Đang kết nối tới Google Gemini API...
+2026-09-21 14:57:54 [INFO] test_gemini: ✅ Kết nối Gemini API THÀNH CÔNG!
+2026-09-21 14:57:54 [INFO] test_gemini: Phản hồi từ AI: Xin chào! 📰
+2026-09-21 14:58:01 [INFO] publish: =======================================================
+2026-09-21 14:58:01 [INFO] publish: [PHASE 2] BAT DAU PUBLISH - 21/09/2026 14:58
+2026-09-21 14:58:01 [INFO] publish:   Mode: manual_review | Dry-run: True
+2026-09-21 14:58:01 [INFO] publish: =======================================================
+2026-09-21 14:58:01 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 14:58:01 [INFO] publish:   Hang doi: {'QUEUED': 328}
+2026-09-21 14:58:01 [INFO] publish:   Bai duoc chon: 'Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý thiên ...'
+2026-09-21 14:58:01 [INFO] publish:   Nguon: VietnamPlus | Trust: 95
+2026-09-21 14:58:01 [INFO] publish:   [1/4] Gemini phan tich bai...
+2026-09-21 14:58:01 [INFO] analyzer: Analyzing: Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý t...
+2026-09-21 14:58:12 [INFO] analyzer:   Score: 91/100 | Publish: True | Topic: giáo dục
+2026-09-21 14:58:12 [INFO] publish:   Diem AI: 91/100 | Publish: True | Ly do: Bài viết mang tính thời sự giáo dục tích cực, được cung cấp 
+2026-09-21 14:58:12 [INFO] publish:   [2/4] Gemini viet bai tom tat...
+2026-09-21 14:58:12 [INFO] writer: ✍️ Writing: Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý t...
+2026-09-21 14:58:17 [ERROR] writer: ❌ Writer lỗi (attempt 1): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-09-21 14:58:30 [ERROR] writer: ❌ Writer lỗi (attempt 2): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-09-21 14:58:44 [ERROR] writer: ❌ Writer lỗi (attempt 3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-09-21 14:58:44 [ERROR] writer: ❌ Không thể viết bài sau 3 lần: Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý t
+2026-09-21 14:58:44 [WARNING] publish:   Writer loi. Tra bai ve QUEUED de thu lai sau.
+2026-09-21 14:59:53 [INFO] publish: =======================================================
+2026-09-21 14:59:53 [INFO] publish: [PHASE 2] BAT DAU PUBLISH - 21/09/2026 14:59
+2026-09-21 14:59:53 [INFO] publish:   Mode: manual_review | Dry-run: True
+2026-09-21 14:59:53 [INFO] publish: =======================================================
+2026-09-21 14:59:53 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 14:59:53 [INFO] publish:   Hang doi: {'QUEUED': 328}
+2026-09-21 14:59:53 [INFO] publish:   Bai duoc chon: 'Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý thiên ...'
+2026-09-21 14:59:53 [INFO] publish:   Nguon: VietnamPlus | Trust: 95
+2026-09-21 14:59:53 [INFO] publish:   [1/4] Gemini phan tich bai...
+2026-09-21 14:59:53 [INFO] analyzer: Analyzing: Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý t...
+2026-09-21 14:59:55 [INFO] analyzer:   Score: 90/100 | Publish: True | Topic: giáo dục
+2026-09-21 14:59:55 [INFO] publish:   Diem AI: 90/100 | Publish: True | Ly do: Bài viết cung cấp thông tin chính thống từ nguồn uy tín về s
+2026-09-21 14:59:55 [INFO] publish:   [2/4] Gemini viet bai tom tat...
+2026-09-21 14:59:55 [INFO] writer: ✍️ Writing: Hà Nội đăng cai tổ chức Kỳ thi Olympic Thiên văn và Vật lý t...
+2026-09-21 14:59:58 [INFO] writer:   ✅ Written: 'Hà Nội lần đầu đăng cai Olympic Thiên văn và Vật l'
+2026-09-21 14:59:59 [INFO] publish:   [3/4] Gemini tao anh minh hoa...
+2026-09-21 14:59:59 [INFO] image_generator: 🎨 Đang tạo prompt ảnh bằng Gemini...
+2026-09-21 15:00:08 [INFO] image_generator: 🖼 Đang gọi Imagen API cho Post #1...
+2026-09-21 15:00:08 [WARNING] image_generator: ⚠️ Chưa thể tạo ảnh trực tiếp qua Imagen (This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.). Lưu metadata prompt để render sau.
+2026-09-21 15:00:33 [INFO] publish: =======================================================
+2026-09-21 15:00:33 [INFO] publish: [PHASE 2] BAT DAU PUBLISH - 21/09/2026 15:00
+2026-09-21 15:00:33 [INFO] publish:   Mode: manual_review | Dry-run: True
+2026-09-21 15:00:33 [INFO] publish: =======================================================
+2026-09-21 15:00:33 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 15:00:33 [INFO] publish:   Hang doi: {'PROCESSED': 1, 'QUEUED': 327}
+2026-09-21 15:00:33 [INFO] publish:   Bai duoc chon: 'Phó Thủ tướng: Đánh giá kỹ các vấn đề quy định trong Luật Đất đai...'
+2026-09-21 15:00:33 [INFO] publish:   Nguon: VietnamPlus | Trust: 95
+2026-09-21 15:00:33 [INFO] publish:   [1/4] Gemini phan tich bai...
+2026-09-21 15:00:33 [INFO] analyzer: Analyzing: Phó Thủ tướng: Đánh giá kỹ các vấn đề quy định trong Luật Đấ...
+2026-09-21 15:00:35 [INFO] analyzer:   Score: 93/100 | Publish: True | Topic: thời sự
+2026-09-21 15:00:35 [INFO] publish:   Diem AI: 93/100 | Publish: True | Ly do: Bài viết cung cấp thông tin thời sự chính thống, quan trọng 
+2026-09-21 15:00:35 [INFO] publish:   [2/4] Gemini viet bai tom tat...
+2026-09-21 15:00:35 [INFO] writer: ✍️ Writing: Phó Thủ tướng: Đánh giá kỹ các vấn đề quy định trong Luật Đấ...
+2026-09-21 15:00:38 [INFO] writer:   ✅ Written: 'Định hướng mới trong việc sửa đổi Luật Đất đai'
+2026-09-21 15:00:39 [INFO] publish:   [3/4] Gemini tao anh minh hoa...
+2026-09-21 15:00:39 [INFO] image_generator: 🎨 Đang tạo prompt ảnh bằng Gemini...
+2026-09-21 15:00:44 [ERROR] image_generator: ❌ Lỗi khi sinh prompt ảnh: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-09-21 15:00:44 [INFO] image_generator: 🖼 Đang gọi Imagen API cho Post #1...
+2026-09-21 15:00:44 [WARNING] image_generator: ⚠️ Chưa thể tạo ảnh trực tiếp qua Imagen (This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.). Lưu metadata prompt để render sau.
+2026-09-21 15:00:44 [INFO] publish:   [4/4] Kiem duyet noi dung...
+2026-09-21 15:00:44 [INFO] validator: 🔎 Validation Post: score=30, status=REJECTED, reasons=['Thiếu source_url hoặc URL không hợp lệ', 'Thiếu tên nguồn bài viết']
+2026-09-21 15:00:44 [INFO] publish:   Validator: REJECTED | Diem: 30
+2026-09-21 15:00:44 [INFO] publish:     - Thiếu source_url hoặc URL không hợp lệ
+2026-09-21 15:00:44 [INFO] publish:     - Thiếu tên nguồn bài viết
+2026-09-21 15:00:44 [INFO] publish:   Bai #1 -> REJECTED
+2026-09-21 15:00:44 [INFO] publish: =======================================================
+2026-09-21 15:00:44 [INFO] publish: [PHASE 2] HOAN THANH | Post #1 | Status: REJECTED
+2026-09-21 15:00:44 [INFO] publish: =======================================================
+2026-09-21 15:01:37 [INFO] publish: =======================================================
+2026-09-21 15:01:37 [INFO] publish: [PHASE 2] BAT DAU PUBLISH - 21/09/2026 15:01
+2026-09-21 15:01:37 [INFO] publish:   Mode: manual_review | Dry-run: True
+2026-09-21 15:01:37 [INFO] publish: =======================================================
+2026-09-21 15:01:37 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 15:01:37 [INFO] publish:   Hang doi: {'PROCESSED': 2, 'QUEUED': 326}
+2026-09-21 15:01:37 [INFO] publish:   Bai duoc chon: 'Hoàn thành Dự án cải tạo Quốc lộ 28B, tiết kiệm chi phí hàng trăm...'
+2026-09-21 15:01:37 [INFO] publish:   Nguon: VietnamPlus | Trust: 95
+2026-09-21 15:01:37 [INFO] publish:   [1/4] Gemini phan tich bai...
+2026-09-21 15:01:37 [INFO] analyzer: Analyzing: Hoàn thành Dự án cải tạo Quốc lộ 28B, tiết kiệm chi phí hàng...
+2026-09-21 15:01:39 [INFO] analyzer:   Score: 90/100 | Publish: True | Topic: thời sự
+2026-09-21 15:01:39 [INFO] publish:   Diem AI: 90/100 | Publish: True | Ly do: Bài báo cung cấp thông tin thời sự chính thống về hạ tầng gi
+2026-09-21 15:01:39 [INFO] publish:   [2/4] Gemini viet bai tom tat...
+2026-09-21 15:01:39 [INFO] writer: ✍️ Writing: Hoàn thành Dự án cải tạo Quốc lộ 28B, tiết kiệm chi phí hàng...
+2026-09-21 15:01:42 [INFO] writer:   ✅ Written: 'Hoàn thành cải tạo Quốc lộ 28B qua Bình Thuận'
+2026-09-21 15:01:43 [INFO] publish:   [3/4] Gemini tao anh minh hoa...
+2026-09-21 15:01:43 [INFO] image_generator: 🎨 Đang tạo prompt ảnh bằng Gemini...
+2026-09-21 15:01:45 [INFO] image_generator: 🖼 Đang gọi Imagen API cho Post #2...
+2026-09-21 15:01:45 [WARNING] image_generator: ⚠️ Chưa thể tạo ảnh trực tiếp qua Imagen (This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.). Lưu metadata prompt để render sau.
+2026-09-21 15:01:45 [INFO] publish:   [4/4] Kiem duyet noi dung...
+2026-09-21 15:01:45 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-21 15:01:45 [INFO] publish:   Validator: READY | Diem: 100
+2026-09-21 15:01:45 [INFO] publish:   Bai #2 -> READY
+2026-09-21 15:01:45 [INFO] publish:   [Dry-run] Bo qua buoc dang bai.
+2026-09-21 15:01:45 [INFO] publish: =======================================================
+2026-09-21 15:01:45 [INFO] publish: [PHASE 2] HOAN THANH | Post #2 | Status: READY
+2026-09-21 15:01:45 [INFO] publish: =======================================================
+2026-09-21 15:07:44 [INFO] publish: =======================================================
+2026-09-21 15:07:44 [INFO] publish: [PHASE 2] BAT DAU PUBLISH - 21/09/2026 15:07
+2026-09-21 15:07:44 [INFO] publish:   Mode: manual_review | Dry-run: True
+2026-09-21 15:07:44 [INFO] publish: =======================================================
+2026-09-21 15:07:44 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 15:07:44 [INFO] publish:   Hang doi: {'PROCESSED': 3, 'QUEUED': 325}
+2026-09-21 15:07:44 [INFO] publish:   Bai duoc chon: 'Đưa quan hệ Đối tác chiến lược Việt Nam-Phần Lan đi vào thực chất...'
+2026-09-21 15:07:44 [INFO] publish:   Nguon: VietnamPlus | Trust: 95
+2026-09-21 15:07:44 [INFO] publish:   [1/4] Gemini phan tich bai...
+2026-09-21 15:07:44 [INFO] analyzer: Analyzing: Đưa quan hệ Đối tác chiến lược Việt Nam-Phần Lan đi vào thực...
+2026-09-21 15:07:47 [INFO] analyzer:   Score: 90/100 | Publish: True | Topic: thời sự
+2026-09-21 15:07:47 [INFO] publish:   Diem AI: 90/100 | Publish: True | Ly do: Bài viết cung cấp thông tin chính thống về quan hệ ngoại gia
+2026-09-21 15:07:47 [INFO] publish:   [2/4] Gemini viet bai tom tat...
+2026-09-21 15:07:47 [INFO] writer: ✍️ Writing: Đưa quan hệ Đối tác chiến lược Việt Nam-Phần Lan đi vào thực...
+2026-09-21 15:07:49 [INFO] writer:   ✅ Written: 'Việt Nam và Phần Lan nâng cấp quan hệ Đối tác chiế'
+2026-09-21 15:07:50 [INFO] publish:   [3/4] Gemini tao anh minh hoa...
+2026-09-21 15:07:50 [INFO] image_generator: 🎨 Đang tạo prompt ảnh bằng Gemini...
+2026-09-21 15:07:52 [INFO] image_generator: 🖼 Đang gọi Imagen API cho Post #3...
+2026-09-21 15:07:52 [WARNING] image_generator: ⚠️ Chưa thể tạo ảnh trực tiếp qua Imagen (This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.). Lưu metadata prompt để render sau.
+2026-09-21 15:07:52 [INFO] publish:   [4/4] Kiem duyet noi dung...
+2026-09-21 15:07:52 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-21 15:07:52 [INFO] publish:   Validator: READY | Diem: 100
+2026-09-21 15:07:52 [INFO] publish:   Bai #3 -> READY
+2026-09-21 15:07:52 [INFO] publish:   [Dry-run] Bo qua buoc dang bai.
+2026-09-21 15:07:52 [INFO] publish: =======================================================
+2026-09-21 15:07:52 [INFO] publish: [PHASE 2] HOAN THANH | Post #3 | Status: READY
+2026-09-21 15:07:52 [INFO] publish: =======================================================
+2026-09-21 15:09:49 [ERROR] review_ui: Lỗi khi chạy publish background: cannot import name 'run_publish_cycle' from 'publish_pipeline' (D:\Auto_tool\AutoUpFeed_tintuc24h\publish_pipeline.py)
+2026-09-21 15:12:35 [INFO] review_ui: Triggering manual publish for Post #3...
+2026-09-21 15:12:35 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/3)...
+2026-09-21 15:12:57 [INFO] review_ui: Triggering manual publish for Post #3...
+2026-09-21 15:12:57 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/3)...
+2026-09-21 15:15:17 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 15:15:18 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:15:19 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 15:15:35 [INFO] review_ui: Triggering manual publish for Post #3...
+2026-09-21 15:15:35 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/3)...
+2026-09-21 15:15:38 [INFO] review_ui: Triggering manual publish for Post #2...
+2026-09-21 15:15:38 [INFO] publisher: 🚀 Đang đăng bài #2 lên UCircle (Lần thử 1/3)...
+2026-09-21 15:15:47 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:15:50 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:15:51 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:15:53 [INFO] review_ui: Triggering manual publish for Post #3...
+2026-09-21 15:15:53 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/3)...
+2026-09-21 15:16:30 [INFO] publish: =======================================================
+2026-09-21 15:16:30 [INFO] publish: [PHASE 2] BAT DAU PUBLISH - 21/09/2026 15:16
+2026-09-21 15:16:30 [INFO] publish:   Mode: manual_review | Dry-run: False
+2026-09-21 15:16:30 [INFO] publish: =======================================================
+2026-09-21 15:16:30 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 15:16:30 [INFO] publish:   Hang doi: {'PROCESSED': 4, 'QUEUED': 324}
+2026-09-21 15:16:30 [INFO] publish:   Bai duoc chon: 'Điều động, bổ nhiệm Đại tá Nguyễn Đình Dương làm Giám đốc Công an...'
+2026-09-21 15:16:30 [INFO] publish:   Nguon: VietnamPlus | Trust: 95
+2026-09-21 15:16:30 [INFO] publish:   [1/4] Gemini phan tich bai...
+2026-09-21 15:16:30 [INFO] analyzer: Analyzing: Điều động, bổ nhiệm Đại tá Nguyễn Đình Dương làm Giám đốc Cô...
+2026-09-21 15:20:50 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:20:58 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:21:05 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:21:05 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 15:22:05 [INFO] review_ui: 🚀 Bắt đầu đăng bài #3 lên UCircle...
+2026-09-21 15:22:05 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/1)...
+2026-09-21 15:22:07 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 15:22:10 [INFO] publisher:   [+] Đã chuyển tư cách đăng sang Trang / Circle
+2026-09-21 15:22:42 [ERROR] publisher: ❌ Playwright publish lỗi: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[data-composer=\"true\"], div[role=\"dialog\"]").locator("button[data-composer-post=\"true\"]").first
+    - locator resolved to <button disabled type="button" class="_cPost_1nhgr_549" data-composer-post="true">Đăng</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+2026-09-21 15:22:42 [WARNING] publisher: ⚠️ Lần thử 1 thất bại: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[data-composer=\"true\"], div[role=\"dialog\"]").locator("button[data-composer-post=\"true\"]").first
+    - locator resolved to <button disabled type="button" class="_cPost_1nhgr_549" data-composer-post="true">Đăng</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+2026-09-21 15:22:42 [ERROR] publisher: ❌ Không thể đăng bài #3 sau 1 lần thử.
+2026-09-21 15:22:42 [WARNING] review_ui: ❌ Không thể đăng bài #3.
+2026-09-21 15:23:52 [INFO] review_ui: 🚀 Bắt đầu đăng bài #3 lên UCircle...
+2026-09-21 15:23:52 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/1)...
+2026-09-21 15:23:53 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 15:23:57 [INFO] publisher:   [+] Đã chuyển tư cách đăng sang Trang / Circle
+2026-09-21 15:24:29 [ERROR] publisher: ❌ Playwright publish lỗi: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[data-composer=\"true\"], div[role=\"dialog\"]").locator("button[data-composer-post=\"true\"]").first
+    - locator resolved to <button disabled type="button" class="_cPost_1nhgr_549" data-composer-post="true">Đăng</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+2026-09-21 15:24:29 [WARNING] publisher: ⚠️ Lần thử 1 thất bại: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[data-composer=\"true\"], div[role=\"dialog\"]").locator("button[data-composer-post=\"true\"]").first
+    - locator resolved to <button disabled type="button" class="_cPost_1nhgr_549" data-composer-post="true">Đăng</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+2026-09-21 15:24:29 [ERROR] publisher: ❌ Không thể đăng bài #3 sau 1 lần thử.
+2026-09-21 15:24:29 [WARNING] review_ui: ❌ Không thể đăng bài #3.
+2026-09-21 15:27:20 [INFO] review_ui: 🚀 Bắt đầu đăng bài #3 lên UCircle...
+2026-09-21 15:27:20 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/1)...
+2026-09-21 15:27:21 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 15:27:22 [ERROR] publisher: ❌ Playwright publish lỗi: Page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c", waiting until "load"
+
+2026-09-21 15:27:22 [WARNING] publisher: ⚠️ Lần thử 1 thất bại: Page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c", waiting until "load"
+
+2026-09-21 15:27:22 [ERROR] publisher: ❌ Không thể đăng bài #3 sau 1 lần thử.
+2026-09-21 15:27:22 [WARNING] review_ui: ❌ Không thể đăng bài #3.
+2026-09-21 15:28:27 [INFO] review_ui: Updated Post #1 -> READY
+2026-09-21 15:28:32 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:28:33 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:28:35 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 15:28:36 [INFO] review_ui: Updated Post #1 -> READY
+2026-09-21 15:28:44 [INFO] review_ui: 🚀 Bắt đầu đăng bài #3 lên UCircle...
+2026-09-21 15:28:44 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/1)...
+2026-09-21 15:28:45 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 15:28:49 [INFO] publisher:   [+] Đã chuyển tư cách đăng sang Trang / Circle
+2026-09-21 15:28:50 [INFO] publisher: 📎 Đã đính kèm ảnh: D:\Auto_tool\AutoUpFeed_tintuc24h\data\images\post_3.png
+2026-09-21 15:28:59 [INFO] publisher: 🎉 Xuất bản thành công Post #3 -> ID: ucircle_post_1789979339
+2026-09-21 15:28:59 [INFO] review_ui: ✅ Đăng bài #3 thành công!
+2026-09-21 15:30:50 [INFO] collection: =======================================================
+2026-09-21 15:30:50 [INFO] collection: [PHASE 1] BAT DAU THU THAP - 21/09/2026 15:30
+2026-09-21 15:30:50 [INFO] collection: =======================================================
+2026-09-21 15:30:50 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 15:30:50 [INFO] collector: 🔍 Bắt đầu thu thập từ 4 sources...
+2026-09-21 15:30:50 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 15:30:50 [INFO] collector:   ✅ VnExpress: 48 bài từ https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 15:30:50 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 15:30:51 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 15:30:51 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 15:30:51 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 15:30:51 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 15:30:51 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 15:30:51 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 15:30:51 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 15:30:51 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/home.rss
+2026-09-21 15:30:52 [INFO] collector:   ✅ Thanh Niên: 60 bài từ https://thanhnien.vn/rss/home.rss
+2026-09-21 15:30:52 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 15:30:52 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 15:30:52 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 15:30:53 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 15:30:53 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 15:30:53 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 15:30:53 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 15:30:53 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 15:30:53 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 15:30:54 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 15:30:54 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 15:30:54 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 15:30:54 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/home.rss
+2026-09-21 15:30:54 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/home.rss
+2026-09-21 15:30:54 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 15:30:54 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 15:30:54 [INFO] collector: 📦 Tổng cộng thu thập được: 648 bài
+2026-09-21 15:30:54 [INFO] normalizer: 📝 Normalize: 648 bài hợp lệ, 0 bị loại
+2026-09-21 15:30:54 [INFO] collection:   Sau Tier-1 keyword filter: 453 bai (bo 195 bai)
+2026-09-21 15:31:08 [INFO] deduplicator: Dedup: 58 unique, 395 duplicate
+2026-09-21 15:31:09 [INFO] collection:   Hang doi hien tai: {'PROCESSED': 4, 'PROCESSING': 1, 'QUEUED': 380}
+2026-09-21 15:31:09 [INFO] collection: =======================================================
+2026-09-21 15:31:09 [INFO] collection: [PHASE 1] HOAN THANH: +57 bai moi vao hang doi | Tong QUEUED: 380
+2026-09-21 15:31:09 [INFO] collection: =======================================================
+2026-09-21 15:33:45 [INFO] review_ui: Updated Post #3 -> READY
+2026-09-21 15:33:47 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 15:33:58 [INFO] review_ui: 🚀 Bắt đầu đăng bài #3 lên UCircle...
+2026-09-21 15:33:58 [INFO] publisher: 🚀 Đang đăng bài #3 lên UCircle (Lần thử 1/1)...
+2026-09-21 15:34:00 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 15:34:04 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Tin Tức 24h' (Circle - Xác nhận thành công)
+2026-09-21 15:34:05 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-21 15:34:06 [INFO] publisher: 📎 Đã đính kèm ảnh: D:\Auto_tool\AutoUpFeed_tintuc24h\data\images\post_3.png
+2026-09-21 15:34:06 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-21 15:34:06 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-21 15:34:11 [INFO] publisher: ✅ Popup soạn thảo đã đóng - Đăng bài thành công!
+2026-09-21 15:34:12 [INFO] publisher: 🎉 Xuất bản thành công Post #3 -> ID: ucircle_post_1789979652
+2026-09-21 15:34:12 [INFO] review_ui: ✅ Đăng bài #3 thành công!
+2026-09-21 15:37:27 [INFO] collection: =======================================================
+2026-09-21 15:37:27 [INFO] collection: [PHASE 1] BAT DAU THU THAP - 21/09/2026 15:37
+2026-09-21 15:37:27 [INFO] collection: =======================================================
+2026-09-21 15:37:27 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 15:37:28 [INFO] collector: 🔍 Bắt đầu thu thập từ 4 sources...
+2026-09-21 15:37:28 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 15:37:28 [INFO] collector:   ✅ VnExpress: 48 bài từ https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 15:37:28 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 15:37:28 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 15:37:28 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 15:37:28 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 15:37:28 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 15:37:29 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 15:37:29 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 15:37:29 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 15:37:29 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/home.rss
+2026-09-21 15:37:29 [INFO] collector:   ✅ Thanh Niên: 60 bài từ https://thanhnien.vn/rss/home.rss
+2026-09-21 15:37:29 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 15:37:30 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 15:37:30 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 15:37:30 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 15:37:30 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 15:37:30 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 15:37:30 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 15:37:31 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 15:37:31 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 15:37:31 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 15:37:31 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 15:37:31 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 15:37:31 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/home.rss
+2026-09-21 15:37:31 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/home.rss
+2026-09-21 15:37:31 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 15:37:32 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 15:37:32 [INFO] collector: 📦 Tổng cộng thu thập được: 648 bài
+2026-09-21 15:37:32 [INFO] normalizer: 📝 Normalize: 648 bài hợp lệ, 0 bị loại
+2026-09-21 15:37:32 [INFO] collection:   Sau Tier-1 keyword filter: 452 bai (bo 196 bai)
+2026-09-21 15:37:33 [INFO] deduplicator: Dedup: 1 unique, 451 duplicate
+2026-09-21 15:37:33 [INFO] collection:   Hang doi hien tai: {'PROCESSED': 4, 'PROCESSING': 1, 'QUEUED': 381}
+2026-09-21 15:37:34 [INFO] collection: =======================================================
+2026-09-21 15:37:34 [INFO] collection: [PHASE 1] HOAN THANH: +1 bai moi vao hang doi | Tong QUEUED: 381
+2026-09-21 15:37:34 [INFO] collection: =======================================================
+2026-09-21 15:38:07 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 15:38:09 [INFO] review_ui: Updated Post #1 -> READY
+2026-09-21 15:38:11 [INFO] review_ui: Updated Post #1 -> READY
+2026-09-21 15:38:12 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 15:50:04 [INFO] init_db: 🚀 Bắt đầu khởi tạo cơ sở dữ liệu...
+2026-09-21 15:50:04 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 15:50:04 [INFO] init_db: 📥 Đang nạp 15 nguồn tin vào database...
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: VnExpress (vnexpress.net)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Thanh Niên (thanhnien.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: VietnamPlus (vietnamplus.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Báo Chính phủ (baochinhphu.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Tuổi Trẻ (tuoitre.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Dân Trí (dantri.com.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Zing News (zingnews.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Nhân Dân (nhandan.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Lao Động (laodong.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: VTV News (vtv.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Tiền Phong (tienphong.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Công An Nhân Dân (cand.com.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: Báo Mới (tổng hợp) (baomoi.com)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: CafeBiz (cafebiz.vn)
+2026-09-21 15:50:04 [INFO] init_db:   ✔️ Đã nạp nguồn: GenK (Công nghệ) (genk.vn)
+2026-09-21 15:50:04 [INFO] init_db: ✨ Khởi tạo database và nạp nguồn tin thành công!
+2026-09-21 15:53:39 [INFO] collection: =======================================================
+2026-09-21 15:53:39 [INFO] collection: [PHASE 1] BAT DAU THU THAP - 21/09/2026 15:53
+2026-09-21 15:53:39 [INFO] collection:   Config: Top 3/nguon | Max 20 bai/lan | Min trust 80
+2026-09-21 15:53:39 [INFO] collection: =======================================================
+2026-09-21 15:53:39 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 15:53:39 [INFO] collection:   Da co 1 bai duoc PUBLISHED (se loai bo).
+2026-09-21 15:53:39 [INFO] collection:   Thu thap tu 15 nguon RSS...
+2026-09-21 15:53:39 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 15:53:40 [INFO] collector:   ✅ VnExpress: 48 bài từ https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 15:53:40 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 15:53:40 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 15:53:40 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 15:53:40 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 15:53:40 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 15:53:40 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 15:53:40 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 15:53:41 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 15:53:41 [INFO] collection:   VnExpress: 288 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:41 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/home.rss
+2026-09-21 15:53:41 [INFO] collector:   ✅ Thanh Niên: 60 bài từ https://thanhnien.vn/rss/home.rss
+2026-09-21 15:53:41 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 15:53:41 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 15:53:41 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 15:53:42 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 15:53:42 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 15:53:42 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 15:53:42 [INFO] collection:   Thanh Niên: 210 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:42 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 15:53:42 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 15:53:42 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 15:53:42 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 15:53:42 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 15:53:43 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 15:53:43 [INFO] collection:     Loai bo 3 bai da dang (PUBLISHED)
+2026-09-21 15:53:43 [INFO] collection:   VietnamPlus: 147 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:43 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/home.rss
+2026-09-21 15:53:43 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/home.rss
+2026-09-21 15:53:43 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 15:53:43 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 15:53:43 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/tin-moi-nhat.rss
+2026-09-21 15:53:43 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/tin-moi-nhat.rss
+2026-09-21 15:53:43 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/thoi-su.rss
+2026-09-21 15:53:43 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/thoi-su.rss
+2026-09-21 15:53:43 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/the-gioi.rss
+2026-09-21 15:53:44 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/the-gioi.rss
+2026-09-21 15:53:44 [INFO] collection:   Tuổi Trẻ: 150 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:44 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/home.rss
+2026-09-21 15:53:44 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/home.rss
+2026-09-21 15:53:44 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/xa-hoi.rss
+2026-09-21 15:53:44 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/xa-hoi.rss
+2026-09-21 15:53:44 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/kinh-doanh.rss
+2026-09-21 15:53:45 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/kinh-doanh.rss
+2026-09-21 15:53:45 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/the-gioi.rss
+2026-09-21 15:53:45 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/the-gioi.rss
+2026-09-21 15:53:45 [INFO] collection:   Dân Trí: 400 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:45 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/tech.rss
+2026-09-21 15:53:45 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/tech.rss
+2026-09-21 15:53:45 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/xa-hoi.rss
+2026-09-21 15:53:46 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/xa-hoi.rss
+2026-09-21 15:53:46 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/kinh-doanh.rss
+2026-09-21 15:53:46 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/kinh-doanh.rss
+2026-09-21 15:53:46 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/feed.rss
+2026-09-21 15:53:46 [INFO] collector:   ✅ Nhân Dân: 50 bài từ https://nhandan.vn/rss/feed.rss
+2026-09-21 15:53:46 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/thoi-su.rss
+2026-09-21 15:53:47 [INFO] collector:   ✅ Nhân Dân: 0 bài từ https://nhandan.vn/rss/thoi-su.rss
+2026-09-21 15:53:47 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/the-gioi.rss
+2026-09-21 15:53:47 [INFO] collector:   ✅ Nhân Dân: 50 bài từ https://nhandan.vn/rss/the-gioi.rss
+2026-09-21 15:53:47 [INFO] collection:   Nhân Dân: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:47 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/home.rss
+2026-09-21 15:53:47 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/home.rss
+2026-09-21 15:53:47 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/xa-hoi.rss
+2026-09-21 15:53:47 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/xa-hoi.rss
+2026-09-21 15:53:47 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/kinh-te.rss
+2026-09-21 15:53:47 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/kinh-te.rss
+2026-09-21 15:53:47 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/trong-nuoc.rss
+2026-09-21 15:53:48 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/trong-nuoc.rss
+2026-09-21 15:53:48 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/the-gioi.rss
+2026-09-21 15:53:50 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/the-gioi.rss
+2026-09-21 15:53:50 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/kinh-te.rss
+2026-09-21 15:53:50 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/kinh-te.rss
+2026-09-21 15:53:51 [INFO] collection:   VTV News: 1500 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:51 [INFO] collector: 📡 Đang đọc RSS: Tiền Phong — https://tienphong.vn/rss/index.rss
+2026-09-21 15:53:51 [INFO] collector:   ✅ Tiền Phong: 50 bài từ https://tienphong.vn/rss/index.rss
+2026-09-21 15:53:51 [INFO] collector: 📡 Đang đọc RSS: Tiền Phong — https://tienphong.vn/rss/xa-hoi.rss
+2026-09-21 15:53:51 [INFO] collector:   ✅ Tiền Phong: 50 bài từ https://tienphong.vn/rss/xa-hoi.rss
+2026-09-21 15:53:51 [INFO] collection:   Tiền Phong: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:51 [INFO] collector: 📡 Đang đọc RSS: Công An Nhân Dân — https://cand.com.vn/rss/Home.rss
+2026-09-21 15:53:52 [INFO] collector:   ✅ Công An Nhân Dân: 50 bài từ https://cand.com.vn/rss/Home.rss
+2026-09-21 15:53:52 [INFO] collector: 📡 Đang đọc RSS: Công An Nhân Dân — https://cand.com.vn/rss/Xa-hoi.rss
+2026-09-21 15:53:52 [INFO] collector:   ✅ Công An Nhân Dân: 50 bài từ https://cand.com.vn/rss/Xa-hoi.rss
+2026-09-21 15:53:52 [INFO] collection:   Công An Nhân Dân: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:52 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/home.rss
+2026-09-21 15:53:52 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/home.rss
+2026-09-21 15:53:52 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/c/thoisu.rss
+2026-09-21 15:53:53 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/c/thoisu.rss
+2026-09-21 15:53:53 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/c/thegioi.rss
+2026-09-21 15:53:53 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/c/thegioi.rss
+2026-09-21 15:53:53 [INFO] collector: 📡 Đang đọc RSS: CafeBiz — https://cafebiz.vn/cafebiz.rss
+2026-09-21 15:53:53 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://cafebiz.vn/cafebiz.rss
+2026-09-21 15:53:53 [INFO] collector: 📡 Đang đọc RSS: GenK (Công nghệ) — https://genk.vn/rss/home.rss
+2026-09-21 15:53:53 [INFO] collector:   ✅ GenK (Công nghệ): 61 bài từ https://genk.vn/rss/home.rss
+2026-09-21 15:53:53 [INFO] collection:   GenK (Công nghệ): 61 bai -> chon top 3 bai HOT nhat
+2026-09-21 15:53:53 [INFO] normalizer: 📝 Normalize: 30 bài hợp lệ, 0 bị loại
+2026-09-21 15:53:53 [INFO] collection:   Sau keyword filter: 22 bai (bo 8)
+2026-09-21 15:53:56 [INFO] deduplicator: Dedup: 15 unique, 7 duplicate
+2026-09-21 15:53:56 [INFO] collection:   Giu top 15 bai HOT nhat trong so 22 bai
+2026-09-21 15:53:56 [INFO] collection:     + [0.0] Thêm 10 bệnh ung thư được kê đơn ngoại trú trên 30 ngày...
+2026-09-21 15:53:56 [INFO] collection:     + [0.0] Chính phủ đề xuất áp giá điện theo giờ với khách hàng s...
+2026-09-21 15:53:56 [INFO] collection:     + [0.0] ShinyHunters tấn công cl0p, cuộc đối đầu hiếm thấy tron...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Giá dầu thô mất mốc 100 USD trước kỳ vọng ngoại giao Mỹ...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Phó Thủ tướng yêu cầu nghiên cứu thuế chống đầu cơ, xử ...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Xét xử vi phạm đất đai theo cơ chế đặc thù: Khắc phục h...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Chủ tịch Trung Quốc sẽ trao đổi loạt vấn đề quan trọng ...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Đoàn công tác Thành ủy Thành phố Hồ Chí Minh làm việc t...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Tổn thương nhỏ cảnh báo ung thư đường tiêu hóa...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Mỹ lên kế hoạch thành lập "Lực lượng AI"...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Hà Nội: Sau va chạm, cô gái bị cuốn vào gầm xe buýt...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Bài 1: Khi sức hút trên mạng xã hội trở thành tài sản...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Công an vùng ĐBSCL góp ý dự thảo Bộ luật Hình sự sửa đổ...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Thanh Hóa ra quân khắc phục hậu quả mưa lũ, bảo vệ cuộc...
+2026-09-21 15:53:57 [INFO] collection:     + [0.0] Mỗi ngành một cái tên quen thuộc: Bức tranh tin dùng củ...
+2026-09-21 15:53:57 [INFO] collection:   Hang doi hien tai: {'PROCESSED': 4, 'PROCESSING': 1, 'QUEUED': 396}
+2026-09-21 15:53:57 [INFO] collection: =======================================================
+2026-09-21 15:53:57 [INFO] collection: [PHASE 1] HOAN THANH: +15 bai HOT moi | Tong QUEUED: 396
+2026-09-21 15:53:57 [INFO] collection: =======================================================
+2026-09-21 15:54:15 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 15:54:19 [INFO] review_ui: 🚀 Bắt đầu đăng bài #2 lên UCircle...
+2026-09-21 15:54:19 [INFO] publisher: 🚀 Đang đăng bài #2 lên UCircle (Lần thử 1/1)...
+2026-09-21 15:54:20 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 15:54:24 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Tin Tức 24h' (Circle - Xác nhận thành công)
+2026-09-21 15:54:25 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-21 15:54:27 [ERROR] publisher: ❌ Playwright publish lỗi: name 'post_id' is not defined
+2026-09-21 15:54:27 [WARNING] publisher: ⚠️ Lần thử 1 thất bại: name 'post_id' is not defined
+2026-09-21 15:54:27 [ERROR] publisher: ❌ Không thể đăng bài #2 sau 1 lần thử.
+2026-09-21 15:54:27 [WARNING] review_ui: ❌ Không thể đăng bài #2.
+2026-09-21 15:54:47 [INFO] review_ui: 🚀 Bắt đầu đăng bài #2 lên UCircle...
+2026-09-21 15:54:47 [INFO] publisher: 🚀 Đang đăng bài #2 lên UCircle (Lần thử 1/1)...
+2026-09-21 15:54:47 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 15:54:52 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Tin Tức 24h' (Circle - Xác nhận thành công)
+2026-09-21 15:54:53 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-21 15:54:54 [ERROR] publisher: ❌ Playwright publish lỗi: name 'post_id' is not defined
+2026-09-21 15:54:54 [WARNING] publisher: ⚠️ Lần thử 1 thất bại: name 'post_id' is not defined
+2026-09-21 15:54:54 [ERROR] publisher: ❌ Không thể đăng bài #2 sau 1 lần thử.
+2026-09-21 15:54:54 [WARNING] review_ui: ❌ Không thể đăng bài #2.
+2026-09-21 16:00:15 [INFO] collection: =======================================================
+2026-09-21 16:00:15 [INFO] collection: [PHASE 1] BAT DAU THU THAP - 21/09/2026 16:00
+2026-09-21 16:00:15 [INFO] collection:   Config: Top 3/nguon | Max 20 bai/lan | Min trust 80
+2026-09-21 16:00:15 [INFO] collection: =======================================================
+2026-09-21 16:00:15 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 16:00:15 [INFO] collection:   Da co 1 bai duoc PUBLISHED (se loai bo).
+2026-09-21 16:00:15 [INFO] collection:   Thu thap tu 15 nguon RSS...
+2026-09-21 16:00:15 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 16:00:15 [INFO] collector:   ✅ VnExpress: 48 bài từ https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 16:00:15 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 16:00:15 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 16:00:15 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 16:00:15 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 16:00:16 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 16:00:16 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 16:00:16 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 16:00:16 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 16:00:16 [INFO] collection:   VnExpress: 288 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:16 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/home.rss
+2026-09-21 16:00:16 [INFO] collector:   ✅ Thanh Niên: 60 bài từ https://thanhnien.vn/rss/home.rss
+2026-09-21 16:00:16 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 16:00:17 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 16:00:17 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 16:00:17 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 16:00:17 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 16:00:17 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 16:00:17 [INFO] collection:   Thanh Niên: 210 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:17 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 16:00:18 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 16:00:18 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 16:00:18 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 16:00:18 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 16:00:18 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 16:00:18 [INFO] collection:     Loai bo 3 bai da dang (PUBLISHED)
+2026-09-21 16:00:18 [INFO] collection:   VietnamPlus: 147 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:18 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/home.rss
+2026-09-21 16:00:18 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/home.rss
+2026-09-21 16:00:18 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 16:00:18 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 16:00:18 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/tin-moi-nhat.rss
+2026-09-21 16:00:19 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/tin-moi-nhat.rss
+2026-09-21 16:00:19 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/thoi-su.rss
+2026-09-21 16:00:19 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/thoi-su.rss
+2026-09-21 16:00:19 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/the-gioi.rss
+2026-09-21 16:00:19 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/the-gioi.rss
+2026-09-21 16:00:19 [INFO] collection:   Tuổi Trẻ: 150 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:19 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/home.rss
+2026-09-21 16:00:19 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/home.rss
+2026-09-21 16:00:19 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/xa-hoi.rss
+2026-09-21 16:00:19 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/xa-hoi.rss
+2026-09-21 16:00:19 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/kinh-doanh.rss
+2026-09-21 16:00:20 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/kinh-doanh.rss
+2026-09-21 16:00:20 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/the-gioi.rss
+2026-09-21 16:00:20 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/the-gioi.rss
+2026-09-21 16:00:20 [INFO] collection:   Dân Trí: 400 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:20 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/tech.rss
+2026-09-21 16:00:20 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/tech.rss
+2026-09-21 16:00:20 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/xa-hoi.rss
+2026-09-21 16:00:21 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/xa-hoi.rss
+2026-09-21 16:00:21 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/kinh-doanh.rss
+2026-09-21 16:00:21 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/kinh-doanh.rss
+2026-09-21 16:00:21 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/feed.rss
+2026-09-21 16:00:21 [INFO] collector:   ✅ Nhân Dân: 50 bài từ https://nhandan.vn/rss/feed.rss
+2026-09-21 16:00:21 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/thoi-su.rss
+2026-09-21 16:00:22 [INFO] collector:   ✅ Nhân Dân: 0 bài từ https://nhandan.vn/rss/thoi-su.rss
+2026-09-21 16:00:22 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/the-gioi.rss
+2026-09-21 16:00:22 [INFO] collector:   ✅ Nhân Dân: 50 bài từ https://nhandan.vn/rss/the-gioi.rss
+2026-09-21 16:00:22 [INFO] collection:   Nhân Dân: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:22 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/home.rss
+2026-09-21 16:00:22 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/home.rss
+2026-09-21 16:00:22 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/xa-hoi.rss
+2026-09-21 16:00:22 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/xa-hoi.rss
+2026-09-21 16:00:22 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/kinh-te.rss
+2026-09-21 16:00:22 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/kinh-te.rss
+2026-09-21 16:00:22 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/trong-nuoc.rss
+2026-09-21 16:00:23 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/trong-nuoc.rss
+2026-09-21 16:00:23 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/the-gioi.rss
+2026-09-21 16:00:24 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/the-gioi.rss
+2026-09-21 16:00:24 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/kinh-te.rss
+2026-09-21 16:00:25 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/kinh-te.rss
+2026-09-21 16:00:25 [INFO] collection:   VTV News: 1500 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:25 [INFO] collector: 📡 Đang đọc RSS: Tiền Phong — https://tienphong.vn/rss/index.rss
+2026-09-21 16:00:25 [INFO] collector:   ✅ Tiền Phong: 50 bài từ https://tienphong.vn/rss/index.rss
+2026-09-21 16:00:25 [INFO] collector: 📡 Đang đọc RSS: Tiền Phong — https://tienphong.vn/rss/xa-hoi.rss
+2026-09-21 16:00:26 [INFO] collector:   ✅ Tiền Phong: 50 bài từ https://tienphong.vn/rss/xa-hoi.rss
+2026-09-21 16:00:26 [INFO] collection:   Tiền Phong: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:26 [INFO] collector: 📡 Đang đọc RSS: Công An Nhân Dân — https://cand.com.vn/rss/Home.rss
+2026-09-21 16:00:26 [INFO] collector:   ✅ Công An Nhân Dân: 50 bài từ https://cand.com.vn/rss/Home.rss
+2026-09-21 16:00:26 [INFO] collector: 📡 Đang đọc RSS: Công An Nhân Dân — https://cand.com.vn/rss/Xa-hoi.rss
+2026-09-21 16:00:26 [INFO] collector:   ✅ Công An Nhân Dân: 50 bài từ https://cand.com.vn/rss/Xa-hoi.rss
+2026-09-21 16:00:26 [INFO] collection:   Công An Nhân Dân: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:26 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/home.rss
+2026-09-21 16:00:26 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/home.rss
+2026-09-21 16:00:26 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/c/thoisu.rss
+2026-09-21 16:00:27 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/c/thoisu.rss
+2026-09-21 16:00:27 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/c/thegioi.rss
+2026-09-21 16:00:27 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/c/thegioi.rss
+2026-09-21 16:00:27 [INFO] collector: 📡 Đang đọc RSS: CafeBiz — https://cafebiz.vn/cafebiz.rss
+2026-09-21 16:00:27 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://cafebiz.vn/cafebiz.rss
+2026-09-21 16:00:27 [INFO] collector: 📡 Đang đọc RSS: GenK (Công nghệ) — https://genk.vn/rss/home.rss
+2026-09-21 16:00:27 [INFO] collector:   ✅ GenK (Công nghệ): 61 bài từ https://genk.vn/rss/home.rss
+2026-09-21 16:00:27 [INFO] collection:   GenK (Công nghệ): 61 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:00:27 [INFO] normalizer: 📝 Normalize: 30 bài hợp lệ, 0 bị loại
+2026-09-21 16:00:27 [INFO] collection:   Sau keyword filter: 19 bai (bo 11)
+2026-09-21 16:00:27 [INFO] deduplicator: Dedup: 4 unique, 15 duplicate
+2026-09-21 16:00:27 [INFO] collection:   Giu top 4 bai HOT nhat trong so 19 bai
+2026-09-21 16:00:27 [INFO] collection:     + [0.0] Xổ số miền Nam ngày 21 tháng 9 - Kết quả xổ số hôm nay ...
+2026-09-21 16:00:27 [INFO] collection:     + [0.0] Cứu sống bệnh nhân lóc động mạch chủ cấp tính type A li...
+2026-09-21 16:00:27 [INFO] collection:     + [0.0] 312.000 ha diện tích cây trồng bị ảnh hưởng bởi thiên t...
+2026-09-21 16:00:27 [INFO] collection:     + [0.0] Khẩn trương khôi phục đàn gia súc, gia cầm sau bão lũ...
+2026-09-21 16:00:27 [INFO] collection:   Hang doi hien tai: {'PROCESSED': 4, 'PROCESSING': 1, 'QUEUED': 400}
+2026-09-21 16:00:27 [INFO] collection: =======================================================
+2026-09-21 16:00:27 [INFO] collection: [PHASE 1] HOAN THANH: +4 bai HOT moi | Tong QUEUED: 400
+2026-09-21 16:00:27 [INFO] collection: =======================================================
+2026-09-21 16:02:05 [INFO] collection: =======================================================
+2026-09-21 16:02:05 [INFO] collection: [PHASE 1] BAT DAU THU THAP - 21/09/2026 16:02
+2026-09-21 16:02:05 [INFO] collection:   Config: Top 3/nguon | Max 20 bai/lan | Min trust 80
+2026-09-21 16:02:05 [INFO] collection: =======================================================
+2026-09-21 16:02:05 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 16:02:05 [INFO] collection:   Da co 1 bai duoc PUBLISHED (se loai bo).
+2026-09-21 16:02:05 [INFO] collection:   Thu thap tu 15 nguon RSS...
+2026-09-21 16:02:05 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 16:02:06 [INFO] collector:   ✅ VnExpress: 48 bài từ https://vnexpress.net/rss/tin-moi-nhat.rss
+2026-09-21 16:02:06 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 16:02:06 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/thoi-su.rss
+2026-09-21 16:02:06 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 16:02:06 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/the-gioi.rss
+2026-09-21 16:02:06 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 16:02:06 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/kinh-doanh.rss
+2026-09-21 16:02:06 [INFO] collector: 📡 Đang đọc RSS: VnExpress — https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 16:02:07 [INFO] collector:   ✅ VnExpress: 60 bài từ https://vnexpress.net/rss/khoa-hoc.rss
+2026-09-21 16:02:07 [INFO] collection:   VnExpress: 288 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:07 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/home.rss
+2026-09-21 16:02:07 [INFO] collector:   ✅ Thanh Niên: 60 bài từ https://thanhnien.vn/rss/home.rss
+2026-09-21 16:02:07 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 16:02:07 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/thoi-su.rss
+2026-09-21 16:02:07 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 16:02:07 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/the-gioi.rss
+2026-09-21 16:02:07 [INFO] collector: 📡 Đang đọc RSS: Thanh Niên — https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 16:02:07 [INFO] collector:   ✅ Thanh Niên: 50 bài từ https://thanhnien.vn/rss/kinh-te.rss
+2026-09-21 16:02:07 [INFO] collection:   Thanh Niên: 210 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:07 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 16:02:08 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/home.rss
+2026-09-21 16:02:08 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 16:02:08 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/chinh-tri-xa-hoi.rss
+2026-09-21 16:02:08 [INFO] collector: 📡 Đang đọc RSS: VietnamPlus — https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 16:02:08 [INFO] collector:   ✅ VietnamPlus: 50 bài từ https://www.vietnamplus.vn/rss/kinh-te.rss
+2026-09-21 16:02:08 [INFO] collection:     Loai bo 3 bai da dang (PUBLISHED)
+2026-09-21 16:02:08 [INFO] collection:   VietnamPlus: 147 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:08 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/home.rss
+2026-09-21 16:02:08 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/home.rss
+2026-09-21 16:02:08 [INFO] collector: 📡 Đang đọc RSS: Báo Chính phủ — https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 16:02:08 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baochinhphu.vn/rss/tin-noi-bat.rss
+2026-09-21 16:02:08 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/tin-moi-nhat.rss
+2026-09-21 16:02:08 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/tin-moi-nhat.rss
+2026-09-21 16:02:08 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/thoi-su.rss
+2026-09-21 16:02:08 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/thoi-su.rss
+2026-09-21 16:02:08 [INFO] collector: 📡 Đang đọc RSS: Tuổi Trẻ — https://tuoitre.vn/rss/the-gioi.rss
+2026-09-21 16:02:09 [INFO] collector:   ✅ Tuổi Trẻ: 50 bài từ https://tuoitre.vn/rss/the-gioi.rss
+2026-09-21 16:02:09 [INFO] collection:   Tuổi Trẻ: 150 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:09 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/home.rss
+2026-09-21 16:02:09 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/home.rss
+2026-09-21 16:02:09 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/xa-hoi.rss
+2026-09-21 16:02:09 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/xa-hoi.rss
+2026-09-21 16:02:09 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/kinh-doanh.rss
+2026-09-21 16:02:09 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/kinh-doanh.rss
+2026-09-21 16:02:09 [INFO] collector: 📡 Đang đọc RSS: Dân Trí — https://dantri.com.vn/rss/the-gioi.rss
+2026-09-21 16:02:09 [INFO] collector:   ✅ Dân Trí: 100 bài từ https://dantri.com.vn/rss/the-gioi.rss
+2026-09-21 16:02:09 [INFO] collection:   Dân Trí: 400 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:09 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/tech.rss
+2026-09-21 16:02:10 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/tech.rss
+2026-09-21 16:02:10 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/xa-hoi.rss
+2026-09-21 16:02:10 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/xa-hoi.rss
+2026-09-21 16:02:10 [INFO] collector: 📡 Đang đọc RSS: Zing News — https://zingnews.vn/kinh-doanh.rss
+2026-09-21 16:02:10 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://zingnews.vn/kinh-doanh.rss
+2026-09-21 16:02:10 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/feed.rss
+2026-09-21 16:02:11 [INFO] collector:   ✅ Nhân Dân: 50 bài từ https://nhandan.vn/rss/feed.rss
+2026-09-21 16:02:11 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/thoi-su.rss
+2026-09-21 16:02:11 [INFO] collector:   ✅ Nhân Dân: 0 bài từ https://nhandan.vn/rss/thoi-su.rss
+2026-09-21 16:02:11 [INFO] collector: 📡 Đang đọc RSS: Nhân Dân — https://nhandan.vn/rss/the-gioi.rss
+2026-09-21 16:02:11 [INFO] collector:   ✅ Nhân Dân: 50 bài từ https://nhandan.vn/rss/the-gioi.rss
+2026-09-21 16:02:11 [INFO] collection:   Nhân Dân: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:11 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/home.rss
+2026-09-21 16:02:11 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/home.rss
+2026-09-21 16:02:11 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/xa-hoi.rss
+2026-09-21 16:02:11 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/xa-hoi.rss
+2026-09-21 16:02:11 [INFO] collector: 📡 Đang đọc RSS: Lao Động — https://laodong.vn/rss/kinh-te.rss
+2026-09-21 16:02:11 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://laodong.vn/rss/kinh-te.rss
+2026-09-21 16:02:11 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/trong-nuoc.rss
+2026-09-21 16:02:12 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/trong-nuoc.rss
+2026-09-21 16:02:12 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/the-gioi.rss
+2026-09-21 16:02:12 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/the-gioi.rss
+2026-09-21 16:02:12 [INFO] collector: 📡 Đang đọc RSS: VTV News — https://vtv.vn/rss/kinh-te.rss
+2026-09-21 16:02:13 [INFO] collector:   ✅ VTV News: 500 bài từ https://vtv.vn/rss/kinh-te.rss
+2026-09-21 16:02:13 [INFO] collection:   VTV News: 1500 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:13 [INFO] collector: 📡 Đang đọc RSS: Tiền Phong — https://tienphong.vn/rss/index.rss
+2026-09-21 16:02:13 [INFO] collector:   ✅ Tiền Phong: 50 bài từ https://tienphong.vn/rss/index.rss
+2026-09-21 16:02:13 [INFO] collector: 📡 Đang đọc RSS: Tiền Phong — https://tienphong.vn/rss/xa-hoi.rss
+2026-09-21 16:02:13 [INFO] collector:   ✅ Tiền Phong: 50 bài từ https://tienphong.vn/rss/xa-hoi.rss
+2026-09-21 16:02:13 [INFO] collection:   Tiền Phong: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:13 [INFO] collector: 📡 Đang đọc RSS: Công An Nhân Dân — https://cand.com.vn/rss/Home.rss
+2026-09-21 16:02:14 [INFO] collector:   ✅ Công An Nhân Dân: 50 bài từ https://cand.com.vn/rss/Home.rss
+2026-09-21 16:02:14 [INFO] collector: 📡 Đang đọc RSS: Công An Nhân Dân — https://cand.com.vn/rss/Xa-hoi.rss
+2026-09-21 16:02:14 [INFO] collector:   ✅ Công An Nhân Dân: 50 bài từ https://cand.com.vn/rss/Xa-hoi.rss
+2026-09-21 16:02:14 [INFO] collection:   Công An Nhân Dân: 100 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:14 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/home.rss
+2026-09-21 16:02:14 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/home.rss
+2026-09-21 16:02:14 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/c/thoisu.rss
+2026-09-21 16:02:14 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/c/thoisu.rss
+2026-09-21 16:02:14 [INFO] collector: 📡 Đang đọc RSS: Báo Mới (tổng hợp) — https://baomoi.com/rss/c/thegioi.rss
+2026-09-21 16:02:14 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://baomoi.com/rss/c/thegioi.rss
+2026-09-21 16:02:14 [INFO] collector: 📡 Đang đọc RSS: CafeBiz — https://cafebiz.vn/cafebiz.rss
+2026-09-21 16:02:14 [WARNING] collector: ⚠️ RSS lỗi hoặc không hợp lệ: https://cafebiz.vn/cafebiz.rss
+2026-09-21 16:02:14 [INFO] collector: 📡 Đang đọc RSS: GenK (Công nghệ) — https://genk.vn/rss/home.rss
+2026-09-21 16:02:15 [INFO] collector:   ✅ GenK (Công nghệ): 61 bài từ https://genk.vn/rss/home.rss
+2026-09-21 16:02:15 [INFO] collection:   GenK (Công nghệ): 61 bai -> chon top 3 bai HOT nhat
+2026-09-21 16:02:15 [INFO] normalizer: 📝 Normalize: 30 bài hợp lệ, 0 bị loại
+2026-09-21 16:02:15 [INFO] collection:   Sau keyword filter: 21 bai (bo 9)
+2026-09-21 16:02:15 [INFO] deduplicator: Dedup: 17 unique, 4 duplicate
+2026-09-21 16:02:15 [INFO] collection:   Giu top 17 bai HOT nhat trong so 21 bai
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Chất công nghệ tạo nét riêng cho Lynk & Co 08...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Chiều cao của trẻ thay đổi thế nào qua từng giai đoạn...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Xổ số miền Nam ngày 21 tháng 9 - Kết quả xổ số hôm nay ...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Độc lạ bộ ảnh đám cưới ngập nước, cả làng lội nước ở Hà...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Cứu sống bệnh nhân lóc động mạch chủ cấp tính type A li...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Phó Thủ tướng yêu cầu nghiên cứu thuế chống đầu cơ, xử ...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Xét xử vi phạm đất đai theo cơ chế đặc thù: Khắc phục h...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Chủ tịch Trung Quốc sẽ trao đổi loạt vấn đề quan trọng ...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Từ EUDR đến cơ hội nâng giá trị cà-phê Việt...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Thành Chung lỡ hẹn FIFA ASEAN Cup 2026, Đăng Khoa được ...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] [Ảnh] Hà Nội: Ba mặt hồ tạo khoảng xanh trên trục Tố Hữ...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] 312.000 ha diện tích cây trồng bị ảnh hưởng bởi thiên t...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Khẩn trương khôi phục đàn gia súc, gia cầm sau bão lũ...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Cô gái Italy yêu chàng trai Hà Giang sau 1 tuần quen...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Hà Nội: Sau va chạm, cô gái bị cuốn vào gầm xe buýt...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Muốn giảm tốc phát triển AI để an toàn cho nhân loại, A...
+2026-09-21 16:02:15 [INFO] collection:     + [0.0] Mỗi ngành một cái tên quen thuộc: Bức tranh tin dùng củ...
+2026-09-21 16:02:15 [INFO] collection:   Hang doi hien tai: {'PROCESSED': 4, 'PROCESSING': 1, 'QUEUED': 17}
+2026-09-21 16:02:15 [INFO] collection: =======================================================
+2026-09-21 16:02:15 [INFO] collection: [PHASE 1] HOAN THANH: +17 bai HOT moi | Tong QUEUED: 17
+2026-09-21 16:02:15 [INFO] collection: =======================================================
+2026-09-21 16:07:34 [INFO] review_ui: ⚡ Đang chạy AI tạo bài từ tin HOT nhất #424: '312.000 ha diện tích cây trồng bị ảnh hưởng bởi thiên tai'...
+2026-09-21 16:07:36 [INFO] analyzer: Analyzing: 312.000 ha diện tích cây trồng bị ảnh hưởng bởi thiên tai...
+2026-09-21 16:07:40 [INFO] analyzer:   Score: 88/100 | Publish: True | Topic: xã hội
+2026-09-21 16:07:40 [INFO] writer: ✍️ Writing: 312.000 ha diện tích cây trồng bị ảnh hưởng bởi thiên tai...
+2026-09-21 16:07:42 [INFO] writer:   ✅ Written: 'Hơn 300.000 ha cây trồng thiệt hại do bão số 3 và '
+2026-09-21 16:07:43 [INFO] image_generator: 🎨 Đang tạo prompt ảnh bằng Gemini...
+2026-09-21 16:07:45 [INFO] image_generator: 🖼 Đang gọi Imagen API cho Post #4...
+2026-09-21 16:07:45 [INFO] image_generator: ℹ️ Imagen API chưa khả dụng (This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.). Chuyển sang Pollinations...
+2026-09-21 16:07:45 [INFO] image_generator: 🎨 Pollinations ảnh 1/3...
+2026-09-21 16:07:48 [INFO] image_generator: ✅ Pollinations ảnh 1: post_4_20260921_160745_0.png
+2026-09-21 16:07:48 [INFO] image_generator: 🎨 Pollinations ảnh 2/3...
+2026-09-21 16:08:18 [WARNING] image_generator: ⚠️ Pollinations ảnh 2 thất bại: The read operation timed out
+2026-09-21 16:08:18 [INFO] image_generator: 🎨 Pollinations ảnh 2/3...
+2026-09-21 16:08:19 [INFO] image_generator: 🖼 Đã tạo 1 ảnh cho Post #4
+2026-09-21 16:08:19 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-21 16:13:51 [INFO] review_ui: Updated Post #4 -> READY
+2026-09-21 16:13:54 [INFO] review_ui: Updated Post #2 -> READY
+2026-09-21 16:13:57 [INFO] review_ui: Updated Post #1 -> READY
+2026-09-21 17:03:47 [INFO] review_ui: ⚡ Đang chạy AI tạo bài từ tin HOT nhất #425: 'Khẩn trương khôi phục đàn gia súc, gia cầm sau bão lũ'...
+2026-09-21 17:03:53 [INFO] analyzer: Analyzing: Khẩn trương khôi phục đàn gia súc, gia cầm sau bão lũ...
+2026-09-21 17:03:58 [INFO] analyzer:   Score: 90/100 | Publish: True | Topic: xã hội
+2026-09-21 17:03:58 [INFO] writer: ✍️ Writing: Khẩn trương khôi phục đàn gia súc, gia cầm sau bão lũ...
+2026-09-21 17:04:00 [INFO] writer:   ✅ Written: 'Khẩn trương khôi phục đàn gia súc, gia cầm sau bão'
+2026-09-21 17:04:01 [INFO] image_generator: 🎨 Đang tạo prompt ảnh bằng Gemini...
+2026-09-21 17:04:03 [INFO] image_generator: 🖼 Đang gọi Imagen API cho Post #5...
+2026-09-21 17:04:03 [INFO] image_generator: ℹ️ Imagen API chưa khả dụng (This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.). Chuyển sang Pollinations...
+2026-09-21 17:04:03 [INFO] image_generator: 🎨 Pollinations ảnh 1/3...
+2026-09-21 17:04:06 [INFO] image_generator: ✅ Pollinations ảnh 1: post_5_20260921_170403_0.png
+2026-09-21 17:04:06 [INFO] image_generator: 🎨 Pollinations ảnh 2/3...
+2026-09-21 17:04:36 [WARNING] image_generator: ⚠️ Pollinations ảnh 2 thất bại: The read operation timed out
+2026-09-21 17:04:36 [INFO] image_generator: 🎨 Pollinations ảnh 2/3...
+2026-09-21 17:04:37 [INFO] image_generator: 🖼 Đã tạo 1 ảnh cho Post #5
+2026-09-21 17:04:37 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-21 17:05:27 [INFO] review_ui: Updated Post #5 -> READY
+2026-09-21 17:05:55 [INFO] publisher: 🚀 Đang đăng bài #5 lên UCircle (Lần thử 1/1)...
+2026-09-21 17:05:57 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 17:06:01 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Tin Tức 24h' (Circle - Xác nhận thành công)
+2026-09-21 17:06:02 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-21 17:06:03 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-21 17:06:03 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-21 17:06:03 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-21 17:06:03 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-21 17:06:07 [INFO] publisher: ✅ Popup soạn thảo đã đóng - Đăng bài thành công!
+2026-09-21 17:06:07 [INFO] publisher: 🎉 Xuất bản thành công Post #5 -> ID: ucircle_post_1789985167
+2026-09-21 17:06:07 [INFO] review_ui: 🚀 Queue Publish [1/4]: Bài #5 'Khẩn trương khôi phục đàn gia súc, gia cầm sau bão': SUCCESS
+2026-09-21 17:06:07 [INFO] review_ui: ⏳ Nghỉ 900s trước bài tiếp theo...
+2026-09-21 17:07:27 [INFO] publish: =======================================================
+2026-09-21 17:07:27 [INFO] publish: [PHASE 2] BAT DAU PUBLISH - 21/09/2026 17:07
+2026-09-21 17:07:27 [INFO] publish:   Mode: manual_review | Dry-run: False
+2026-09-21 17:07:27 [INFO] publish: =======================================================
+2026-09-21 17:07:27 [INFO] storage: Database initialized: data/automation.db
+2026-09-21 17:07:27 [INFO] publish: 🎯 Phát hiện bài #1 đã duyệt (READY) đang chờ đăng: 'Định hướng mới trong việc sửa đổi Luật Đất đai'
+2026-09-21 17:07:27 [INFO] publish: 🚀 Tiến hành đăng bài #1 lên UCircle...
+2026-09-21 17:07:27 [INFO] publisher: 🚀 Đang đăng bài #1 lên UCircle (Lần thử 1/3)...
+2026-09-21 17:07:28 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-21 17:07:32 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Tin Tức 24h' (Circle - Xác nhận thành công)
+2026-09-21 17:07:33 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-21 17:07:34 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-21 17:07:34 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-21 17:07:34 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-21 17:07:34 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-21 17:07:46 [INFO] publisher: ✅ Popup soạn thảo đã đóng - Đăng bài thành công!
+2026-09-21 17:07:47 [INFO] publisher: 🎉 Xuất bản thành công Post #1 -> ID: ucircle_post_1789985267
+2026-09-21 17:07:47 [INFO] publish: 🎉 Đăng bài thành công!
+2026-09-21 17:12:12 [INFO] review_ui: ⚡ Đang chạy AI tạo bài từ tin #421...
+2026-09-21 17:12:14 [INFO] analyzer: Analyzing: Từ EUDR đến cơ hội nâng giá trị cà-phê Việt...
+2026-09-21 17:12:17 [INFO] analyzer:   Score: 88/100 | Publish: True | Topic: kinh tế
+2026-09-21 17:12:17 [INFO] writer: ✍️ Writing: Từ EUDR đến cơ hội nâng giá trị cà-phê Việt...
+2026-09-21 17:12:20 [INFO] writer:   ✅ Written: 'Cơ hội nâng cao giá trị cà phê Việt Nam từ các tiê'
+2026-09-21 17:12:21 [INFO] image_generator: 🎨 Đang tạo prompt ảnh bằng Gemini...
+2026-09-21 17:12:23 [INFO] image_generator: 🖼 Đang gọi Imagen API cho Post #6...
+2026-09-21 17:12:23 [INFO] image_generator: ℹ️ Imagen API chưa khả dụng (This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.). Chuyển sang Pollinations...
+2026-09-21 17:12:23 [INFO] image_generator: 🎨 Pollinations ảnh 1/3...
+2026-09-21 17:12:27 [INFO] image_generator: ✅ Pollinations ảnh 1: post_6_20260921_171223_0.png
+2026-09-21 17:12:27 [INFO] image_generator: 🎨 Pollinations ảnh 2/3...
+2026-09-21 17:12:57 [WARNING] image_generator: ⚠️ Pollinations ảnh 2 thất bại: The read operation timed out
+2026-09-21 17:12:57 [INFO] image_generator: 🎨 Pollinations ảnh 2/3...
+2026-09-21 17:12:57 [INFO] image_generator: 🖼 Đã tạo 1 ảnh cho Post #6
+2026-09-21 17:12:57 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-21 17:17:37 [INFO] review_ui: ⚡ Đang chạy AI tạo bài từ tin #422...
+2026-09-21 17:17:37 [INFO] analyzer: Analyzing: Thành Chung lỡ hẹn FIFA ASEAN Cup 2026, Đăng Khoa được triệu...
+2026-09-21 17:17:39 [INFO] analyzer:   Score: 93/100 | Publish: True | Topic: thể thao
+2026-09-21 17:17:39 [INFO] writer: ✍️ Writing: Thành Chung lỡ hẹn FIFA ASEAN Cup 2026, Đăng Khoa được triệu...
+2026-09-21 17:17:41 [INFO] writer:   ✅ Written: 'Đội tuyển Việt Nam chuẩn bị cho FIFA ASEAN Cup 202'
+2026-09-21 17:17:42 [INFO] image_generator: 🎨 Đang tạo prompt ảnh bằng Gemini...
+2026-09-21 17:17:44 [INFO] image_generator: 🖼 Đang gọi Imagen API cho Post #7...
+2026-09-21 17:17:44 [INFO] image_generator: ℹ️ Imagen API chưa khả dụng (This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.). Chuyển sang Pollinations...
+2026-09-21 17:17:44 [INFO] image_generator: 🎨 Pollinations ảnh 1/3...
+2026-09-21 17:17:47 [INFO] image_generator: ✅ Pollinations ảnh 1: post_7_20260921_171744_0.png
+2026-09-21 17:17:47 [INFO] image_generator: 🎨 Pollinations ảnh 2/3...
+2026-09-21 17:18:17 [WARNING] image_generator: ⚠️ Pollinations ảnh 2 thất bại: The read operation timed out
+2026-09-21 17:18:17 [INFO] image_generator: 🎨 Pollinations ảnh 2/3...
+2026-09-21 17:18:18 [INFO] image_generator: 🖼 Đã tạo 1 ảnh cho Post #7
+2026-09-21 17:18:18 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-21 17:18:31 [INFO] review_ui: Updated Post #7 -> READY
+2026-09-21 17:18:36 [INFO] review_ui: Updated Post #4 -> READY
+2026-09-21 17:18:44 [INFO] review_ui: Updated Post #2 -> READY

@@ -1,0 +1,2748 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCircle AI Content Automation — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    .top-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .action-group {
+      display: flex;
+      gap: 12px;
+    }
+    .btn-action {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    }
+    .btn-action.btn-publish-next {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+    .btn-action.btn-publish-next:hover {
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    }
+    .tab-nav {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px 18px;
+      color: #94a3b8;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f1f5f9;
+    }
+    .tab-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #38bdf8;
+      box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4);
+    }
+    .tab-pane {
+      display: block;
+    }
+    .section-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .section-title-large {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .queue-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 0.95rem;
+    }
+    .queue-table th, .queue-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .queue-table th {
+      background: #0f172a;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+    .queue-table tr:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .badge-trust {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+  
+    .ai-spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(56, 189, 248, 0.2);
+      border-top-color: #38bdf8;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .toast-container {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 100001;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      pointer-events: none;
+    }
+    .toast-msg {
+      pointer-events: auto;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      padding: 14px 20px;
+      color: #f1f5f9;
+      font-size: 0.95rem;
+      font-weight: 500;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 280px;
+      max-width: 440px;
+      animation: slideInRight 0.3s ease-out;
+      transition: all 0.3s;
+    }
+    .toast-success { border-left: 4px solid #10b981; }
+    .toast-error { border-left: 4px solid #ef4444; }
+    .toast-info { border-left: 4px solid #38bdf8; }
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes glowHighlight {
+      0% { box-shadow: 0 0 5px rgba(56, 189, 248, 0.4); border-color: #38bdf8; }
+      50% { box-shadow: 0 0 30px rgba(56, 189, 248, 0.9); border-color: #38bdf8; }
+      100% { box-shadow: 0 0 5px rgba(56, 189, 248, 0.4); border-color: rgba(255, 255, 255, 0.08); }
+    }
+    .newly-created-card {
+      animation: glowHighlight 3s infinite ease-in-out;
+    }
+
+
+    /* ─── MODAL DIALOG & OVERLAY STYLES ─── */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(10, 15, 30, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .modal-overlay.show {
+      display: flex !important;
+      opacity: 1 !important;
+    }
+    .btn-preset {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-preset:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+    .btn-preset.active {
+      background: #0284c7;
+      border-color: #38bdf8;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+    }
+    .modal-dialog {
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.15);
+      overflow: hidden;
+      animation: zoomInDialog 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .publish-queue-dialog {
+      width: min(1120px, calc(100vw - 32px));
+      max-width: 1120px !important;
+      max-height: 94vh;
+      padding: 28px !important;
+      overflow-y: auto;
+    }
+    .queue-history-card {
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.72);
+      padding: 11px 13px;
+      margin-top: 9px;
+    }
+    .queue-history-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      color: #e2e8f0;
+    }
+    .queue-history-log {
+      max-height: 230px;
+      overflow-y: auto;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.34);
+      color: #94a3b8;
+      line-height: 1.55;
+      font-size: 0.82rem;
+    }
+    @media (max-width: 720px) {
+      .publish-queue-dialog {
+        width: calc(100vw - 16px);
+        padding: 16px !important;
+      }
+      .queue-history-summary {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+    @keyframes zoomInDialog {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+    }
+    .modal-header h2 {
+      font-size: 1.15rem;
+      margin: 0;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-close-modal {
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: #94a3b8;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .btn-close-modal:hover {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+    }
+    .modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      background: #0f172a;
+    }
+    /* Preview Feed Card */
+    .preview-pane {
+      background: #0f172a;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .pane-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ucircle-preview-card {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .ucircle-author {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .ucircle-avatar {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+      font-size: 0.85rem;
+    }
+    .ucircle-meta-name {
+      font-weight: 700;
+      color: #f1f5f9;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ucircle-tag-ai {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .ucircle-meta-sub {
+      color: #64748b;
+      font-size: 0.8rem;
+    }
+    .ucircle-post-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .ucircle-post-image {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      max-height: 240px;
+      object-fit: cover;
+    }
+    .ucircle-post-text {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .ucircle-bullets {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+    .ucircle-bullets ul {
+      margin: 6px 0 0 16px;
+      padding: 0;
+    }
+    .ucircle-bullets li {
+      margin-bottom: 4px;
+    }
+    .ucircle-hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .ucircle-source-box {
+      font-size: 0.82rem;
+      color: #64748b;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 10px;
+    }
+    /* Eligibility Pane */
+    .eligibility-pane {
+      background: #0f172a;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .verdict-banner {
+      border-radius: 10px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .verdict-banner.eligible {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .verdict-banner.warning {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .verdict-banner.ineligible {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .verdict-icon {
+      font-size: 1.8rem;
+    }
+    .verdict-text-main {
+      font-weight: 700;
+      color: #f1f5f9;
+      font-size: 0.95rem;
+    }
+    .verdict-desc {
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+    .stats-grid-mini {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .stat-box-mini {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+    .stat-val-mini {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+    .stat-lbl-mini {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+    .checklist-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+      max-height: 240px;
+    }
+    .checklist-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .checklist-item.pass { border-left: 3px solid #10b981; }
+    .checklist-item.warn { border-left: 3px solid #f59e0b; }
+    .checklist-item.fail { border-left: 3px solid #ef4444; }
+    .item-title {
+      font-weight: 600;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .item-detail {
+      color: #94a3b8;
+      font-size: 0.78rem;
+      margin-top: 2px;
+    }
+    .item-badge-crit {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+      font-size: 0.7rem;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .ucircle-account-panel {
+      margin-bottom: 20px;
+      padding: 16px 18px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.09), rgba(30, 41, 59, 0.78));
+    }
+    .ucircle-account-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .ucircle-account-title { font-weight: 800; color: #e0f2fe; font-size: 1rem; }
+    .ucircle-account-note { color: #94a3b8; font-size: 0.82rem; margin-top: 3px; }
+    .ucircle-account-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ucircle-account-actions button {
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 8px;
+      padding: 8px 11px;
+      color: #e2e8f0;
+      background: rgba(15, 23, 42, 0.75);
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.82rem;
+    }
+    .ucircle-account-actions button:disabled { opacity: 0.48; cursor: not-allowed; }
+    .ucircle-account-actions .primary { background: #0369a1; border-color: #0ea5e9; }
+    .ucircle-account-actions .success { background: #047857; border-color: #10b981; }
+    .ucircle-account-status {
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .account-state-badge {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.16);
+      color: #fbbf24;
+      font-weight: 800;
+    }
+    .account-state-badge.ready { background: rgba(16, 185, 129, 0.16); color: #34d399; }
+    .circle-discovery-list {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .circle-discovery-item {
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 9px;
+      background: rgba(15, 23, 42, 0.55);
+      color: #cbd5e1;
+      font-size: 0.82rem;
+    }
+    .circle-discovery-item strong { color: #f1f5f9; }
+    .circle-discovery-item small { color: #64748b; display: block; margin-top: 2px; }
+    .circle-discovery-list.compact { flex-direction: row; flex-wrap: wrap; }
+    .media-source-status { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+    .circle-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 10px; border-radius: 999px;
+      background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.18);
+      color: #cbd5e1; font-size: 0.78rem;
+    }
+    .circle-chip.enabled { color: #86efac; border-color: rgba(34, 197, 94, 0.55); background: rgba(34,197,94,.1); }
+    .circle-workspace {
+      margin: 0;
+      padding: 13px;
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.72);
+      max-height: 72vh;
+      overflow-y: auto;
+    }
+    .circle-board {
+      display: grid; grid-auto-flow: column; grid-auto-columns: minmax(310px, 350px);
+      gap: 14px; overflow-x: auto; align-items: start; padding: 2px 2px 18px;
+      scroll-snap-type: x proximity;
+    }
+    .circle-board .circle-workspace { scroll-snap-align: start; }
+    .circle-workspace-header {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 14px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .circle-workspace-header h2 { margin: 0 0 5px; color: #f8fafc; }
+    .circle-workspace-header p { margin: 0; color: #94a3b8; }
+    .circle-live-state {
+      display: inline-flex; margin-top: 7px; padding: 3px 8px; border-radius: 999px;
+      font-size: .7rem; font-weight: 850; letter-spacing: .02em;
+    }
+    .circle-live-state.on { color: #86efac; background: rgba(34,197,94,.13); border: 1px solid rgba(34,197,94,.35); }
+    .circle-live-state.off { color: #94a3b8; background: rgba(100,116,139,.12); border: 1px solid rgba(100,116,139,.25); }
+    .circle-inline-config {
+      margin-bottom: 14px; padding: 13px; border-radius: 10px;
+      background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+    .circle-inline-config > summary, .circle-matched-list > summary {
+      cursor: pointer; color: #7dd3fc; font-weight: 800; list-style: none;
+    }
+    .circle-inline-config > summary::-webkit-details-marker,
+    .circle-matched-list > summary::-webkit-details-marker { display: none; }
+    .circle-inline-config > summary::after, .circle-matched-list > summary::after {
+      content: '▾'; float: right; color: #64748b;
+    }
+    .circle-inline-config[open] > summary::after, .circle-matched-list[open] > summary::after { content: '▴'; }
+    .circle-config-body { margin-top: 12px; }
+    .circle-posts-title { margin: 16px 0 10px; color: #86efac; font-weight: 800; }
+    .circle-card-tools { display: flex; align-items: center; gap: 6px; }
+    .circle-card-tools button {
+      border: 1px solid rgba(255,255,255,.12); background: rgba(30,41,59,.8);
+      color: #cbd5e1; border-radius: 7px; padding: 5px 7px; cursor: pointer;
+    }
+    .circle-select { width: 18px; height: 18px; accent-color: #8b5cf6; }
+    .circle-workspace .posts-grid { display: flex; flex-direction: column; gap: 8px; }
+    .compact-post {
+      border: 1px solid rgba(148,163,184,.16); border-radius: 10px;
+      background: rgba(30,41,59,.72); overflow: hidden;
+    }
+    .compact-post > summary {
+      cursor: pointer; list-style: none; padding: 10px; display: grid; gap: 6px;
+    }
+    .compact-post > summary::-webkit-details-marker { display: none; }
+    .compact-post-title { color: #f8fafc; font-weight: 750; font-size: .9rem; line-height: 1.35; }
+    .compact-post-meta { display: flex; justify-content: space-between; gap: 8px; color: #94a3b8; font-size: .72rem; }
+    .compact-post-detail { padding: 0 10px 11px; border-top: 1px solid rgba(148,163,184,.12); }
+    .compact-post .post-summary { max-height: 120px; overflow-y: auto; }
+    .compact-post .post-image-container { height: 145px; }
+    .add-circle-bar {
+      display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 12px;
+    }
+    .add-circle-bar select {
+      background: #0f172a; color: #e2e8f0; border: 1px solid rgba(56,189,248,.3);
+      padding: 8px 10px; border-radius: 8px; min-width: 220px;
+    }
+    .global-control-bar {
+      position: sticky; bottom: 10px; z-index: 50; display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr)); gap: 10px;
+      margin: 18px 0; padding: 12px; border-radius: 14px;
+      background: rgba(2,6,23,.94); border: 1px solid rgba(139,92,246,.38);
+      box-shadow: 0 12px 35px rgba(0,0,0,.45); backdrop-filter: blur(12px);
+    }
+    .global-control-bar button { justify-content: center; width: 100%; }
+    .top-toolbar, .stats-section, #section-queue { display: none !important; }
+    .circle-matched-list {
+      margin-bottom: 18px; padding: 12px; border-radius: 10px;
+      background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(14, 165, 233, 0.2);
+    }
+    .matched-title { color: #7dd3fc; font-weight: 700; margin-bottom: 8px; }
+    .matched-row {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 12px; padding: 10px 0; border-top: 1px solid rgba(148, 163, 184, 0.15);
+    }
+    .matched-row a { color: #f1f5f9; text-decoration: none; font-weight: 600; }
+    .matched-row small { display: block; color: #94a3b8; margin-top: 4px; }
+    .matched-empty { color: #94a3b8; padding: 8px 0; }
+    @media (max-width: 720px) {
+      .matched-row { align-items: stretch; flex-direction: column; }
+      .circle-board { grid-auto-columns: minmax(285px, 88vw); }
+      .global-control-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .circle-config-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 9px;
+    }
+    .circle-config-options { display: flex; gap: 14px; flex-wrap: wrap; }
+    .circle-config-options label { display: flex; align-items: center; gap: 6px; color: #cbd5e1; font-weight: 700; }
+    .circle-config-options input { width: 17px; height: 17px; accent-color: #0ea5e9; }
+    .circle-config-prompt {
+      width: 100%;
+      min-height: 76px;
+      resize: vertical;
+      padding: 9px 11px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 8px;
+      background: rgba(2, 6, 23, 0.6);
+      color: #e2e8f0;
+      font: inherit;
+      line-height: 1.45;
+    }
+    .circle-display-name {
+      width: 100%; box-sizing: border-box; margin-bottom: 8px; padding: 9px 11px;
+      border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px;
+      background: rgba(2, 6, 23, 0.6); color: #e2e8f0; font: inherit; font-weight: 700;
+    }
+    .media-platform-options {
+      display: flex; flex-wrap: wrap; gap: 7px 10px; align-items: center;
+      margin: 0 0 8px; color: #cbd5e1; font-size: .78rem;
+    }
+    .media-platform-options > span { width: 100%; color: #7dd3fc; font-weight: 800; }
+    .media-platform-options label { display: inline-flex; align-items: center; gap: 4px; }
+    .platform-badge {
+      display: inline-block; padding: 1px 5px; border-radius: 5px;
+      background: rgba(148,163,184,.15); color: #cbd5e1; font-size: .65rem; font-weight: 800;
+    }
+    .platform-youtube { color: #fca5a5; background: rgba(239,68,68,.15); }
+    .platform-facebook, .platform-facebook_reel { color: #93c5fd; background: rgba(59,130,246,.15); }
+    .circle-config-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+    .circle-config-actions button {
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 7px;
+      padding: 7px 10px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #e2e8f0;
+      background: rgba(30, 41, 59, 0.9);
+    }
+    .circle-config-actions .save-circle { background: #0369a1; }
+    .circle-config-actions .generate-circle { background: #047857; }
+    .circle-config-actions button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+</style>
+</head>
+<body>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- MODAL TIẾN TRÌNH TẠO BÀI VIẾT AI -->
+  <div class="modal-overlay" id="aiProgressModal" style="display:none; z-index:100000;">
+    <div class="modal-dialog" style="max-width: 480px; text-align: center; padding: 32px 24px;">
+      <div class="ai-spinner"></div>
+      <h3 id="aiProgressHeading" style="color: #38bdf8; margin: 18px 0 8px; font-size: 1.25rem;">🤖 Đang tạo bản nháp bài viết...</h3>
+      <p id="aiProgressTitle" style="color: #f1f5f9; font-size: 0.92rem; font-weight: 600; margin-bottom: 16px; line-height: 1.4;"></p>
+      <div style="text-align: left; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 16px 20px; font-size: 0.88rem; color: #cbd5e1;">
+        <div id="step1" style="margin-bottom: 10px; color: #38bdf8;">⏳ 1. Phân tích nội dung & trích xuất sự kiện...</div>
+        <div id="step2" style="margin-bottom: 10px; color: #94a3b8;">⏳ 2. Biên tập bài viết, tóm tắt & hashtag...</div>
+        <div id="step3" style="margin-bottom: 10px; color: #94a3b8;">⏳ 3. Tạo 2–3 hình ảnh minh họa chất lượng cao...</div>
+        <div id="step4" style="color: #94a3b8;">⏳ 4. Kiểm duyệt & thẩm định tiêu chuẩn chất lượng...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-area">
+        <div class="logo-badge">AI</div>
+        <div>
+          <h1>UCircle Feed Automation</h1>
+          <p class="subtitle">Hệ thống phân tích, tóm tắt tin tức & tạo ảnh AI tự động</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="status-indicator live"></span>
+        <span class="mode-tag">Chế độ: Nhiều Circle sở hữu</span>
+      </div>
+    </header>
+
+    <section class="ucircle-account-panel" aria-label="Quản lý tài khoản UCircle">
+      <div class="ucircle-account-head">
+        <div>
+          <div class="ucircle-account-title">🔐 Tài khoản UCircle & danh sách Circle</div>
+          <div class="ucircle-account-note">Chỉ hiển thị Circle bạn sở hữu. Mỗi lượt quét chọn một tin nổi bật, tự tạo bài và đưa sang Chờ đăng.</div>
+        </div>
+        <div class="ucircle-account-actions">
+          <button type="button" class="primary" id="btnUcircleLogin" onclick="startUcircleLogin()">🌐 Mở đăng nhập</button>
+          <button type="button" class="success" id="btnUcircleSave" onclick="saveUcircleSession()" disabled>💾 Lưu phiên</button>
+          <button type="button" id="btnUcircleCancel" onclick="cancelUcircleLogin()" disabled>✕ Hủy</button>
+          <button type="button" id="btnScanCircles" onclick="scanUcircleCircles()">🔎 Quét Circle</button>
+        </div>
+      </div>
+      <div class="ucircle-account-status">
+        <span class="account-state-badge" id="ucircleAccountBadge">Đang kiểm tra</span>
+        <span id="ucircleAccountMessage">Đang đọc trạng thái phiên UCircle...</span>
+      </div>
+      <div class="media-source-status">
+        <span class="circle-chip {% if media_source_status.youtube_ready %}enabled{% endif %}">▶ YouTube API: {{ 'Sẵn sàng' if media_source_status.youtube_ready else 'Chưa có khóa' }}</span>
+        <span class="circle-chip {% if media_source_status.facebook_ready %}enabled{% endif %}" id="facebookStatusBadge">Facebook/Reels: {% if media_source_status.facebook_ready %}Đã kết nối {{ media_source_status.facebook_page_count }} Page{% elif media_source_status.facebook_credentials_ready %}Sẵn sàng đăng nhập{% else %}Thiếu App ID/Secret{% endif %}</span>
+        <button type="button" class="btn-action" id="btnFacebookLogin" onclick="startFacebookLogin()" {% if not media_source_status.facebook_credentials_ready %}disabled{% endif %}>f Đăng nhập Facebook</button>
+        <span class="circle-chip enabled">🛡 Không tải/đăng lại video</span>
+        <label class="circle-chip enabled" for="publishBrowserHidden" title="Chỉ ẩn trình duyệt chạy đăng bài tự động. Cửa sổ đăng nhập UCircle vẫn luôn hiển thị.">
+          <input type="checkbox" id="publishBrowserHidden" onchange="saveBrowserVisibility(this)" {% if publish_browser_hidden %}checked{% endif %}>
+          🕶 Ẩn trình duyệt khi chạy
+        </label>
+      </div>
+      <div class="circle-discovery-list" id="ucircleCircleList"></div>
+      <details class="image-settings">
+        <summary>🖼 Dịch vụ tạo ảnh · Gemini đọc toàn bài để thiết kế và kiểm tra</summary>
+        <div class="image-settings-controls">
+          <label>Dịch vụ sinh ảnh
+            <select id="imageProvider">
+              <option value="pollinations" {% if image_settings.provider != 'gemini' %}selected{% endif %}>Pollinations · Gemini thiết kế prompt</option>
+              <option value="gemini" {% if image_settings.provider == 'gemini' %}selected{% endif %}>Gemini trực tiếp sinh ảnh</option>
+            </select>
+          </label>
+          <label>Model ảnh Gemini
+            <input id="imageGeminiModel" value="{{ image_settings.gemini_model or 'gemini-3.1-flash-image' }}" maxlength="100">
+          </label>
+          <label><input type="checkbox" id="imageGeminiEnabled" {% if image_settings.gemini_generation_enabled %}checked{% endif %}> Bật sinh ảnh Gemini (model ảnh có thể cần tài khoản tính phí)</label>
+          <button type="button" class="btn btn-inspect" onclick="saveImageSettings(this)">💾 Lưu dịch vụ ảnh</button>
+        </div>
+        <p class="image-status-note">Ưu tiên ảnh nguồn. Mọi ảnh phải được kiểm tra với toàn bài; hết hạn mức sẽ giữ bài ở Chờ ảnh. Hiện chọn: <span id="currentImageProvider">{{ image_settings.provider or 'pollinations' }}</span>.</p>
+      </details>
+    </section>
+
+    <!-- Top Toolbar with Actions -->
+    <div class="top-toolbar">
+      <div class="tab-nav">
+        <button type="button" class="tab-btn active" id="tabBtnPosts" onclick="switchView('posts')">
+          📝 Bài viết AI ({{ total_posts_count }})
+        </button>
+        <button type="button" class="tab-btn" id="tabBtnQueue" onclick="switchView('queue')">
+          📥 Hàng đợi tin tức ({{ queued_count }})
+        </button>
+        <button type="button" class="tab-btn" id="tabBtnAll" onclick="switchView('all')">
+          👁️ Gộp chung (Xem cả 2 mục)
+        </button>
+      </div>
+      <div class="action-group">
+        <button class="btn-action" id="btnCollect" onclick="triggerCollect()">
+          🔄 Thu thập tin mới ngay
+        </button>
+        <button class="btn-action" id="btnPublishQueue" onclick="openPublishQueueModal()"
+          style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+          🤖 Tự động quét · tạo · đăng
+        </button>
+        <button class="btn-action" id="btnClearQueue" onclick="clearQueue()"
+          style="background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3);">
+          🗑️ Dọn sạch hàng đợi
+        </button>
+      </div>
+    </div>
+
+    <!-- Thống kê chu kỳ chạy -->
+    <section class="stats-section">
+      <h2 class="section-title">Nhật ký các lần chạy gần đây</h2>
+      <div class="run-cards">
+        {% for run in run_logs %}
+        <div class="run-card">
+          <div class="run-time">{{ run.run_at }}</div>
+          <div class="run-metrics">
+            <span title="Thu thập">📥 {{ run.collected }}</span>
+            <span title="Trùng lặp">🔁 {{ run.url_duplicate }}</span>
+            <span title="AI duyệt">🤖 {{ run.ai_analyzed }}</span>
+            <span title="Từ chối">🚫 {{ run.rejected }}</span>
+            <span title="Tạo bài">📝 {{ run.draft_generated }}</span>
+            <span title="Đã đăng">🚀 {{ run.published }}</span>
+          </div>
+        </div>
+        {% else %}
+        <div class="empty-hint">Chưa có dữ liệu lần chạy nào. Bấm <strong>Thu thập tin mới ngay</strong> để bắt đầu.</div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- KHỐI 1: BÀI VIẾT ĐÃ BIÊN TẬP -->
+    <div id="section-posts" class="tab-pane">
+      <div class="section-banner">
+        <div class="section-title-large">
+          <span>🗂️ KHÔNG GIAN LÀM VIỆC THEO TỪNG CIRCLE</span>
+        </div>
+        <div class="counter">Tổng số: <strong>{{ posts | length }}</strong> bài hiển thị</div>
+      </div>
+
+      <!-- Bộ lọc bài viết -->
+      <div class="filter-bar">
+        <div class="filter-buttons">
+          <a href="/?tab=posts&status=ALL" class="btn-filter {% if current_status == 'ALL' %}active{% endif %}">Đang xử lý ({{ posts | length }})</a>
+          <a href="/?tab=posts&status=READY" class="btn-filter {% if current_status == 'READY' %}active{% endif %}">⏳ Đã duyệt & Chờ đăng ({{ post_counts.get('READY', 0) }})</a>
+          <a href="/?tab=posts&status=REVIEW" class="btn-filter {% if current_status == 'REVIEW' %}active{% endif %}">⚠️ Cần duyệt ({{ post_counts.get('REVIEW', 0) }})</a>
+          <a href="/?tab=posts&status=WAITING_IMAGE" class="btn-filter {% if current_status == 'WAITING_IMAGE' %}active{% endif %}">🖼 Chờ ảnh ({{ post_counts.get('WAITING_IMAGE', 0) }})</a>
+          <span class="btn-filter" title="Bài đã đăng được ẩn khỏi màn hình nhưng vẫn còn trong lịch sử">🚀 Đã đăng: {{ post_counts.get('PUBLISHED', 0) }} (đã ẩn)</span>
+        </div>
+      </div>
+
+      <div class="add-circle-bar">
+        <strong>➕ Thêm Circle vào bảng:</strong>
+        <select id="hiddenCircleSelect" {% if not hidden_circles %}disabled{% endif %}>
+          {% for circle in hidden_circles %}
+          <option value="{{ circle.circle_id }}">{{ circle.display_name or circle.circle_name }}</option>
+          {% else %}
+          <option value="">Không có Circle đang ẩn</option>
+          {% endfor %}
+        </select>
+        <button class="btn-action" onclick="restoreSelectedCircle()" {% if not hidden_circles %}disabled{% endif %}>Thêm vào Dashboard</button>
+        <span style="color:#64748b;font-size:.8rem;">Nút xóa chỉ ẩn ô, không xóa bài và cấu hình.</span>
+      </div>
+
+      <!-- Mỗi Circle có hàng chờ tin và danh sách bài riêng -->
+      <div class="circle-board">
+      {% for group in circle_groups %}
+      <section class="circle-workspace" id="workspace-{{ group.circle.circle_id }}" data-circle-config data-circle-category="{{ (group.circle.category_name or group.circle.ucircle_category_name or 'chưa phân loại') | e }}">
+        <div class="circle-workspace-header">
+          <div>
+            <h2>🎯 {{ group.circle.circle_name }}</h2>
+            <p>{{ group.circle.category_name or group.circle.description or 'Circle sở hữu' }} · {{ group.posts | length }} bài đang xử lý · {{ group.ready_count }} bài chờ đăng</p>
+            <div class="circle-live-state {% if group.circle.scan_enabled or group.circle.publish_enabled %}on{% else %}off{% endif %}">
+              {% if group.circle.scan_enabled or group.circle.publish_enabled %}
+                ● ĐANG BẬT · Quét: {{ 'Có' if group.circle.scan_enabled else 'Không' }} · Đăng: {{ 'Có' if group.circle.publish_enabled else 'Không' }}
+              {% else %}
+                ○ ĐANG TẮT
+              {% endif %}
+            </div>
+          </div>
+          <div class="circle-card-tools">
+            <label title="Chọn Circle để đăng theo nhóm"><input type="checkbox" class="circle-select" value="{{ group.circle.circle_id }}"> Chọn</label>
+            <button type="button" onclick="document.getElementById('config-{{ group.circle.circle_id }}').open = true" title="Sửa Circle">✏️</button>
+            <button type="button" onclick='hideCircle({{ group.circle.circle_id | tojson }}, {{ group.circle.circle_name | tojson }})' title="Ẩn Circle khỏi Dashboard">🗑️</button>
+          </div>
+        </div>
+
+        <details class="circle-inline-config" id="config-{{ group.circle.circle_id }}">
+          <summary>⚙️ Cấu hình, sửa tên và prompt</summary>
+          <div class="circle-config-body">
+          <div class="circle-config-top">
+            <div class="circle-config-options">
+              <label><input type="checkbox" data-field="scan_enabled" {% if group.circle.scan_enabled %}checked{% endif %} onchange="toggleCircleGenerate(this)"> Quét bài</label>
+              <label><input type="checkbox" data-field="publish_enabled" {% if group.circle.publish_enabled %}checked{% endif %}> Đăng bài</label>
+            </div>
+          </div>
+          <input class="circle-display-name" data-field="display_name" value="{{ group.circle.circle_name }}" maxlength="160" placeholder="Tên hiển thị Circle">
+          <select class="circle-display-name" data-field="prompt_profile_id" title="Chọn bộ prompt ngoài áp dụng cho Circle" onchange="applyPromptProfile(this)">
+            {% for profile in prompt_profiles %}
+            <option value="{{ profile.profile_id }}"
+              data-prompt="{{ profile.content_prompt | e }}"
+              data-query="{{ profile.media_search_query | e }}"
+              data-image-prompt="{{ profile.image_prompt | e }}"
+              {% if profile.profile_id == group.circle.prompt_profile_id %}selected{% endif %}>🧩 {{ profile.display_name }}</option>
+            {% endfor %}
+          </select>
+          <small class="circle-prompt-profile">
+            🧩 Hồ sơ prompt: <strong>{{ group.circle.prompt_profile_name or group.circle.prompt_profile_id or 'Circle chung' }}</strong>
+            · {% if group.circle.prompt_source == 'circle_override' %}đang dùng bản ghi đè riêng{% else %}đang dùng cấu hình ngoài{% endif %}.
+            Nội dung sửa tại đây chỉ ghi đè Circle này.
+          </small>
+          <div class="media-platform-options">
+            <span>Nguồn tìm kiếm:</span>
+            <label><input type="checkbox" data-platform="news" {% if 'news' in (group.circle.media_platforms or ['news']) %}checked{% endif %}> 📰 Báo</label>
+            <label><input type="checkbox" data-platform="youtube" {% if 'youtube' in (group.circle.media_platforms or []) %}checked{% endif %}> ▶ YouTube CC</label>
+            <label><input type="checkbox" data-platform="facebook" {% if 'facebook' in (group.circle.media_platforms or []) %}checked{% endif %}> Facebook Feed</label>
+            <label><input type="checkbox" data-platform="facebook_reel" {% if 'facebook_reel' in (group.circle.media_platforms or []) %}checked{% endif %}> Reels</label>
+          </div>
+          <input class="circle-display-name" data-field="media_search_query" value="{{ group.circle.media_search_query or group.circle.circle_name }}" maxlength="180" placeholder="Từ khóa tìm video và mạng xã hội">
+          <textarea class="circle-config-prompt" data-field="content_prompt" placeholder="Mô tả chủ đề và loại nội dung riêng của Circle...">{{ group.circle.content_prompt or '' }}</textarea>
+          <label class="image-status-note">Hướng dẫn ảnh riêng cho Circle</label>
+          <textarea class="circle-config-prompt" data-field="image_prompt" maxlength="6000" placeholder="Đối tượng, thao tác, bối cảnh cần thể hiện; những chi tiết cần tránh...">{{ group.circle.image_prompt or '' }}</textarea>
+          <div class="circle-config-actions">
+            <button type="button" class="save-circle" onclick='saveCircleSettings({{ group.circle.circle_id | tojson }}, this)'>💾 Lưu cấu hình</button>
+            <button type="button" class="generate-circle scan-circle" onclick='scanArticlesForCircle({{ group.circle.circle_id | tojson }}, this, {{ group.circle.circle_name | tojson }})'
+              {% if not group.circle.scan_enabled %}disabled title="Bật Quét bài và lưu cấu hình trước"{% endif %}>🔎 Quét 1 tin & tạo bài</button>
+          </div>
+          </div>
+        </details>
+
+        <details class="circle-matched-list" {% if group.matched_articles %}open{% endif %}>
+          <summary>🛟 Tin chờ xử lý lại ({{ group.matched_articles | length }})</summary>
+          {% for article in group.matched_articles %}
+          <div class="matched-row">
+            <div>
+              <a href="{{ article.source_url }}" target="_blank" rel="noopener">{{ article.original_title }}</a>
+              <small><span class="platform-badge platform-{{ article.platform }}">{{ article.platform }}</span> {{ article.source_name }} · Phù hợp {{ article.relevance_score }}/100</small>
+              <small>Quyền: {{ article.rights_status }} · {{ article.license_type }} · {{ article.ai_reason }}</small>
+            </div>
+            <button class="btn btn-approve" onclick='generateMatchedArticle({{ group.circle.circle_id | tojson }}, {{ article.article_id }}, this)'>🔄 Tạo lại</button>
+          </div>
+          {% else %}
+          <div class="matched-empty">Không có tin bị kẹt. Khi bấm quét, hệ thống sẽ tự chọn một tin, tạo bài và đưa sang Chờ đăng.</div>
+          {% endfor %}
+        </details>
+
+        <div class="circle-posts-title">📝 Bài đã viết · chờ ảnh / chờ đăng</div>
+        <main class="posts-grid">
+        {% for post in group.posts %}
+        <details class="compact-post status-{{ post.status | lower }}" id="post-{{ post.id }}">
+          <summary>
+            <span class="badge badge-{{ post.status | lower }}">
+              {% if post.status == 'READY' %}⏳ CHỜ ĐĂNG{% elif post.status == 'WAITING_IMAGE' %}🖼 CHỜ ẢNH{% elif post.status == 'REVIEW' %}⚠️ CẦN DUYỆT{% else %}{{ post.status }}{% endif %}
+            </span>
+            <span class="compact-post-title">{{ post.ai_title }}</span>
+            <span class="compact-post-meta"><span>{{ post.source_name }}</span><span>{{ post.confidence_score or 0 }}/100 · Xem chi tiết ▾</span></span>
+          </summary>
+          <div class="compact-post-detail">
+            {% if post.image_path %}
+            <div class="post-image-container">
+              <a href="/images/{{ post.file_name }}" target="_blank" class="post-image-link" title="Mở ảnh đầy đủ">
+                <img src="/images/{{ post.file_name }}" alt="Ảnh bài viết" class="post-thumb" loading="lazy" onerror="this.closest('.post-image-container').style.display='none'">
+              </a>
+              <span class="image-source-label">{% if post.is_ai_generated == 0 %}📰 Ảnh từ bài gốc{% else %}🖼 Ảnh AI{% endif %}</span>
+            </div>
+            {% endif %}
+            <div class="image-status-note">
+              Ảnh: {{ post.image_provider or 'chưa xác định dịch vụ' }} · {{ post.image_model or 'chưa có model' }}
+              · {% if post.image_current %}✅ Đã kiểm tra với bài hiện tại{% else %}⏳ Chưa đạt / cần kiểm tra{% endif %}
+              {% if post.image_validation_reason %}<p>{{ post.image_validation_reason }}</p>{% endif %}
+            </div>
+            {% if post.image_prompt %}<details class="image-prompt-detail"><summary>Prompt ảnh đã gửi</summary><pre>{{ post.image_prompt }}</pre></details>{% endif %}
+            <p class="post-summary">{{ post.ai_summary }}</p>
+            {% if post.source_url %}<a href="{{ post.source_url }}" target="_blank" rel="noopener" class="source-link">🔗 Xem bài gốc</a>{% endif %}
+            {% if post.hashtags %}<div class="hashtags">{% for tag in post.hashtags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>{% endif %}
+            <div class="card-actions" style="flex-wrap:wrap;margin-top:10px;">
+              <button class="btn btn-inspect" onclick="openOverviewModal({{ post.id }})">🔍 Xem đầy đủ</button>
+              <button class="btn btn-inspect" onclick='processPostImage({{ post.id }}, this, false, {{ group.circle.circle_id | tojson }})'>🔎 Kiểm tra / tiếp tục ảnh</button>
+              <button class="btn btn-inspect" onclick='processPostImage({{ post.id }}, this, true, {{ group.circle.circle_id | tojson }})'>🎨 Tạo ảnh AI mới</button>
+              {% if post.status != 'READY' and post.image_current %}<button class="btn btn-approve" onclick="updateStatus({{ post.id }}, 'READY')">✔️ Duyệt</button>{% endif %}
+              {% if post.status == 'READY' and post.image_current %}<button class="btn btn-publish" onclick='publishNow({{ post.id }}, this, {{ post.circle_name | tojson }}, {{ group.circle.circle_id | tojson }})'>🚀 Đăng</button>{% endif %}
+              <button class="btn btn-reject" onclick="updateStatus({{ post.id }}, 'REJECTED')">✕ Loại</button>
+            </div>
+          </div>
+        </details>
+        {% else %}
+          <div class="empty-state"><p>Circle này chưa có bài AI đang xử lý.</p></div>
+        {% endfor %}
+        </main>
+      </section>
+      {% else %}
+      <div class="empty-state">
+        <h3>Chưa có Circle sở hữu nào!</h3>
+        <p>Đăng nhập UCircle rồi bấm <strong>Quét Circle</strong> để bắt đầu.</p>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+
+    <section class="global-control-bar" aria-label="Điều khiển chung">
+      <button class="btn-action" id="btnScanAll" onclick="scanAllCircles()">🔎 Quét & tạo toàn bộ</button>
+      <button class="btn-action" onclick="openPublishQueueModal(false)" style="background:linear-gradient(135deg,#10b981,#059669);">🚀 Tự động toàn bộ</button>
+      <button class="btn-action" onclick="openPublishQueueModal(true)" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed);">☑️ Tự động Circle đã chọn</button>
+      <button class="btn-action queue-pause-btn" onclick="pausePublishQueue()" style="background:linear-gradient(135deg,#f59e0b,#d97706);">⏸ Tạm dừng</button>
+      <button class="btn-action queue-resume-btn" onclick="resumePublishQueue()" style="background:linear-gradient(135deg,#0ea5e9,#0284c7);">▶️ Tiếp tục</button>
+      <button class="btn-action queue-stop-btn" onclick="stopPublishQueue()" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">⏹ Dừng hẳn</button>
+    </section>
+
+    <!-- KHỐI 2: HÀNG ĐỢI TIN TỨC GỐC -->
+    <div id="section-queue" class="tab-pane" style="margin-top: 30px;">
+      <div class="section-banner">
+        <div class="section-title-large">
+          <span>📥 HÀNG ĐỢI TIN TỨC GỐC (CHỜ TẠO BÀI AI)</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <span style="color: #94a3b8; font-size: 0.9rem;">Đang có <strong>{{ queued_count }}</strong> bài chờ</span>
+          <button class="btn" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5; padding: 6px 14px; font-size: 0.85rem; border: 1px solid rgba(239, 68, 68, 0.3);" onclick="clearQueue()">🗑️ Dọn sạch</button>
+        </div>
+      </div>
+
+      <table class="queue-table">
+        <thead>
+          <tr>
+            <th style="width: 60px;">ID</th>
+            <th style="width: 160px;">Nguồn & Độ tin cậy</th>
+            <th>Tiêu đề bài báo gốc</th>
+            <th style="width: 170px;">Thời gian xuất bản</th>
+            <th style="width: 160px;">Tham khảo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for a in queued_articles %}
+          <tr>
+            <td>#{{ a.id }}</td>
+            <td>
+              <strong>{{ a.source_name }}</strong><br>
+              <span class="badge-trust">Trust {{ a.trust_level }}</span>
+            </td>
+            <td>
+              <a href="{{ a.source_url }}" target="_blank" rel="noopener" style="color: #f1f5f9; text-decoration: none; font-weight: 500; line-height: 1.4; display: inline-block;">
+                {{ a.original_title }}
+              </a>
+            </td>
+            <td style="color: #94a3b8; font-size: 0.85rem;">{{ a.published_at }}</td>
+            <td>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="{{ a.source_url }}" target="_blank" rel="noopener" class="source-link" style="font-size: 0.85rem;">
+                  🔗 Xem gốc
+                </a>
+              </div>
+            </td>
+          </tr>
+          {% else %}
+          <tr>
+            <td colspan="5" style="text-align: center; color: #94a3b8; padding: 32px;">
+              Hàng đợi hiện đang trống. Bấm nút <strong>🔄 Thu thập tin mới ngay</strong> ở trên để nạp các bài HOT nhất từ 15 nguồn tin.
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MODAL: XEM TỔNG THỂ & KIỂM TRA ĐIỀU KIỆN ĐĂNG BÀI -->
+  <div class="modal-overlay" id="overviewModal" onclick="handleModalBackdropClick(event)">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>
+          <span>🔍 Tổng thể bài viết & Đánh giá điều kiện</span>
+          <span id="modalPostBadge" class="badge"></span>
+        </h2>
+        <button class="btn-close-modal" onclick="closeOverviewModal()">✕</button>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Cột Trái: Live Preview Feed UCircle -->
+        <div class="preview-pane">
+          <div class="pane-title">📱 Mô phỏng bài đăng thật trên UCircle</div>
+          <div class="ucircle-preview-card">
+            <div class="ucircle-author">
+              <div class="ucircle-avatar">AI</div>
+              <div>
+                <div class="ucircle-meta-name">
+                  <span id="previewCircleName">Circle UCircle</span>
+                  <span class="ucircle-tag-ai">AI Editor</span>
+                </div>
+                <div class="ucircle-meta-sub">Vừa xong • Công khai</div>
+              </div>
+            </div>
+
+            <div class="ucircle-post-title" id="previewTitle">Tiêu đề bài viết...</div>
+
+            <div id="previewImageWrapper">
+              <img src="" alt="Ảnh minh họa AI" class="ucircle-post-image" id="previewImage" style="display: none;">
+            </div>
+            <div id="previewImageStatus" class="image-status-note"></div>
+            <details class="image-prompt-detail"><summary>Prompt ảnh và kết quả kiểm tra</summary><pre id="previewImagePrompt"></pre></details>
+
+            <div class="ucircle-post-text" id="previewSummary">Tóm tắt bài viết...</div>
+
+            <div class="ucircle-bullets" id="previewBulletsBox">
+              <strong>📌 Điểm chính:</strong>
+              <ul id="previewBulletsList"></ul>
+            </div>
+
+            <div class="ucircle-hashtags" id="previewHashtags"></div>
+
+            <div class="ucircle-source-box">
+              <span id="previewSource">📰 Nguồn: </span>
+              <a href="#" target="_blank" rel="noopener" id="previewSourceLink" style="color: #38bdf8; text-decoration: none;">🔗 Xem bài gốc</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột Phải: Bảng đánh giá tiêu chuẩn & điều kiện -->
+        <div class="eligibility-pane">
+          <div class="pane-title">📋 Bảng kiểm tra điều kiện xuất bản</div>
+
+          <!-- Banner kết luận -->
+          <div class="verdict-banner" id="verdictBanner">
+            <div class="verdict-icon" id="verdictIcon">⏳</div>
+            <div>
+              <div class="verdict-text-main" id="verdictText">Đang kiểm tra...</div>
+              <div class="verdict-desc" id="verdictDesc">Vui lòng chờ giây lát...</div>
+            </div>
+          </div>
+
+          <!-- Thống kê chỉ số nhanh -->
+          <div class="stats-grid-mini">
+            <div class="stat-box-mini">
+              <div class="stat-val-mini" id="statScore">0/100</div>
+              <div class="stat-lbl-mini">Điểm thẩm định</div>
+            </div>
+            <div class="stat-box-mini">
+              <div class="stat-val-mini" id="statWords">0 từ</div>
+              <div class="stat-lbl-mini">Độ dài tóm tắt</div>
+            </div>
+            <div class="stat-box-mini">
+              <div class="stat-val-mini" id="statToday">0/20</div>
+              <div class="stat-lbl-mini">Đã đăng hôm nay</div>
+            </div>
+          </div>
+
+          <!-- Checklist các tiêu chí -->
+          <div class="checklist-container" id="checklistContainer">
+            <!-- Render động danh sách checklist -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-inspect" id="btnModalImage" onclick="processPostImage(currentModalPostId, this, false)">🔎 Kiểm tra / tiếp tục ảnh</button>
+        <button class="btn btn-inspect" id="btnModalRegenerateImage" onclick="processPostImage(currentModalPostId, this, true)">🎨 Tạo ảnh AI mới</button>
+        <button class="btn btn-reject" id="btnModalReject" onclick="onModalAction('REJECTED')">✕ Từ chối</button>
+        <button class="btn btn-approve" id="btnModalManualImageApprove" onclick="manualApproveImage()" style="display:none;" title="Bỏ qua thẩm định ảnh tự động; xác nhận thủ công có lưu dấu vết">✅ Ảnh đạt — duyệt thủ công</button>
+        <button class="btn btn-approve" id="btnModalApprove" onclick="onModalAction('READY')">✔️ Duyệt → Chờ đăng</button>
+        <button class="btn btn-publish" id="btnModalPublish" onclick="onModalPublish()">🚀 Đăng ngay lên UCircle</button>
+        <button class="btn" style="background: rgba(255,255,255,0.08); color: #cbd5e1;" onclick="closeOverviewModal()">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ĐĂNG CHUNG CÁC BÀI CHỜ ĐĂNG -->
+  <div class="modal-overlay" id="publishQueueModal" onclick="handleQueueModalBackdrop(event)">
+    <div class="modal-dialog publish-queue-dialog">
+      <div class="modal-header">
+        <h2 style="font-size: 1.15rem; font-weight: 700; color: #f1f5f9;">🤖 Chu trình quét · tạo · đăng tự động</h2>
+        <button type="button" class="btn-close-modal" onclick="closePublishQueueModal()">✕</button>
+      </div>
+      <div style="padding: 16px 0;">
+        <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 10px; padding: 12px 16px; margin-bottom: 16px; font-size: 0.92rem; color: #e2e8f0;">
+          Mỗi Circle sẽ chọn đúng <strong style="color: #34d399; font-size: 1.15rem;">1 tin nổi bật</strong>, tự tạo bài, kiểm tra điều kiện rồi đăng. Bài Chờ đăng có sẵn sẽ được ưu tiên trước.
+        </div>
+        <p style="color: #94a3b8; margin-bottom: 16px; font-size: 0.88rem; line-height: 1.5;">
+          Tối đa 6 Circle chạy song song nhưng theo lịch riêng: Circle nào đăng và xác minh xong thì Circle đó nghỉ đủ thời gian đã chọn rồi tự chạy lượt kế tiếp. Circle lỗi chỉ chờ thử lại tối đa 5 phút và không chặn các Circle khác.
+        </p>
+        <p id="publishScopeText" style="color:#c4b5fd;font-weight:700;margin-bottom:14px;">Chạy tất cả Circle đang bật cả Quét bài và Đăng bài.</p>
+        <div style="margin-bottom: 20px;">
+          <label style="display:block; margin-bottom: 8px; color: #f1f5f9; font-weight: 600; font-size: 0.95rem;">⏱ Thời gian mỗi Circle nghỉ sau khi đăng thành công:</label>
+          
+          <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px;">
+            <div style="position: relative; flex: 1;">
+              <input type="number" id="queueIntervalValue" value="{{ min_publish_interval }}" min="{{ min_publish_interval }}" step="1"
+                oninput="updateIntervalHint()"
+                style="width: 100%; box-sizing: border-box; background: #0f172a; border: 1px solid rgba(56,189,248,0.4); border-radius: 10px; padding: 12px 16px; color: #fff; font-size: 1.1rem; font-weight: 700; outline: none; transition: border-color 0.2s;">
+            </div>
+            <select id="queueIntervalUnit" onchange="updateIntervalHint()"
+              style="background: #1e293b; border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 12px 16px; color: #38bdf8; font-size: 1rem; font-weight: 700; cursor: pointer; outline: none;">
+              <option value="minutes" selected>Phút</option>
+              <option value="hours">Giờ</option>
+            </select>
+          </div>
+
+          <!-- Gợi ý chọn nhanh -->
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-bottom: 12px;">
+            <span style="color: #64748b; font-size: 0.8rem; margin-right: 4px;">Chọn nhanh:</span>
+            <button type="button" onclick="setIntervalPreset({{ min_publish_interval }}, 'minutes')" class="btn-preset active">{{ min_publish_interval }} phút</button>
+            <button type="button" onclick="setIntervalPreset(1, 'hours')" class="btn-preset">1 giờ</button>
+          </div>
+
+          <!-- Live Hint -->
+          <div id="intervalHint" style="background: rgba(56,189,248,0.08); border-left: 3px solid #38bdf8; padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: 0.85rem; color: #93c5fd;">
+            💡 Mỗi Circle tự nghỉ <strong>{{ min_publish_interval }} phút</strong> sau khi đăng thành công; Circle lỗi được thử lại độc lập, tối đa mỗi 5 phút.
+          </div>
+        </div>
+        <div id="queueProgressBox" style="display:none; background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56,189,248,0.4); border-radius:10px; padding: 16px; margin-top:16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <div style="color: #38bdf8; font-weight:700; display:flex; align-items:center; gap:8px;">
+              <span class="ai-spinner" style="width:16px; height:16px; border-width:2px; display:inline-block; margin:0;"></span>
+              <span>Tiến trình tự động:</span>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;">
+              <button type="button" class="queue-pause-btn" onclick="pausePublishQueue()" style="background:rgba(245,158,11,.2);color:#fbbf24;border:1px solid rgba(245,158,11,.4);padding:4px 9px;border-radius:6px;cursor:pointer;font-weight:600;">⏸ Tạm dừng</button>
+              <button type="button" class="queue-resume-btn" onclick="resumePublishQueue()" style="background:rgba(14,165,233,.2);color:#38bdf8;border:1px solid rgba(14,165,233,.4);padding:4px 9px;border-radius:6px;cursor:pointer;font-weight:600;">▶️ Tiếp tục</button>
+              <button type="button" class="queue-stop-btn" onclick="stopPublishQueue()" style="background:rgba(239,68,68,.2);color:#f87171;border:1px solid rgba(239,68,68,.4);padding:4px 9px;border-radius:6px;cursor:pointer;font-weight:600;">⏹ Dừng hẳn</button>
+            </div>
+          </div>
+          <div id="queueProgressText" style="color: #f1f5f9; font-weight:600; font-size:0.92rem; margin-bottom:6px;">Đang chuẩn bị...</div>
+          <div id="queueCheckpointWarning" style="display:none;margin:8px 0;padding:9px 11px;border:1px solid rgba(248,113,113,.45);border-radius:7px;background:rgba(127,29,29,.18);color:#fecaca;font-size:.85rem;"></div>
+          <section style="margin-top:10px;border:1px solid rgba(56,189,248,.2);border-radius:8px;padding:10px;background:rgba(15,23,42,.55);">
+            <div style="font-weight:700;color:#bae6fd;margin-bottom:8px;">📍 Trạng thái từng Circle</div>
+            <div id="queueCircleStatusList" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:7px;"></div>
+          </section>
+          <div id="queueProgressLog" style="margin-top:8px; max-height:280px; overflow-y:auto; font-size:0.85rem; color:#94a3b8; background:rgba(0,0,0,0.4); border-radius:6px; padding:10px; line-height:1.6;"></div>
+        </div>
+        <div id="queueHistoryBox" style="margin-top:18px; border-top:1px solid rgba(148,163,184,.2); padding-top:16px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+            <div>
+              <div style="color:#38bdf8;font-weight:800;">🗂 Lịch sử chạy và đăng bài</div>
+              <div style="color:#64748b;font-size:.8rem;margin-top:3px;">Lưu tối đa 50 phiên gần nhất. Xóa lịch sử không xóa bài viết hoặc checkpoint hiện tại.</div>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <button type="button" class="btn-preset" onclick="loadPublishHistory()">↻ Làm mới</button>
+              <button type="button" class="btn-preset" onclick="deleteAllPublishHistory()" style="color:#fca5a5;border-color:rgba(248,113,113,.35);">🗑 Xóa lịch sử cũ</button>
+            </div>
+          </div>
+          <div id="queueHistoryList" style="margin-top:10px;color:#94a3b8;">Đang tải lịch sử...</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:12px; justify-content:flex-end; margin-top: 10px;">
+        <button type="button" class="btn" style="background:rgba(255,255,255,0.08); color:#cbd5e1;" onclick="closePublishQueueModal()">Đóng</button>
+        <button type="button" class="btn btn-publish" id="btnStartQueuePublish" onclick="startPublishQueue()">
+          🚀 Bật tự động
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentModalPostId = null;
+    let ucircleStatusTimer = null;
+    let publishCircleScope = null;
+    let queuePollTimer = null;
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function renderUcircleCircles(circles) {
+      const container = document.getElementById('ucircleCircleList');
+      if (!container) return;
+      if (!Array.isArray(circles) || circles.length === 0) {
+        container.innerHTML = '<div class="circle-discovery-item">Chưa có dữ liệu. Bấm <strong>Quét Circle</strong> sau khi phiên đăng nhập sẵn sàng.</div>';
+        return;
+      }
+      container.classList.add('compact');
+      container.innerHTML = circles.map(circle => {
+        const active = circle.scan_enabled || circle.publish_enabled;
+        const permissions = [circle.scan_enabled ? 'Quét' : '', circle.publish_enabled ? 'Đăng' : '']
+          .filter(Boolean).join(' + ');
+        const state = active ? `● ĐANG BẬT (${permissions})` : '○ ĐANG TẮT';
+        return `<span class="circle-chip ${active ? 'enabled' : ''}" title="Cấu hình đầy đủ nằm trong khu vực làm việc bên dưới">
+          🎯 ${escapeHtml(circle.display_name || circle.circle_name)} · ${escapeHtml(state)}
+        </span>`;
+      }).join('');
+    }
+
+    function toggleCircleGenerate(checkbox) {
+      const row = checkbox.closest('[data-circle-config]');
+      const button = row && row.querySelector('.scan-circle');
+      if (button) button.disabled = !checkbox.checked;
+    }
+
+    function applyPromptProfile(select) {
+      const row = select.closest('[data-circle-config]');
+      const option = select.options[select.selectedIndex];
+      if (!row || !option) return;
+      const circleName = row.querySelector('[data-field="display_name"]').value.trim() || 'Circle mới';
+      const categoryName = row.dataset.circleCategory || 'chưa phân loại';
+      const circleToken = '{' + '{circle_name}' + '}';
+      const categoryToken = '{' + '{category_name}' + '}';
+      const render = value => String(value || '')
+        .replaceAll(circleToken, circleName)
+        .replaceAll(categoryToken, categoryName);
+      row.querySelector('[data-field="content_prompt"]').value = render(option.dataset.prompt);
+      row.querySelector('[data-field="media_search_query"]').value = render(option.dataset.query) || circleName;
+      row.querySelector('[data-field="image_prompt"]').value = render(option.dataset.imagePrompt);
+    }
+
+    async function saveImageSettings(button) {
+      button.disabled = true;
+      try {
+        const response = await fetch('/api/images/settings', {
+          method: 'POST', headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            provider: document.getElementById('imageProvider').value,
+            gemini_model: document.getElementById('imageGeminiModel').value.trim(),
+            gemini_generation_enabled: document.getElementById('imageGeminiEnabled').checked
+          })
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || data.detail || 'Không lưu được dịch vụ ảnh');
+        document.getElementById('currentImageProvider').textContent = data.images.provider;
+        showToast(data.message, 'success', 5000);
+      } catch (error) {
+        showToast(error.message, 'error', 6000);
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    async function processPostImage(postId, button, regenerate, circleId = null) {
+      if (!postId) return;
+      const oldText = button.innerText;
+      button.disabled = true;
+      button.innerText = regenerate ? '⏳ Đang tạo ảnh...' : '⏳ Đang kiểm tra ảnh...';
+      showToast('Đang xử lý riêng phần ảnh; bài đã viết được giữ nguyên.', 'info', 6000);
+      try {
+        const response = await fetch(`/api/posts/${postId}/image`, {
+          method: 'POST', headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({regenerate})
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || data.detail || 'Không xử lý được ảnh');
+        showToast(data.success ? 'Ảnh đã đạt; bài được chuyển sang Chờ đăng.' :
+          (data.error || 'Bài được giữ ở Chờ ảnh.'), data.success ? 'success' : 'warning', 8000);
+        const targetCircle = circleId || data.circle_id;
+        if (targetCircle) await refreshCircleWorkspaces([targetCircle], `post-${postId}`);
+        if (currentModalPostId === postId) await openOverviewModal(postId);
+      } catch (error) {
+        showToast(error.message, 'error', 6000);
+      } finally {
+        button.disabled = false;
+        button.innerText = oldText;
+      }
+    }
+
+    async function saveCircleSettings(circleId, button) {
+      const row = button.closest('[data-circle-config]');
+      const scanEnabled = Boolean(row.querySelector('[data-field="scan_enabled"]').checked);
+      const publishEnabled = Boolean(row.querySelector('[data-field="publish_enabled"]').checked);
+      const prompt = row.querySelector('[data-field="content_prompt"]').value.trim();
+      const displayName = row.querySelector('[data-field="display_name"]').value.trim();
+      const mediaSearchQuery = row.querySelector('[data-field="media_search_query"]').value.trim();
+      const promptProfileId = row.querySelector('[data-field="prompt_profile_id"]').value;
+      const imagePrompt = row.querySelector('[data-field="image_prompt"]').value.trim();
+      const mediaPlatforms = [...row.querySelectorAll('[data-platform]:checked')].map(item => item.dataset.platform);
+      button.disabled = true;
+      const oldText = button.innerText;
+      button.innerText = '⏳ Đang lưu...';
+      try {
+        const response = await fetch(`/api/ucircle/circles/${encodeURIComponent(circleId)}/settings`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            scan_enabled: scanEnabled,
+            publish_enabled: publishEnabled,
+            content_prompt: prompt,
+            display_name: displayName,
+            media_platforms: mediaPlatforms,
+            media_search_query: mediaSearchQuery,
+            prompt_profile_id: promptProfileId,
+            image_prompt: imagePrompt
+          })
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Không lưu được cấu hình Circle');
+        showToast('✅ ' + data.message, 'success', 4000);
+        await refreshUcircleAccountStatus();
+        setTimeout(() => window.location.reload(), 450);
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 6000);
+      } finally {
+        button.disabled = false;
+        button.innerText = oldText;
+      }
+    }
+
+    async function setCircleVisibility(circleId, visible) {
+      const response = await fetch(`/api/ucircle/circles/${encodeURIComponent(circleId)}/visibility`, {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({visible})
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Không cập nhật được Circle');
+      return data;
+    }
+
+    async function hideCircle(circleId, circleName) {
+      if (!confirm(`Ẩn "${circleName}" khỏi Dashboard? Prompt, bài viết và lịch sử vẫn được giữ nguyên.`)) return;
+      try {
+        const data = await setCircleVisibility(circleId, false);
+        showToast('✅ ' + data.message, 'success', 3500);
+        setTimeout(() => window.location.reload(), 400);
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 5000);
+      }
+    }
+
+    async function restoreSelectedCircle() {
+      const select = document.getElementById('hiddenCircleSelect');
+      if (!select || !select.value) return;
+      try {
+        const data = await setCircleVisibility(select.value, true);
+        showToast('✅ ' + data.message, 'success', 3500);
+        setTimeout(() => window.location.reload(), 400);
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 5000);
+      }
+    }
+
+    async function waitForCollectionToFinish() {
+      for (let attempt = 0; attempt < 120; attempt++) {
+        const response = await fetch('/api/status');
+        const data = await response.json();
+        if (!data.bg_status?.collecting) return data;
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+      throw new Error('Thu thập tin mất quá nhiều thời gian.');
+    }
+
+    async function refreshCircleWorkspaces(circleIds, focusElementId = '') {
+      const ids = [...new Set((circleIds || []).filter(Boolean))];
+      if (!ids.length) return;
+      const selectedIds = new Set(
+        [...document.querySelectorAll('.circle-select:checked')].map(input => input.value)
+      );
+      const response = await fetch('/?tab=posts&status=ALL', {headers: {'X-Partial-Refresh': '1'}});
+      if (!response.ok) throw new Error('Không cập nhật được dữ liệu Circle sau khi xử lý.');
+      const html = await response.text();
+      const freshDocument = new DOMParser().parseFromString(html, 'text/html');
+      ids.forEach(circleId => {
+        const current = document.getElementById(`workspace-${circleId}`);
+        const fresh = freshDocument.getElementById(`workspace-${circleId}`);
+        if (current && fresh) current.replaceWith(fresh);
+      });
+      selectedIds.forEach(circleId => {
+        const checkbox = document.querySelector(`#workspace-${CSS.escape(circleId)} .circle-select`);
+        if (checkbox) checkbox.checked = true;
+      });
+      if (focusElementId) {
+        const target = document.getElementById(focusElementId);
+        if (target) {
+          if (target.tagName === 'DETAILS') target.open = true;
+          target.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }
+      }
+    }
+
+    async function scanAllCircles() {
+      const button = document.getElementById('btnScanAll');
+      const circles = [...document.querySelectorAll('.circle-workspace')]
+        .filter(card => card.querySelector('[data-field="scan_enabled"]')?.checked)
+        .map(card => ({id: card.id.replace('workspace-', ''), name: card.querySelector('h2')?.innerText || 'Circle'}));
+      if (!circles.length) {
+        showToast('⚠️ Chưa có Circle nào bật Quét bài.', 'warning', 4500);
+        return;
+      }
+      if (!confirm(`Mỗi Circle sẽ chọn đúng 1 tin nổi bật, tự tạo bài và chuyển sang Chờ đăng. Chạy cho ${circles.length} Circle?`)) return;
+      button.disabled = true;
+      button.innerText = `⏳ Đang chuẩn bị ${circles.length} Circle...`;
+      try {
+        button.innerText = `⚡ Đang quét và tạo bài · tối đa 2 luồng...`;
+        const response = await fetch('/api/ucircle/circles/bulk-scan-articles', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({circle_ids: circles.map(circle => circle.id)})
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || 'Không chạy được quét đa luồng.');
+
+        const failures = (data.results || []).filter(item => !item.success);
+        const emptyCircles = (data.results || []).filter(item => !item.generated);
+        const fallbackCircles = (data.results || []).filter(item => item.selection_mode === 'local_fallback');
+        button.innerText = `✅ Đã tạo ${data.generated}/${data.total} bài`;
+        showToast(`Đã xử lý ${data.succeeded}/${data.total} Circle bằng ${data.max_workers} luồng và tự tạo ${data.generated} bài Chờ đăng.`, failures.length ? 'warning' : 'success', 8000);
+
+        failures.forEach(item => {
+          showToast(`${escapeHtml(item.circle_name)}: ${escapeHtml(item.error || 'Quét thất bại')}`, 'error', 12000);
+        });
+        if (emptyCircles.length) {
+          showToast(`${emptyCircles.map(item => escapeHtml(item.circle_name)).join(', ')}: chưa tạo được bài, có thể thử lại sau.`, 'warning', 9000);
+        }
+        if (fallbackCircles.length) {
+          showToast(`Gemini đang bận; đã dùng bộ lọc dự phòng trên máy cho: ${fallbackCircles.map(item => escapeHtml(item.circle_name)).join(', ')}.`, 'warning', 11000);
+        }
+        await refreshCircleWorkspaces(circles.map(circle => circle.id));
+        button.disabled = false;
+        button.innerText = '🔎 Quét & tạo toàn bộ';
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 6000);
+        button.disabled = false;
+        button.innerText = '🔎 Quét & tạo toàn bộ';
+      }
+    }
+
+    async function scanArticlesForCircle(circleId, button, circleName) {
+      circleName = circleName || circleId;
+      if (!confirm(`Hệ thống sẽ chọn đúng 1 tin nổi bật cho "${circleName}", tự tạo bài và đưa thẳng sang Chờ đăng. Tiếp tục?`)) return;
+      button.disabled = true;
+      const oldText = button.innerText;
+      showAIProgress(`Đang chọn 1 tin nổi bật và tạo bài cho: ${circleName}`, 'generate');
+      try {
+        const response = await fetch(`/api/ucircle/circles/${encodeURIComponent(circleId)}/scan-articles`, {method: 'POST'});
+        const data = await response.json();
+        hideAIProgress();
+        if (!response.ok) throw new Error(data.error || 'Không quét được tin phù hợp');
+        showToast(`✅ ${data.message}`, 'success', 5500);
+        await refreshCircleWorkspaces([circleId], data.post_id ? `post-${data.post_id}` : `workspace-${circleId}`);
+      } catch (error) {
+        hideAIProgress();
+        showToast('❌ ' + error.message, 'error', 6500);
+        button.disabled = false;
+        button.innerText = oldText;
+      }
+    }
+
+    async function generateMatchedArticle(circleId, articleId, button) {
+      if (!confirm('Tạo bài viết AI từ tin này cho đúng Circle đã chọn?')) return;
+      button.disabled = true;
+      const oldText = button.innerText;
+      button.innerText = '⏳ Đang tạo...';
+      showAIProgress('Đang phân tích, viết bài và chuẩn bị ảnh phù hợp...');
+      try {
+        const response = await fetch(
+          `/api/ucircle/circles/${encodeURIComponent(circleId)}/articles/${articleId}/generate`,
+          {method: 'POST'}
+        );
+        const data = await response.json();
+        hideAIProgress();
+        if (!response.ok) throw new Error(data.error || 'Không tạo được bài AI');
+        showToast(`✅ Đã tạo bài #${data.post_id} và tự chuyển sang Chờ đăng.`, 'success', 5000);
+        if (data.warning) showToast(escapeHtml(data.warning), 'warning', 9000);
+        await refreshCircleWorkspaces([circleId], `post-${data.post_id}`);
+      } catch (error) {
+        hideAIProgress();
+        showToast('❌ ' + error.message, 'error', 6500);
+        button.disabled = false;
+        button.innerText = oldText;
+      }
+    }
+
+    function applyUcircleAccountState(payload) {
+      const account = payload.account || {};
+      const scan = payload.scan || {};
+      const browserOpen = Boolean(account.browser_open);
+      const sessionReady = Boolean(account.session_exists);
+      const scanRunning = Boolean(scan.running);
+      const badge = document.getElementById('ucircleAccountBadge');
+      const message = document.getElementById('ucircleAccountMessage');
+      const loginBtn = document.getElementById('btnUcircleLogin');
+      const saveBtn = document.getElementById('btnUcircleSave');
+      const cancelBtn = document.getElementById('btnUcircleCancel');
+      const scanBtn = document.getElementById('btnScanCircles');
+
+      if (badge) {
+        badge.classList.toggle('ready', sessionReady && !browserOpen);
+        badge.innerText = browserOpen ? 'Đang mở trình duyệt' : (sessionReady ? 'Phiên sẵn sàng' : 'Chưa đăng nhập');
+      }
+      if (message) {
+        const sessionTime = account.session_updated_at ? ` · Lưu lúc ${account.session_updated_at}` : '';
+        message.innerText = `${account.message || 'Sẵn sàng.'}${sessionTime}`;
+      }
+      if (loginBtn) loginBtn.disabled = browserOpen;
+      if (saveBtn) saveBtn.disabled = !browserOpen;
+      if (cancelBtn) cancelBtn.disabled = !browserOpen;
+      if (scanBtn) {
+        scanBtn.disabled = browserOpen || scanRunning || !sessionReady;
+        scanBtn.innerText = scanRunning ? '⏳ Đang quét Circle...' : '🔎 Quét Circle';
+      }
+      renderUcircleCircles(payload.circles || []);
+    }
+
+    async function refreshUcircleAccountStatus() {
+      try {
+        const response = await fetch('/api/ucircle/account/status', {cache: 'no-store'});
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Không đọc được trạng thái UCircle');
+        applyUcircleAccountState(data);
+        const state = data.account && data.account.state;
+        if (ucircleStatusTimer && !data.account.browser_open && ['success', 'error', 'cancelled'].includes(state)) {
+          clearInterval(ucircleStatusTimer);
+          ucircleStatusTimer = null;
+          if (state === 'success') showToast('✅ Đã lưu phiên UCircle thành công.', 'success', 4000);
+          if (state === 'error') showToast('❌ ' + data.account.message, 'error', 6000);
+        }
+        return data;
+      } catch (error) {
+        console.error('Không thể cập nhật trạng thái UCircle:', error);
+        return null;
+      }
+    }
+
+    function startUcircleStatusPolling() {
+      if (ucircleStatusTimer) clearInterval(ucircleStatusTimer);
+      ucircleStatusTimer = setInterval(refreshUcircleAccountStatus, 1500);
+    }
+
+    async function refreshFacebookStatus() {
+      try {
+        const response = await fetch('/api/facebook/status', {cache: 'no-store'});
+        const data = await response.json();
+        const badge = document.getElementById('facebookStatusBadge');
+        const button = document.getElementById('btnFacebookLogin');
+        if (badge) {
+          badge.classList.toggle('enabled', Boolean(data.connected));
+          badge.innerText = data.connected
+            ? `Facebook/Reels: Đã kết nối ${data.page_count} Page`
+            : (data.credentials_ready ? 'Facebook/Reels: Sẵn sàng đăng nhập' : 'Facebook/Reels: Thiếu App ID/Secret');
+        }
+        if (button) {
+          button.disabled = !data.credentials_ready;
+          button.innerText = data.connected ? 'f Đăng nhập lại Facebook' : 'f Đăng nhập Facebook';
+        }
+        return data;
+      } catch (error) {
+        console.error('Không đọc được trạng thái Facebook:', error);
+        return null;
+      }
+    }
+
+    function startFacebookLogin() {
+      const popup = window.open('/api/facebook/login/start', 'facebookOAuth', 'width=620,height=760,resizable=yes,scrollbars=yes');
+      if (!popup) {
+        showToast('⚠️ Trình duyệt đã chặn cửa sổ đăng nhập Facebook.', 'warning', 5000);
+        return;
+      }
+      showToast('f Hãy đăng nhập và cấp quyền đọc Page trong cửa sổ vừa mở.', 'info', 6000);
+      const timer = setInterval(async () => {
+        const status = await refreshFacebookStatus();
+        if (status?.connected || popup.closed) {
+          clearInterval(timer);
+          if (status?.connected) showToast(`✅ Đã kết nối ${status.page_count} Facebook Page.`, 'success', 5000);
+        }
+      }, 1800);
+      setTimeout(() => clearInterval(timer), 10 * 60 * 1000);
+    }
+
+    window.addEventListener('message', async event => {
+      if (event.origin !== window.location.origin || event.data?.type !== 'facebook-auth-complete') return;
+      const status = await refreshFacebookStatus();
+      if (event.data.success && status?.connected) {
+        showToast(`✅ Đã kết nối ${status.page_count} Facebook Page.`, 'success', 5000);
+      }
+    });
+
+    async function saveBrowserVisibility(checkbox) {
+      const desiredState = Boolean(checkbox.checked);
+      checkbox.disabled = true;
+      try {
+        const response = await fetch('/api/browser/settings', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({publish_browser_hidden: desiredState}),
+        });
+        const data = await response.json();
+        if (!response.ok || !data.success) {
+          throw new Error(data.error || 'Không lưu được chế độ trình duyệt.');
+        }
+        showToast('✅ ' + data.message + ' Nút Mở đăng nhập vẫn luôn hiện trình duyệt.', 'success', 5000);
+      } catch (error) {
+        checkbox.checked = !desiredState;
+        showToast('❌ ' + error.message, 'error', 6000);
+      } finally {
+        checkbox.disabled = false;
+      }
+    }
+
+    async function startUcircleLogin() {
+      try {
+        const response = await fetch('/api/ucircle/login/start', {method: 'POST'});
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || 'Không mở được đăng nhập');
+        showToast('🌐 ' + data.message, 'info', 5000);
+        applyUcircleAccountState({account: data.account, scan: {}, circles: []});
+        startUcircleStatusPolling();
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 6000);
+        await refreshUcircleAccountStatus();
+      }
+    }
+
+    async function saveUcircleSession() {
+      try {
+        const response = await fetch('/api/ucircle/login/save', {method: 'POST'});
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || 'Không thể lưu phiên');
+        showToast('💾 ' + data.message, 'info', 4000);
+        startUcircleStatusPolling();
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 6000);
+      }
+    }
+
+    async function cancelUcircleLogin() {
+      try {
+        const response = await fetch('/api/ucircle/login/cancel', {method: 'POST'});
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || 'Không thể hủy');
+        showToast(data.message, 'warning', 3500);
+        startUcircleStatusPolling();
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 5000);
+      }
+    }
+
+    async function scanUcircleCircles() {
+      const button = document.getElementById('btnScanCircles');
+      if (button) {
+        button.disabled = true;
+        button.innerText = '⏳ Đang quét Circle...';
+      }
+      showToast('🔎 Đang quét danh sách Circle theo chế độ chỉ đọc...', 'info', 5000);
+      try {
+        const response = await fetch('/api/ucircle/circles/scan', {method: 'POST'});
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Quét Circle thất bại');
+        renderUcircleCircles(data.circles || []);
+        showToast('✅ ' + data.message, 'success', 5000);
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 6500);
+      } finally {
+        await refreshUcircleAccountStatus();
+      }
+    }
+
+    async function triggerCollect() {
+      const btn = document.getElementById('btnCollect');
+      btn.disabled = true;
+      btn.innerText = "⏳ Đang thu thập...";
+      showToast("🔄 Đang quét các nguồn RSS đang hoạt động...", "info", 4000);
+      try {
+        const res = await fetch('/api/trigger/collect', {method: 'POST'});
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.message || data.detail || 'Không thể bắt đầu quét RSS');
+        showToast(data.message || "Bắt đầu thu thập bài mới!", "success", 4000);
+        const result = await waitForBackgroundTask('collecting', 180000);
+        if (!result.success) throw new Error(result.message || 'Quét RSS thất bại');
+        window.location.reload();
+      } catch (e) {
+        showToast("❌ Lỗi: " + (e.message || e), "error", 5000);
+        btn.disabled = false;
+        btn.innerText = "🔄 Thu thập tin mới ngay";
+      }
+    }
+
+    async function triggerPublishNext() {
+      const btn = document.getElementById('btnPublishNext');
+      if (!confirm("Đăng bài READY cũ nhất lên UCircle ngay bây giờ?")) return;
+      btn.disabled = true;
+      btn.innerText = "⏳ Đang đăng lên UCircle...";
+      showToast("🚀 Đang kết nối và đăng bài READY lên UCircle...", "info", 5000);
+      try {
+        const res = await fetch('/api/trigger/publish', {method: 'POST'});
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.message || data.detail || 'Không thể bắt đầu đăng bài');
+        showToast(data.message || "Đang xử lý...", "success", 5000);
+        const result = await waitForBackgroundTask('publishing', 180000);
+        if (!result.success) throw new Error(result.message || 'Đăng bài thất bại');
+        showToast(result.message, "success", 4000);
+        setTimeout(() => window.location.reload(), 1200);
+      } catch (e) {
+        showToast("❌ Lỗi: " + (e.message || e), "error", 6000);
+        btn.disabled = false;
+        btn.innerText = "🚀 Đăng bài READY tiếp theo";
+      }
+    }
+
+    async function waitForBackgroundTask(taskName, timeoutMs) {
+      const startedAt = Date.now();
+      let observedRunning = false;
+      while (Date.now() - startedAt < timeoutMs) {
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        const response = await fetch('/api/status', {cache: 'no-store'});
+        if (!response.ok) throw new Error('Không đọc được trạng thái xử lý');
+        const data = await response.json();
+        const running = Boolean(data.bg_status && data.bg_status[taskName]);
+        observedRunning = observedRunning || running;
+        const result = data.bg_result && data.bg_result[taskName];
+        if (!running && (observedRunning || result)) {
+          return result || {success: true, message: 'Hoàn tất'};
+        }
+      }
+      throw new Error('Tiến trình chạy quá lâu. Hãy xem nhật ký trên Dashboard.');
+    }
+
+    async function updateStatus(postId, status) {
+      try {
+        const res = await fetch(`/api/posts/${postId}/status`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({status})
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          showToast(`Đã chuyển bài #${postId} sang trạng thái ${status}`, "success", 3000);
+          if (status === 'READY') {
+            window.location.href = '/?tab=posts&status=READY';
+          } else if (status === 'REJECTED') {
+            window.location.href = '/?tab=posts&status=REJECTED';
+          } else {
+            window.location.reload();
+          }
+        } else {
+          showToast('❌ ' + (data.detail || data.error || 'Không thể cập nhật trạng thái'), "error", 5000);
+        }
+      } catch (err) {
+        showToast('❌ Lỗi: ' + err, "error", 4000);
+      }
+    }
+
+    async function publishNow(postId, btnElem, circleName = 'Circle đã cấu hình', circleId = '') {
+      if (!confirm(`Xác nhận đăng bài #${postId} lên UCircle: ${circleName}?`)) return;
+      const btn = btnElem || event?.target;
+      if (btn) {
+        btn.disabled = true;
+        btn.innerText = "⏳ Đang đăng...";
+      }
+      showToast(`🚀 Đang xuất bản bài #${postId} lên ${circleName}...`, "info", 5000);
+
+      try {
+        const res = await fetch(`/api/posts/${postId}/publish`, {method: 'POST'});
+        const data = await res.json();
+        if (data.success) {
+          showToast('🎉 ' + (data.message || 'Đăng bài thành công lên UCircle!'), "success", 5000);
+          if (circleId) {
+            await refreshCircleWorkspaces([circleId], `workspace-${circleId}`);
+          } else {
+            const postCard = document.getElementById(`post-${postId}`);
+            if (postCard) postCard.remove();
+          }
+        } else {
+          showToast('❌ ' + (data.error || 'Đăng bài thất bại. Vui lòng kiểm tra session hoặc log.'), "error", 6000);
+          if (btn) {
+            btn.disabled = false;
+            btn.innerText = "🚀 Đăng ngay";
+          }
+        }
+      } catch (err) {
+        showToast('❌ Lỗi kết nối máy chủ: ' + err, "error", 5000);
+        if (btn) {
+          btn.disabled = false;
+          btn.innerText = "🚀 Đăng ngay";
+        }
+      }
+    }
+
+    // ─── MODAL TỔNG THỂ & KIỂM TRA ĐIỀU KIỆN ───────────────────────────
+    async function openOverviewModal(postId) {
+      currentModalPostId = postId;
+      const modal = document.getElementById('overviewModal');
+      modal.classList.add('show');
+
+      // Reset placeholders
+      document.getElementById('modalPostBadge').innerText = "Đang tải...";
+      document.getElementById('modalPostBadge').className = "badge";
+      document.getElementById('previewTitle').innerText = "Đang tải nội dung...";
+      document.getElementById('previewSummary').innerText = "";
+      document.getElementById('previewBulletsList').innerHTML = "";
+      document.getElementById('previewHashtags').innerHTML = "";
+      document.getElementById('previewImage').style.display = "none";
+      document.getElementById('checklistContainer').innerHTML = "<div style='color: #94a3b8; text-align: center; padding: 20px;'>Đang thẩm định tiêu chí...</div>";
+
+      try {
+        const res = await fetch(`/api/posts/${postId}/overview`);
+        if (!res.ok) throw new Error("Không thể tải thông tin bài viết");
+        const data = await res.json();
+        renderModalContent(data);
+      } catch (e) {
+        alert("Lỗi tải tổng thể bài viết: " + e.message);
+        closeOverviewModal();
+      }
+    }
+
+    function closeOverviewModal() {
+      const modal = document.getElementById('overviewModal');
+      modal.classList.remove('show');
+      currentModalPostId = null;
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target.id === 'overviewModal') {
+        closeOverviewModal();
+      }
+    }
+
+    function renderModalContent(data) {
+      const post = data.post;
+      const eval = data.evaluation;
+
+      // Header Badge
+      const badge = document.getElementById('modalPostBadge');
+      badge.innerText = `Bài #${post.id} • ${post.status}`;
+      badge.className = `badge badge-${post.status.toLowerCase()}`;
+      const approveButton = document.getElementById('btnModalApprove');
+      const publishButton = document.getElementById('btnModalPublish');
+      const imageBusy = post.image_work_state === 'PROCESSING';
+      approveButton.disabled = !data.image_current || imageBusy;
+      publishButton.disabled = !data.image_current || imageBusy;
+      approveButton.style.display = post.status === 'READY' ? 'none' : 'inline-flex';
+      publishButton.style.display = post.status === 'READY' ? 'inline-flex' : 'none';
+      const manualImageApproveButton = document.getElementById('btnModalManualImageApprove');
+      manualImageApproveButton.style.display =
+        !data.image_current && post.file_name && !['PUBLISHED', 'PUBLISHING'].includes(post.status)
+          ? 'inline-flex' : 'none';
+      manualImageApproveButton.disabled = imageBusy;
+      manualImageApproveButton.title = imageBusy
+        ? 'Đang có tác vụ kiểm tra ảnh; hãy chờ tác vụ kết thúc rồi mở lại bài.'
+        : 'Bỏ qua thẩm định ảnh tự động. Chỉ xác nhận nếu bạn đã xem ảnh, ảnh đúng bài và được phép sử dụng.';
+      const canEditImage = !['PUBLISHED', 'PUBLISHING'].includes(post.status);
+      document.getElementById('btnModalImage').style.display = canEditImage ? 'inline-flex' : 'none';
+      document.getElementById('btnModalImage').disabled = imageBusy;
+      document.getElementById('btnModalRegenerateImage').style.display = canEditImage ? 'inline-flex' : 'none';
+      const imageInfo = data.image || {};
+      document.getElementById('previewImageStatus').textContent =
+        `${imageInfo.provider || 'Chưa có dịch vụ'} · ${imageInfo.model || 'chưa có model'} · ` +
+        `${data.image_current ? 'Đã đạt với bài hiện tại' : 'Chưa đạt / cần kiểm tra'} · ` +
+        `${imageInfo.relevance_score || 0}/100\n${imageInfo.validation_reason || ''}`;
+      document.getElementById('previewImagePrompt').textContent =
+        `${imageInfo.image_prompt || 'Chưa có prompt tạo ảnh.'}\n\nKết quả đọc ảnh:\n${imageInfo.validation_result || 'Chưa kiểm tra.'}`;
+
+      // Left: Live Preview
+      document.getElementById('previewCircleName').innerText = post.circle_name || post.circle_id || 'Circle UCircle';
+      document.getElementById('previewTitle').innerText = post.ai_title || "Chưa có tiêu đề";
+      document.getElementById('previewSummary').innerText = post.ai_summary || "";
+
+      // Image
+      const img = document.getElementById('previewImage');
+      if (post.file_name) {
+        img.src = `/images/${post.file_name}`;
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
+
+      // Bullet points
+      const bulletsList = document.getElementById('previewBulletsList');
+      bulletsList.innerHTML = "";
+      const bullets = Array.isArray(post.bullet_points) ? post.bullet_points : [];
+      if (bullets.length > 0) {
+        document.getElementById('previewBulletsBox').style.display = "block";
+        bullets.forEach(b => {
+          if (b && String(b).trim()) {
+            const li = document.createElement('li');
+            li.innerText = b;
+            bulletsList.appendChild(li);
+          }
+        });
+      } else {
+        document.getElementById('previewBulletsBox').style.display = "none";
+      }
+
+      // Hashtags
+      const hashBox = document.getElementById('previewHashtags');
+      hashBox.innerHTML = "";
+      const tags = Array.isArray(post.hashtags) ? post.hashtags : [];
+      tags.forEach(t => {
+        if (t && String(t).trim()) {
+          const span = document.createElement('span');
+          span.className = "ucircle-hashtag-item";
+          span.innerText = String(t).startsWith('#') ? t : `#${t}`;
+          hashBox.appendChild(span);
+        }
+      });
+
+      // Source
+      document.getElementById('previewSource').innerText = `📰 Nguồn: ${post.source_name || "Báo chí"}`;
+      const sourceLink = document.getElementById('previewSourceLink');
+      if (post.source_url) {
+        sourceLink.href = post.source_url;
+        sourceLink.style.display = "inline";
+      } else {
+        sourceLink.style.display = "none";
+      }
+
+      // Right: Verdict Banner
+      const banner = document.getElementById('verdictBanner');
+      banner.className = `verdict-banner ${eval.verdict_class}`;
+      document.getElementById('verdictText').innerText = eval.verdict_text;
+      document.getElementById('verdictDesc').innerText = eval.verdict_desc;
+      document.getElementById('verdictIcon').innerText = 
+        eval.verdict === 'ELIGIBLE' ? '🎉' : (eval.verdict === 'NEEDS_APPROVAL' ? '⚠️' : '❌');
+
+      // Quick Stats
+      document.getElementById('statScore').innerText = `${eval.score}/100`;
+      document.getElementById('statWords').innerText = `${eval.stats.word_count} từ`;
+      document.getElementById('statToday').innerText = `${eval.stats.published_today}/20`;
+
+      // Checklist items
+      const container = document.getElementById('checklistContainer');
+      container.innerHTML = "";
+      eval.checklist.forEach(item => {
+        const row = document.createElement('div');
+        const passClass = item.passed ? 'pass' : (item.severity === 'critical' ? 'fail' : 'warn');
+        const icon = item.passed ? '✅' : (item.severity === 'critical' ? '❌' : '⚠️');
+        row.className = `checklist-item ${passClass}`;
+        row.innerHTML = `
+          <div class="item-icon">${icon}</div>
+          <div class="item-content">
+            <div class="item-title">
+              <span>${item.title}</span>
+              ${!item.passed && item.severity === 'critical' ? '<span class="item-badge-crit">Bắt buộc</span>' : ''}
+            </div>
+            <div class="item-detail">${item.detail}</div>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    async function onModalAction(status) {
+      if (!currentModalPostId) return;
+      await updateStatus(currentModalPostId, status);
+    }
+
+    async function manualApproveImage() {
+      if (!currentModalPostId) return;
+      const confirmed = confirm(
+        'Bạn đã tự xem ảnh và xác nhận ảnh đúng với bài viết, đồng thời bạn có quyền sử dụng ảnh này?\\n\\n' +
+        'Thao tác này bỏ qua Gemini kiểm tra ảnh và được lưu rõ là duyệt thủ công.'
+      );
+      if (!confirmed) return;
+      const button = document.getElementById('btnModalManualImageApprove');
+      button.disabled = true;
+      try {
+        const response = await fetch(`/api/posts/${currentModalPostId}/image/manual-approve`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({confirm: true})
+        });
+        const data = await response.json();
+        if (!response.ok || !data.success) {
+          showToast('❌ ' + (data.detail || data.error || 'Không thể xác nhận ảnh thủ công.'), 'error', 6000);
+          button.disabled = false;
+          return;
+        }
+        showToast(data.message || 'Đã lưu xác nhận ảnh thủ công.', data.post_ready ? 'success' : 'warning', 5500);
+        if (data.post_ready) {
+          window.location.href = '/?tab=posts&status=READY';
+        } else {
+          await openOverviewModal(currentModalPostId);
+        }
+      } catch (error) {
+        showToast('❌ Lỗi xác nhận ảnh: ' + error, 'error', 6000);
+        button.disabled = false;
+      }
+    }
+
+    async function onModalPublish() {
+      if (!currentModalPostId) return;
+      const btn = document.getElementById('btnModalPublish');
+      await publishNow(currentModalPostId, btn);
+    }
+
+    // ─── PUBLISH QUEUE MODAL ──────────────────────────────────────────────
+    function formatHistoryTime(value) {
+      if (!value) return 'Không rõ thời gian';
+      const date = new Date(value);
+      return Number.isNaN(date.getTime()) ? escapeHtml(value) : date.toLocaleString('vi-VN');
+    }
+
+    function renderPublishHistory(history) {
+      const container = document.getElementById('queueHistoryList');
+      if (!container) return;
+      if (!Array.isArray(history) || history.length === 0) {
+        container.innerHTML = '<div style="padding:16px;text-align:center;border:1px dashed rgba(148,163,184,.25);border-radius:10px;">Chưa có phiên chạy cũ. Lịch sử sẽ được lưu khi tiến trình dừng hoặc hoàn tất.</div>';
+        return;
+      }
+      container.innerHTML = history.map(item => {
+        const finished = item.state === 'finished';
+        const publishedIds = Array.isArray(item.published_post_ids) ? item.published_post_ids : [];
+        const logLines = Array.isArray(item.log) ? item.log : [];
+        const statusColor = finished ? '#34d399' : (Number(item.pending || 0) > 0 ? '#fbbf24' : '#60a5fa');
+        const statusText = finished ? 'Hoàn tất' : 'Đã dừng';
+        const runId = String(item.run_id || '');
+        const encodedRunId = encodeURIComponent(runId);
+        return `
+          <details class="queue-history-card">
+            <summary class="queue-history-summary">
+              <span>
+                <strong style="color:${statusColor};">${statusText}</strong>
+                · ${formatHistoryTime(item.started_at)}
+                · Đạt ${Number(item.succeeded || 0)}/${Number(item.total || 0)} Circle
+                · ${publishedIds.length} bài đã xác minh
+              </span>
+              <button type="button" class="btn-preset" style="color:#fca5a5;" onclick="event.preventDefault(); event.stopPropagation(); deletePublishHistory('${encodedRunId}')">Xóa</button>
+            </summary>
+            <div style="margin-top:9px;color:#cbd5e1;font-size:.82rem;">
+              Kết thúc: ${formatHistoryTime(item.ended_at)} · Vòng ${Number(item.cycle || 0)} · Lần thử ${Number(item.attempt || 0)}
+              ${publishedIds.length ? `<br>Bài đã đăng và xác minh: ${publishedIds.map(id => '#' + escapeHtml(id)).join(', ')}` : ''}
+            </div>
+            <div class="queue-history-log">
+              ${logLines.length ? logLines.map(line => `<div>• ${escapeHtml(line)}</div>`).join('') : '<div>Không có chi tiết log.</div>'}
+            </div>
+          </details>`;
+      }).join('');
+    }
+
+    async function loadPublishHistory() {
+      const container = document.getElementById('queueHistoryList');
+      try {
+        const response = await fetch('/api/posts/publish-queue/history?limit=30', {cache: 'no-store'});
+        const data = await response.json();
+        if (!response.ok || !data.success) throw new Error(data.error || 'Không đọc được lịch sử.');
+        renderPublishHistory(data.history);
+      } catch (error) {
+        if (container) container.innerHTML = `<div style="color:#fca5a5;">❌ ${escapeHtml(error.message)}</div>`;
+      }
+    }
+
+    async function deletePublishHistory(encodedRunId) {
+      if (!confirm('Xóa bản ghi lịch sử này? Bài viết và checkpoint hiện tại vẫn được giữ nguyên.')) return;
+      try {
+        const response = await fetch(`/api/posts/publish-queue/history?run_id=${encodedRunId}`, {method: 'DELETE'});
+        const data = await response.json();
+        if (!response.ok || !data.success) throw new Error(data.error || 'Không xóa được lịch sử.');
+        showToast('✅ ' + data.message, 'success', 4000);
+        await loadPublishHistory();
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 5000);
+      }
+    }
+
+    async function deleteAllPublishHistory() {
+      if (!confirm('Xóa toàn bộ lịch sử tiến trình cũ? Thao tác này không xóa bài viết hoặc checkpoint đang chạy.')) return;
+      try {
+        const response = await fetch('/api/posts/publish-queue/history', {method: 'DELETE'});
+        const data = await response.json();
+        if (!response.ok || !data.success) throw new Error(data.error || 'Không xóa được lịch sử.');
+        showToast('✅ ' + data.message, 'success', 4000);
+        await loadPublishHistory();
+      } catch (error) {
+        showToast('❌ ' + error.message, 'error', 5000);
+      }
+    }
+
+    async function openPublishQueueModal(selectedOnly = false) {
+      publishCircleScope = null;
+      if (selectedOnly) {
+        publishCircleScope = [...document.querySelectorAll('.circle-select:checked')].map(item => item.value);
+        if (!publishCircleScope.length) {
+          showToast('⚠️ Hãy tích chọn ít nhất một Circle ở phần giữa.', 'warning', 4500);
+          return;
+        }
+      }
+      const modal = document.getElementById('publishQueueModal');
+      modal.classList.add('show');
+      modal.style.display = 'flex';
+      modal.style.opacity = '1';
+      document.getElementById('queueProgressBox').style.display = 'none';
+      const btn = document.getElementById('btnStartQueuePublish');
+      btn.disabled = false;
+      btn.innerText = '🚀 Bật tự động';
+      const scopeText = document.getElementById('publishScopeText');
+      loadPublishHistory();
+      if (scopeText) scopeText.innerText = selectedOnly
+        ? `Chạy tự động cho ${publishCircleScope.length} Circle đã chọn.`
+        : 'Chạy tất cả Circle đang bật cả Quét bài và Đăng bài.';
+      try {
+        const res = await fetch('/api/posts/publish-queue/status');
+        const data = await res.json();
+        updateQueueControlButtons(data);
+        if (data.running || (data.progress?.selected_circle_ids || []).length) {
+          document.getElementById('queueProgressBox').style.display = 'block';
+          pollQueueProgress();
+        }
+      } catch (e) {
+        console.error('Không đọc được trạng thái checkpoint:', e);
+      }
+    }
+
+    function closePublishQueueModal() {
+      const modal = document.getElementById('publishQueueModal');
+      modal.classList.remove('show');
+      modal.style.display = 'none';
+    }
+
+    function handleQueueModalBackdrop(e) {
+      if (e.target.id === 'publishQueueModal') closePublishQueueModal();
+    }
+
+    function setIntervalPreset(val, unit) {
+      const valInput = document.getElementById('queueIntervalValue');
+      const unitInput = document.getElementById('queueIntervalUnit');
+      if (valInput) valInput.value = val;
+      if (unitInput) unitInput.value = unit;
+
+      document.querySelectorAll('.btn-preset').forEach(btn => {
+        btn.classList.remove('active');
+        const unitName = unit === 'seconds' ? 'giây' : unit === 'hours' ? 'giờ' : 'phút';
+        if (btn.innerText.trim() === `${val} ${unitName}`) {
+          btn.classList.add('active');
+        }
+      });
+      updateIntervalHint();
+    }
+
+    function updateIntervalHint() {
+      const valInput = document.getElementById('queueIntervalValue');
+      const unitInput = document.getElementById('queueIntervalUnit');
+      const val = parseFloat(valInput ? valInput.value : 5) || 1;
+      const unit = unitInput ? unitInput.value : 'minutes';
+
+      let totalSec = 0;
+      let text = '';
+      if (unit === 'seconds') {
+        totalSec = Math.max(5, Math.round(val));
+        text = `${totalSec} giây`;
+      } else if (unit === 'hours') {
+        totalSec = Math.round(val * 3600);
+        text = `${val} giờ (${totalSec} giây)`;
+      } else {
+        totalSec = Math.round(val * 60);
+        text = `${val} phút (${totalSec} giây)`;
+      }
+      const hintEl = document.getElementById('intervalHint');
+      if (hintEl) {
+        hintEl.innerHTML = `💡 Mỗi Circle tự nghỉ <strong>${text}</strong> sau khi đăng thành công; Circle lỗi được thử lại độc lập, tối đa mỗi 5 phút.`;
+      }
+    }
+
+    function updateQueueControlButtons(data) {
+      const state = data?.progress?.state || 'idle';
+      const running = Boolean(data?.running);
+      const hasCheckpoint = (data?.progress?.selected_circle_ids || []).length > 0;
+      const checkpointCanResume = hasCheckpoint && !data?.checkpoint_warning;
+      document.querySelectorAll('.queue-pause-btn').forEach(btn => {
+        btn.disabled = !running || ['paused', 'pausing', 'stopping'].includes(state);
+      });
+      document.querySelectorAll('.queue-resume-btn').forEach(btn => {
+        btn.disabled = !(checkpointCanResume && (!running || ['paused', 'pausing'].includes(state)));
+      });
+      document.querySelectorAll('.queue-stop-btn').forEach(btn => {
+        btn.disabled = !running || state === 'stopping';
+      });
+    }
+
+    function renderQueueCircleStatuses(statuses, state = '') {
+      const container = document.getElementById('queueCircleStatusList');
+      if (!container) return;
+      const entries = statuses && typeof statuses === 'object' ? Object.values(statuses) : [];
+      if (!entries.length) {
+        container.innerHTML = '<div style="color:#94a3b8;font-size:.82rem;">Phiên checkpoint cũ chưa có trạng thái riêng cho từng Circle. Hãy bắt đầu lượt mới để xem tiến độ chi tiết.</div>';
+        return;
+      }
+      const labels = {
+        pending: ['Chưa chạy', '#94a3b8'],
+        preparing: ['Đang quét / tạo bài', '#38bdf8'],
+        ready_to_publish: ['Đã chuẩn bị · chờ đăng', '#c4b5fd'],
+        publishing: ['Đang đăng / xác minh', '#fbbf24'],
+        succeeded: ['Đăng thành công', '#34d399'],
+        resting: ['Đã đăng · đang nghỉ riêng', '#34d399'],
+        retry_wait: ['Lỗi · sẽ thử lại', '#fca5a5'],
+        failed: ['Thất bại', '#f87171'],
+        stopped: ['Chưa hoàn tất · đã dừng', '#fbbf24'],
+        paused: ['Đã tạm dừng', '#fbbf24']
+      };
+      container.innerHTML = entries.map(item => {
+        let status = item.status || 'pending';
+        if (['paused', 'pausing'].includes(state) && !['stopped'].includes(status)) status = 'paused';
+        const [label, color] = labels[status] || [escapeHtml(status), '#94a3b8'];
+        const postLabel = item.post_id ? ` · Bài #${escapeHtml(item.post_id)}` : '';
+        const nextRun = item.wait_until && ['resting', 'retry_wait'].includes(item.status)
+          ? ` · ${item.status === 'resting' ? 'chạy lại' : 'thử lại'} lúc ${new Date(item.wait_until).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}`
+          : '';
+        return `<article style="min-width:0;border:1px solid rgba(148,163,184,.18);border-radius:7px;padding:8px 9px;background:rgba(30,41,59,.65);">
+          <div style="font-weight:700;color:#e2e8f0;overflow-wrap:anywhere;">${escapeHtml(item.circle_name || item.circle_id || 'Circle')}</div>
+          <div style="color:${color};font-size:.8rem;font-weight:700;margin-top:3px;">● ${label}${postLabel}${nextRun}</div>
+          ${item.message ? `<div style="color:#94a3b8;font-size:.77rem;margin-top:3px;overflow-wrap:anywhere;">${escapeHtml(item.message)}</div>` : ''}
+        </article>`;
+      }).join('');
+    }
+
+    function renderQueueCheckpointWarning(message) {
+      const warning = document.getElementById('queueCheckpointWarning');
+      if (!warning) return;
+      warning.style.display = message ? 'block' : 'none';
+      warning.textContent = message || '';
+    }
+
+    async function sendQueueCommand(action, pendingMessage) {
+      try {
+        const res = await fetch(`/api/posts/publish-queue/${action}`, {method: 'POST'});
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.message || 'Lệnh không thực hiện được');
+        document.getElementById('queueProgressBox').style.display = 'block';
+        document.getElementById('queueProgressText').innerText = pendingMessage || data.message;
+        showToast(data.message, action === 'stop' ? 'warning' : 'info', 4500);
+        pollQueueProgress();
+        return data;
+      } catch (e) {
+        showToast("Không thực hiện được lệnh: " + e.message, "error", 4000);
+        return null;
+      }
+    }
+
+    async function pausePublishQueue() {
+      document.querySelectorAll('.queue-pause-btn').forEach(btn => btn.disabled = true);
+      await sendQueueCommand('pause', '⏸ Đang tạm dừng an toàn sau thao tác hiện tại...');
+    }
+
+    async function resumePublishQueue() {
+      document.querySelectorAll('.queue-resume-btn').forEach(btn => btn.disabled = true);
+      await sendQueueCommand('resume', '▶️ Đang tiếp tục từ checkpoint đã lưu...');
+    }
+
+    async function stopPublishQueue() {
+      document.querySelectorAll('.queue-stop-btn').forEach(btn => btn.disabled = true);
+      await sendQueueCommand('stop', '⏹ Đang dừng hẳn an toàn; checkpoint vẫn được lưu...');
+    }
+
+    async function startPublishQueue() {
+      const valInput = document.getElementById('queueIntervalValue');
+      const unitInput = document.getElementById('queueIntervalUnit');
+      const val = parseFloat(valInput ? valInput.value : {{ min_publish_interval }}) || {{ min_publish_interval }};
+      const unit = unitInput ? unitInput.value : 'minutes';
+
+      let intervalMinutes = {{ min_publish_interval }};
+      if (unit === 'seconds') {
+        intervalMinutes = val / 60;
+      } else if (unit === 'hours') {
+        intervalMinutes = val * 60;
+      } else {
+        intervalMinutes = val;
+      }
+
+      const btn = document.getElementById('btnStartQueuePublish');
+      btn.disabled = true;
+      btn.innerText = '⏳ Đang khởi động...';
+      document.getElementById('queueProgressBox').style.display = 'block';
+      document.getElementById('queueProgressText').innerText = 'Đang gửi yêu cầu...';
+      showToast("🚀 Đang bật chu trình quét, tạo và đăng tự động...", "info", 4000);
+
+      try {
+        const res = await fetch('/api/posts/publish-queue', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            interval_minutes: intervalMinutes,
+            ...(publishCircleScope !== null ? {circle_ids: publishCircleScope} : {})
+          })
+        });
+        const data = await res.json();
+        if (data.status === 'started') {
+          document.getElementById('queueProgressText').innerText =
+            `✅ ${data.message}`;
+          btn.innerText = '🔄 Đang chạy tự động...';
+          showToast(`🚀 Đã bật tự động cho ${data.total} Circle!`, "success", 4000);
+          pollQueueProgress();
+        } else if (data.status === 'empty') {
+          document.getElementById('queueProgressText').innerText = '⚠️ ' + data.message;
+          btn.disabled = false;
+          btn.innerText = '🚀 Bật tự động';
+          showToast(data.message, "warning", 4000);
+        } else {
+          document.getElementById('queueProgressText').innerText = '⚠️ ' + (data.message || 'Đã xảy ra lỗi');
+          btn.disabled = false;
+          btn.innerText = '🚀 Bật tự động';
+          showToast(data.message || 'Đã xảy ra lỗi', "error", 4000);
+        }
+      } catch (err) {
+        document.getElementById('queueProgressText').innerText = '❌ Lỗi kết nối: ' + err;
+        btn.disabled = false;
+        btn.innerText = '🚀 Bật tự động';
+        showToast("❌ Lỗi kết nối: " + err, "error", 4000);
+      }
+    }
+
+    function pollQueueProgress() {
+      let pollCount = 0;
+      if (queuePollTimer) clearInterval(queuePollTimer);
+      queuePollTimer = setInterval(async () => {
+        pollCount++;
+        try {
+          const res = await fetch('/api/posts/publish-queue/status');
+          const data = await res.json();
+          const prog = data.progress;
+
+          updateQueueControlButtons(data);
+          renderQueueCircleStatuses(prog?.circle_statuses, prog?.state);
+          renderQueueCheckpointWarning(data.checkpoint_warning);
+          if (prog && !['resumable_batch_v4', 'independent_circle_v1'].includes(prog.mode)) {
+            document.getElementById('queueProgressText').innerText =
+              '⚠️ Máy chủ đang dùng luồng tự động cũ. Hãy khởi động lại Dashboard.';
+          } else if (prog && prog.total > 0) {
+            const stageLabels = {
+              circles_running: 'Mỗi Circle đang chạy theo lịch riêng',
+              circle_preparing: 'Đang quét và tạo bài cho Circle',
+              circle_publishing: 'Đang đăng và xác minh một Circle',
+              circle_resting: 'Các Circle đang nghỉ riêng sau khi đăng',
+              batch_preparing: 'Đang quét và tạo bài theo nhóm',
+              batch_publishing: 'Đang đăng các Circle trong lượt',
+              retry_wait: 'Đang chờ thử lại Circle bị lỗi',
+              cycle_wait: 'Đã xong cả lượt, đang nghỉ',
+              pausing: 'Đang tạm dừng an toàn',
+              paused: 'Đã tạm dừng — có thể tiếp tục',
+              stopping: 'Đang dừng hẳn an toàn',
+              stopped: 'Đã dừng — checkpoint đã lưu',
+              starting: 'Đang khởi động',
+              idle: 'Đang dừng'
+            };
+            if (prog.mode === 'independent_circle_v1') {
+              const items = Object.values(prog.circle_statuses || {});
+              const effectiveStatus = item => item.status === 'stopped' ? (item.resume_status || 'stopped') : item.status;
+              const resting = items.filter(item => effectiveStatus(item) === 'resting').length;
+              const retrying = items.filter(item => effectiveStatus(item) === 'retry_wait').length;
+              const active = items.filter(item => ['preparing', 'ready_to_publish', 'publishing'].includes(item.status)).length;
+              const untouched = items.filter(item => ['pending', 'stopped'].includes(effectiveStatus(item))).length;
+              document.getElementById('queueProgressText').innerText =
+                `Chạy độc lập · ${resting}/${prog.total} Circle đang nghỉ sau đăng · ${active} đang xử lý · ${retrying} chờ thử lại · ${untouched} chưa chạy`;
+            } else {
+              const remaining = Number(prog.remaining_sec || 0);
+              const countdown = remaining > 0
+                ? ` · Còn ${Math.floor(remaining / 60)}:${String(remaining % 60).padStart(2, '0')}`
+                : '';
+              document.getElementById('queueProgressText').innerText =
+                `Vòng ${prog.cycle || 1} · Đã đăng ${prog.succeeded || 0}/${prog.total} · Còn ${prog.pending || 0} Circle · ${stageLabels[prog.stage] || prog.stage || 'Đang xử lý'}${countdown}`;
+            }
+          }
+
+          const logEl = document.getElementById('queueProgressLog');
+          if (prog && prog.log && prog.log.length > 0) {
+            logEl.innerHTML = prog.log.map(l => `<div style="padding: 2px 0;">• ${l}</div>`).join('');
+            logEl.scrollTop = logEl.scrollHeight;
+          }
+          (prog?.published_post_ids || []).forEach(postId => {
+            const postCard = document.getElementById(`post-${postId}`);
+            if (postCard) postCard.remove();
+          });
+
+          if (!data.running && pollCount > 1) {
+            clearInterval(queuePollTimer);
+            queuePollTimer = null;
+            document.getElementById('queueProgressText').innerText = prog.state === 'stopped'
+              ? `⏹ Đã dừng hẳn. Checkpoint còn ${prog.pending || 0} Circle; bấm Tiếp tục để chạy tiếp.`
+              : '✅ Chu trình tự động đã kết thúc.';
+            document.getElementById('btnStartQueuePublish').disabled = false;
+            document.getElementById('btnStartQueuePublish').innerText = '🚀 Bắt đầu lượt mới';
+            showToast(prog.state === 'stopped' ? "⏹ Đã dừng; checkpoint vẫn còn để tiếp tục." : "✅ Chu trình đã kết thúc.", prog.state === 'stopped' ? "warning" : "success", 5000);
+            const circleIds = [...document.querySelectorAll('.circle-workspace')]
+              .map(card => card.id.replace('workspace-', ''));
+            await refreshCircleWorkspaces(circleIds);
+            await loadPublishHistory();
+          }
+        } catch (e) {
+          console.error("Poll error:", e);
+        }
+      }, 2000);
+    }
+
+    // --- CHUYỂN TAB TỨC THÌ (KHÔNG RELOAD TRANG) ---
+    function switchView(mode) {
+      const postsSec = document.getElementById('section-posts');
+      const queueSec = document.getElementById('section-queue');
+      const btnPosts = document.getElementById('tabBtnPosts');
+      const btnQueue = document.getElementById('tabBtnQueue');
+      const btnAll = document.getElementById('tabBtnAll');
+
+      if (!postsSec || !queueSec) return;
+
+      if (btnPosts) btnPosts.classList.remove('active');
+      if (btnQueue) btnQueue.classList.remove('active');
+      if (btnAll) btnAll.classList.remove('active');
+
+      if (mode === 'posts') {
+        postsSec.style.display = 'block';
+        queueSec.style.display = 'none';
+        if (btnPosts) btnPosts.classList.add('active');
+      } else if (mode === 'queue') {
+        postsSec.style.display = 'none';
+        queueSec.style.display = 'block';
+        if (btnQueue) btnQueue.classList.add('active');
+      } else { // 'all'
+        postsSec.style.display = 'block';
+        queueSec.style.display = 'block';
+        if (btnAll) btnAll.classList.add('active');
+      }
+
+      const url = new URL(window.location);
+      url.searchParams.set('tab', mode);
+      window.history.replaceState({}, '', url);
+    }
+
+    // ─── TOAST NOTIFICATION ─────────────────────────────────────
+    function showToast(message, type = 'info', duration = 4000) {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+      const toast = document.createElement('div');
+      toast.className = `toast-msg toast-${type}`;
+      
+      let icon = 'ℹ️';
+      if (type === 'success') icon = '🎉';
+      else if (type === 'error') icon = '❌';
+      else if (type === 'warning') icon = '⚠️';
+
+      toast.innerHTML = `<span>${icon}</span><span style="flex:1;">${message}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(100%)';
+        setTimeout(() => toast.remove(), 300);
+      }, duration);
+    }
+
+    // ─── TIẾN TRÌNH AI POPUP ────────────────────────────────────
+    let stepInterval = null;
+    function showAIProgress(titleText, operation = 'generate') {
+      const modal = document.getElementById('aiProgressModal');
+      const titleEl = document.getElementById('aiProgressTitle');
+      const headingEl = document.getElementById('aiProgressHeading');
+      const baseTitle = titleText || 'Đang xử lý tin tức được chọn...';
+      if (titleEl) titleEl.innerText = baseTitle;
+
+      const s1 = document.getElementById('step1');
+      const s2 = document.getElementById('step2');
+      const s3 = document.getElementById('step3');
+      const s4 = document.getElementById('step4');
+
+      if (operation === 'scan') {
+        if (headingEl) headingEl.innerText = '🔎 Đang quét và phân loại tin...';
+        s1.innerHTML = '⚡ Đang thu thập nguồn theo chủ đề Circle...';
+        s2.innerHTML = '• Kiểm tra độ phù hợp với prompt của Circle';
+        s3.innerHTML = '• Gemini bận sẽ tự chuyển sang bộ lọc dự phòng';
+        s4.innerHTML = '• Kết quả sẽ hiện ngay khi máy chủ xử lý xong';
+      } else {
+        if (headingEl) headingEl.innerText = '🤖 Đang tạo bản nháp bài viết...';
+        s1.innerHTML = '⚡ Đang phân tích nội dung nguồn...';
+        s2.innerHTML = '• Tiếp theo: biên tập nội dung và hashtag';
+        s3.innerHTML = '• Tiếp theo: lấy hoặc tạo ảnh phù hợp';
+        s4.innerHTML = '• Cuối cùng: kiểm tra và lưu bản nháp';
+      }
+      s1.style.color = '#38bdf8';
+      s2.style.color = '#94a3b8';
+      s3.style.color = '#94a3b8';
+      s4.style.color = '#94a3b8';
+
+      modal.classList.add('show');
+      modal.style.display = 'flex';
+      modal.style.opacity = '1';
+
+      if (stepInterval) clearInterval(stepInterval);
+      const startedAt = Date.now();
+      stepInterval = setInterval(() => {
+        const elapsedSeconds = Math.floor((Date.now() - startedAt) / 1000);
+        if (titleEl) titleEl.innerText = `${baseTitle} · ${elapsedSeconds} giây`;
+      }, 1000);
+    }
+
+    function hideAIProgress() {
+      const modal = document.getElementById('aiProgressModal');
+      if (modal) {
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+      }
+      if (stepInterval) {
+        clearInterval(stepInterval);
+        stepInterval = null;
+      }
+    }
+
+    // ─── TỰ ĐỘNG XEM BÀI KHI TẢI XONG ──────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      refreshUcircleAccountStatus();
+      refreshFacebookStatus();
+      fetch('/api/posts/publish-queue/status')
+        .then(res => res.json())
+        .then(data => {
+          updateQueueControlButtons(data);
+          if (data.running) pollQueueProgress();
+        })
+        .catch(err => console.error('Không đọc được trạng thái tự động:', err));
+      const params = new URLSearchParams(window.location.search);
+      const urlTab = params.get('tab') || 'posts';
+      switchView(urlTab);
+
+      const previewPostId = params.get('preview_post_id');
+      if (previewPostId) {
+        const pId = parseInt(previewPostId);
+        switchView('posts');
+
+        setTimeout(() => {
+          const card = document.getElementById(`post-${pId}`);
+          if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('newly-created-card');
+          }
+        }, 300);
+
+        showToast(`🎉 Tạo bài viết AI #${pId} thành công! Đang mở bản xem trước...`, 'success', 5000);
+
+        setTimeout(() => {
+          openOverviewModal(pId);
+        }, 800);
+
+        const cleanUrl = new URL(window.location);
+        cleanUrl.searchParams.delete('preview_post_id');
+        window.history.replaceState({}, '', cleanUrl);
+      }
+    });
+
+    // ─── TẠO BÀI TỪ TIN TRONG HÀNG ĐỢI ────────────────────────
+    async function generateFromArticle(articleId, btn, titleText = '') {
+      showAIProgress(titleText);
+      try {
+        const res = await fetch(`/api/articles/${articleId}/generate`, {method: 'POST'});
+        const data = await res.json();
+        hideAIProgress();
+        if (res.ok) {
+          showToast(`🎉 Tạo bài #${data.post_id} thành công! Đang chuyển đến bài viết...`, 'success', 3000);
+          window.location.href = `/?tab=posts&status=ALL&preview_post_id=${data.post_id}`;
+        } else {
+          showToast(`❌ Lỗi tạo bài: ${data.detail || data.error || 'Thất bại'}`, 'error', 6000);
+        }
+      } catch (e) {
+        hideAIProgress();
+        showToast(`❌ Lỗi kết nối: ${e.message}`, 'error', 5000);
+      }
+    }
+
+    // ─── TẠO BÀI TỪ TIN HOT NHẤT ──────────────────────────────
+    async function generateBest() {
+      showAIProgress('Tin tức HOT nhất từ các nguồn báo chí đang hoạt động');
+      try {
+        const res = await fetch('/api/queue/generate-best', {method: 'POST'});
+        const data = await res.json();
+        hideAIProgress();
+        if (res.ok) {
+          showToast(`🎉 Tạo bài #${data.post_id} từ tin HOT thành công! Đang mở bài viết...`, 'success', 3000);
+          window.location.href = `/?tab=posts&status=ALL&preview_post_id=${data.post_id}`;
+        } else {
+          showToast(`❌ Lỗi: ${data.detail || 'Không thể tạo bài'}`, 'error', 5000);
+        }
+      } catch (e) {
+        hideAIProgress();
+        showToast(`❌ Lỗi kết nối: ${e.message}`, 'error', 5000);
+      }
+    }
+
+    // ─── DỌN DẸP HÀNG ĐỢI ─────────────────────────────────────
+    async function clearQueue() {
+      if (!confirm('Bạn có chắc muốn dọn sạch tất cả tin trong hàng đợi không? Bạn có thể bấm "Thu thập tin mới ngay" sau đó để lấy tin mới nhất.')) {
+        return;
+      }
+      try {
+        const res = await fetch('/api/queue/clear', {method: 'POST'});
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message || 'Đã dọn sạch hàng đợi!', 'success', 3000);
+          setTimeout(() => window.location.reload(), 1500);
+        } else {
+          showToast(`❌ Lỗi: ${data.detail || 'Thất bại'}`, 'error', 5000);
+        }
+      } catch (e) {
+        showToast(`❌ Lỗi: ${e.message}`, 'error', 5000);
+      }
+    }
+  </script>
+</body>
+</html>

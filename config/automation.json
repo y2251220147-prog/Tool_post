@@ -1,0 +1,88 @@
+{
+  "collection": {
+    "interval_minutes": 60,
+    "max_articles_per_run": 20,
+    "article_max_age_hours": 24,
+    "top_articles_per_source": 3,
+    "min_trust_level": 80
+  },
+  "publish_schedule": {
+    "enabled": true,
+    "interval_minutes": 45,
+    "max_posts_per_day": null,
+    "max_posts_per_hour": 2,
+    "min_interval_minutes": 30,
+    "active_hours_start": 6,
+    "active_hours_end": 23,
+    "retry_intervals_minutes": [
+      1,
+      5,
+      15
+    ],
+    "max_publish_retries": 3
+  },
+  "filtering": {
+    "tier1_keyword_filter": true,
+    "min_title_length": 10,
+    "max_title_length": 300
+  },
+  "queue": {
+    "max_queue_size": 50,
+    "article_expire_hours": 24,
+    "pick_strategy": "score_then_fresh"
+  },
+  "ai": {
+    "provider": "gemini",
+    "model_text": "gemini-3.5-flash-lite",
+    "fallback_models": [
+      "gemini-3.8-flash",
+      "gemini-3.6-flash"
+    ],
+    "model_image": "imagen-3.0-generate-002",
+    "min_publish_score": 82,
+    "min_review_score": 70,
+    "max_retries": 3,
+    "retry_delay_seconds": 5,
+    "temperature": 0.3
+  },
+  "images": {
+    "strategy": "source_first",
+    "allow_ai_fallback": true,
+    "provider": "pollinations",
+    "gemini_model": "gemini-3.1-flash-image",
+    "gemini_generation_enabled": false,
+    "generation_timeout_seconds": 90,
+    "max_generation_attempts": 2,
+    "max_prompt_chars": 4000,
+    "min_relevance_score": 85,
+    "max_images_per_post": 1,
+    "download_timeout_seconds": 45,
+    "source_attribution": true
+  },
+  "content": {
+    "min_words": 80,
+    "max_words": 250,
+    "bullet_points": 3,
+    "min_hashtags": 5,
+    "max_hashtags": 5
+  },
+  "deduplication": {
+    "url_check": true,
+    "title_similarity_threshold": 0.75,
+    "lookback_days": 7
+  },
+  "storage": {
+    "db_path": "data/automation.db",
+    "images_dir": "data/images",
+    "drafts_dir": "data/drafts",
+    "logs_dir": "data/logs"
+  },
+  "review_ui": {
+    "host": "127.0.0.1",
+    "port": 8000
+  },
+  "browser": {
+    "publish_headless": true
+  },
+  "operation_mode": "fully_auto"
+}

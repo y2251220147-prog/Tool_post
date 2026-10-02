@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "common_prompt_file": "config/prompts/common.md",
+  "selection_prompt_file": "config/prompts/selection.md",
+  "default_profile_id": "generic",
+  "profiles": [
+    {
+      "profile_id": "generic",
+      "image_prompt": "Chọn một chủ thể và hành động cụ thể từ toàn bộ bài, phù hợp {{circle_name}}. Ưu tiên minh họa trung tính khi chưa đủ dữ kiện về nhân vật hoặc địa điểm.",
+      "display_name": "Circle chung an toàn",
+      "prompt_file": "config/prompts/generic.md",
+      "aliases": [],
+      "category_keywords": [],
+      "media_search_query": "{{circle_name}} mới nhất",
+      "fallback_filter": {"all_groups": [], "exclude": ["cá cược", "tin đồn", "quảng cáo trá hình"]}
+    },
+    {
+      "profile_id": "tin_tuc_24h",
+      "image_prompt": "Minh họa đúng vấn đề hoặc tác động chính trong bài thời sự. Không dựng ảnh giả hiện trường, cuộc họp, lãnh đạo hoặc nạn nhân. Khi thiếu ảnh thật, dùng vật thể hay biểu tượng dễ hiểu, không bịa số liệu, bản đồ, logo và chữ.",
+      "display_name": "Tin Tức 24h",
+      "prompt_file": "config/prompts/tin_tuc_24h.md",
+      "aliases": ["Tin Tức 24h", "Tin tức", "Thời sự 24h", "Tin mới 24h"],
+      "category_keywords": ["tin tức", "truyền thông", "thời sự"],
+      "media_search_query": "tin tức Việt Nam mới nhất thời sự kinh tế xã hội công nghệ giáo dục y tế nguồn chính thống",
+      "media_search_variants": [
+        "chính sách Chính phủ Việt Nam mới nhất",
+        "kinh tế Việt Nam thị trường mới nhất",
+        "giáo dục y tế Việt Nam chính sách mới",
+        "thời tiết thiên tai Việt Nam cảnh báo mới nhất",
+        "công nghệ trí tuệ nhân tạo an ninh mạng mới nhất",
+        "tin quốc tế ảnh hưởng Việt Nam mới nhất"
+      ],
+      "media_max_age_days": 3,
+      "analysis_publish_threshold": 85,
+      "fallback_filter": {
+        "all_groups": [],
+        "priority_phrases": ["chính phủ", "quốc hội", "toàn quốc", "chính sách", "bộ y tế", "bộ giáo dục", "ngân hàng nhà nước", "cảnh báo", "bão", "an ninh mạng"],
+        "exclude": ["quảng cáo", "khuyến mãi", "soi kèo", "cá cược"]
+      }
+    },
+    {
+      "profile_id": "qua_tang_cuoc_song",
+      "image_prompt": "Thể hiện hành động tử tế, giúp đỡ hoặc nghị lực cụ thể trong bài bằng minh họa ấm áp và tôn trọng nhân vật. Không tự dựng chân dung của người có thật, không tạo cảnh bi thương chỉ để gây xúc động.",
+      "display_name": "Quà tặng cuộc sống",
+      "prompt_file": "config/prompts/qua_tang_cuoc_song.md",
+      "aliases": ["Quà tặng cuộc sống", "Câu chuyện cuộc sống", "Sống đẹp", "Chuyện tử tế"],
+      "category_keywords": ["cộng đồng", "đời sống", "văn hóa"],
+      "media_search_query": "câu chuyện người thật việc thật hành động tử tế giúp đỡ người khác vượt khó thiện nguyện tấm gương truyền cảm hứng",
+      "media_search_variants": [
+        "câu chuyện người tốt giúp đỡ người lạ hành động tử tế",
+        "một nhân vật vượt khó vươn lên câu chuyện người thật",
+        "người dân cứu người hành động đẹp câu chuyện cụ thể",
+        "nhặt được của rơi trả lại người mất câu chuyện tử tế",
+        "thiện nguyện giúp đỡ hoàn cảnh khó khăn câu chuyện cá nhân",
+        "thầy cô học sinh vượt khó câu chuyện truyền cảm hứng",
+        "người lao động nghị lực vượt khó câu chuyện cuộc sống",
+        "hành động đẹp tình người cộng đồng câu chuyện nhân văn"
+      ],
+      "fallback_filter": {"all_groups": [["nhân văn", "người tốt việc tốt", "người tốt", "lòng tốt", "tử tế", "nghị lực", "vượt khó", "thiện nguyện", "giúp đỡ", "cứu người", "cứu hộ", "trả lại tài sản", "nhặt được của rơi", "hiến máu", "tình nguyện", "truyền cảm hứng", "câu chuyện nhân vật"]], "exclude": ["ép chia sẻ", "mê tín", "cá cược", "quảng cáo"]}
+    },
+    {
+      "profile_id": "net_dep_bong_da",
+      "image_prompt": "Thể hiện hành động fair-play, tinh thần cộng đồng hoặc nỗ lực của người chơi đúng với nội dung bài. Dùng nhân vật trung tính, không bịa áo đội, tên cầu thủ, sân đấu hay trận đấu có thật.",
+      "display_name": "Nét đẹp bóng đá",
+      "prompt_file": "config/prompts/net_dep_bong_da.md",
+      "aliases": ["Nét đẹp bóng đá", "Câu chuyện bóng đá", "Tinh thần bóng đá"],
+      "category_keywords": ["thể thao", "bóng đá"],
+      "media_search_query": "khoảnh khắc đẹp bàn thắng siêu phẩm fair play câu chuyện cầu thủ bóng đá cộng đồng",
+      "media_search_variants": [
+        "bàn thắng đẹp siêu phẩm bóng đá khoảnh khắc ấn tượng",
+        "fair play bóng đá cầu thủ giúp đỡ đối thủ",
+        "cầu thủ vượt khó hành trình truyền cảm hứng bóng đá",
+        "cứu thua đẹp thủ môn pha bóng xuất sắc",
+        "bóng đá nữ bóng đá trẻ câu chuyện nghị lực",
+        "cổ động viên bóng đá hành động đẹp đoàn kết",
+        "pha kiến tạo đẹp kỹ thuật bóng đá khoảnh khắc",
+        "bóng đá cộng đồng trẻ em câu chuyện ý nghĩa"
+      ],
+      "fallback_filter": {"all_groups": [["bóng đá", "cầu thủ", "đội bóng", "huấn luyện viên", "v-league", "fifa", "afc", "thủ môn", "cổ động viên", "bóng đá nữ", "bóng đá trẻ"], ["fair play", "bàn thắng đẹp", "siêu phẩm", "pha bóng đẹp", "pha kiến tạo", "cứu thua", "kỹ thuật", "khoảnh khắc", "ấn tượng", "ngoạn mục", "cảm xúc", "tinh thần", "nghị lực", "tôn trọng", "cộng đồng", "người hâm mộ", "hành trình", "đoàn kết", "giúp đỡ", "truyền cảm hứng"]], "exclude": ["soi kèo", "tỷ lệ cược", "nhà cái", "cá cược", "tin đồn chuyển nhượng"]}
+    },
+    {
+      "profile_id": "me_hinh_xam",
+      "image_prompt": "Thể hiện kiểu hình xăm hoặc thao tác chăm sóc cụ thể có trong bài. Tôn trọng ý nghĩa văn hóa, bố cục rõ, không tự thêm biểu tượng khác, không mô phỏng nguy hiểm hoặc ngụ ý hiệu quả điều trị.",
+      "display_name": "Mê Hình Xăm",
+      "prompt_file": "config/prompts/me_hinh_xam.md",
+      "aliases": ["Mê Hình Xăm", "Nghệ thuật xăm", "Tattoo Art", "Yêu hình xăm"],
+      "category_keywords": ["nghệ thuật", "văn hóa"],
+      "media_search_query": "\"hình xăm nghệ thuật\" OR \"tattoo artist\" OR \"phong cách tattoo\" OR \"ý nghĩa hình xăm\" OR \"chăm sóc sau xăm\"",
+      "fallback_filter": {"all_groups": [["hình xăm", "xăm hình", "nghệ sĩ xăm", "thợ xăm", "tattoo", "studio xăm", "sau xăm"]], "exclude": ["xăm lốp", "xăm soi", "cá cược"]}
+    },
+    {
+      "profile_id": "meo_hay_moi_ngay",
+      "image_prompt": "Ảnh phải cho thấy vật dụng và thao tác chính của mẹo trong bài. Nếu hướng dẫn làm sạch đồ vật, thấy rõ đồ vật và cách xử lý; nếu bảo quản thực phẩm, thể hiện đúng thực phẩm và vật chứa. Không thêm hóa chất hay thao tác thiếu căn cứ. Tránh ảnh nhà cửa trang trí chung chung.",
+      "display_name": "Mẹo hay mỗi ngày",
+      "prompt_file": "config/prompts/meo_hay_moi_ngay.md",
+      "aliases": ["Mẹo hay mỗi ngày", "Mẹo vặt", "Mẹo gia đình", "Kiến thức ứng dụng"],
+      "category_keywords": ["đời sống", "gia đình", "công nghệ"],
+      "media_search_query": "\"mẹo dọn dẹp nhà cửa\" OR \"mẹo bảo quản thực phẩm\" OR \"mẹo nấu ăn\" OR \"mẹo tiết kiệm điện nước\" OR \"mẹo dùng điện thoại an toàn\"",
+      "media_search_variants": [
+        "hướng dẫn vệ sinh nhà cửa từng bước",
+        "cách bảo quản rau củ thực phẩm an toàn",
+        "cách khử mùi tủ lạnh nhà bếp",
+        "mẹo nấu ăn các bước thực hiện",
+        "cách tiết kiệm điện nước trong gia đình",
+        "hướng dẫn sắp xếp phòng ngủ tủ quần áo",
+        "cách dùng điện thoại an toàn bảo mật",
+        "hướng dẫn sử dụng ứng dụng điện thoại hữu ích",
+        "cách quản lý thời gian học tập hiệu quả",
+        "kinh nghiệm đóng gói hành lý du lịch",
+        "cách làm sạch đồ gia dụng an toàn",
+        "mẹo xử lý quần áo giặt ủi đúng cách"
+      ],
+      "media_max_age_days": 90,
+      "analysis_publish_threshold": 60,
+      "analysis_allow_threshold_override": true,
+      "fallback_filter": {"all_groups": [["mẹo", "cách", "cách làm", "cách dùng", "cách xử lý", "hướng dẫn", "bí quyết", "các bước", "kinh nghiệm", "lời khuyên", "nên làm", "không nên", "cần biết", "chỉ cần", "chỉ mất", "nhờ"], ["dọn dẹp", "vệ sinh", "làm sạch", "khử mùi", "nấu ăn", "bếp", "thực phẩm", "rau củ", "bảo quản", "gia dụng", "nhà cửa", "nội trợ", "mâm cơm", "phòng ngủ", "tủ quần áo", "giặt ủi", "tiết kiệm điện", "tiết kiệm nước", "hóa đơn tiền điện", "thiết bị điện", "bình nóng lạnh", "điện thoại", "máy tính", "ứng dụng", "bảo mật", "an toàn số", "học tập", "quản lý thời gian", "hành lý", "du lịch"]], "exclude": ["thời sự", "chính trị", "hôn nhân", "tình cảm", "đời tư", "nghệ sĩ", "chữa bệnh", "cá cược", "hạ giá", "giảm giá", "giá còn", "khuyến mãi", "đáng mua"]}
+    },
+    {
+      "profile_id": "da_nang_an_gi",
+      "image_prompt": "Ưu tiên ảnh thật từ chính bài nguồn hoặc trang chính thức được bài nguồn dẫn tới, phải khớp món ăn/địa điểm cụ thể và giữ thông tin nguồn. Nếu không có ảnh nguồn hợp lệ, tạo ảnh AI minh họa chân thực, đúng món và bối cảnh đã xác minh trong bài; không giả làm ảnh chụp tại quán thật, không bịa biển hiệu, logo, menu, giá hay địa chỉ. Nếu ảnh AI không tạo được hoặc bị kiểm tra từ chối sau số lần thử cấu hình, loại bài và tự chuyển sang nguồn khác; không để bài mắc kẹt ở Chờ ảnh.",
+      "image_strategy": "source_first",
+      "display_name": "Đà Nẵng ăn gì",
+      "prompt_file": "config/prompts/da_nang_an_gi.md",
+      "aliases": ["Đà Nẵng ăn gì", "Ăn gì Đà Nẵng", "Ẩm thực Đà Nẵng", "Món ngon Đà Nẵng"],
+      "category_keywords": ["ăn uống", "cafe", "nhà hàng", "ẩm thực"],
+      "media_search_query": "đặc sản món ngon quán ăn ẩm thực các điểm du lịch nổi tiếng Việt Nam Hà Nội TP.HCM Huế Đà Nẵng Hội An Hạ Long Ninh Bình Sa Pa Nha Trang Đà Lạt Phú Quốc",
+      "media_search_variants": [
+        "đặc sản quán ngon món ăn nổi tiếng Hà Nội phở bún chả",
+        "đặc sản món ngon quán ăn TP.HCM cơm tấm bánh mì",
+        "đặc sản quán ăn món ngon Huế bún bò cơm hến",
+        "đặc sản Đà Nẵng Hội An mì Quảng cao lầu quán địa chỉ",
+        "đặc sản Hạ Long Quảng Ninh chả mực hải sản quán ăn",
+        "đặc sản Ninh Bình dê núi cơm cháy quán ăn địa chỉ",
+        "đặc sản Sa Pa Hà Giang Mộc Châu món ăn địa phương",
+        "đặc sản Nha Trang Đà Lạt Quy Nhơn Phú Quốc quán ăn"
+      ],
+      "media_max_age_days": 90,
+      "fallback_filter": {
+        "all_groups": [["đà nẵng", "danang", "da nang", "quảng nam", "hội an", "tam kỳ", "điện bàn", "huế", "thừa thiên huế", "quảng ngãi", "hà nội", "ha noi", "tp.hcm", "tp hồ chí minh", "sài gòn", "hạ long", "quảng ninh", "ninh bình", "sa pa", "sapa", "lào cai", "hà giang", "cao bằng", "mộc châu", "sơn la", "phong nha", "quảng bình", "nha trang", "khánh hòa", "đà lạt", "lâm đồng", "quy nhơn", "gia lai", "lý sơn", "cần thơ", "phú quốc", "kiên giang", "cà mau", "chợ cồn", "chợ hàn", "cù lao chàm"], ["phở", "bún chả", "cơm tấm", "bánh mì", "bún bò", "cơm hến", "mì quảng", "mỳ quảng", "cao lầu", "bún chả cá", "bún mắm", "bún mắm nêm", "bánh tráng cuốn", "bánh xèo", "nem lụi", "chả mực", "dê núi", "cơm cháy", "thắng cố", "phở chua", "nem nướng", "bánh căn", "bún quậy", "gỏi cá", "hải sản", "bánh canh", "bún ốc", "cơm gà", "chè", "đặc sản", "quán ăn", "quán cà phê", "quán cafe", "nhà hàng", "chợ", "food tour", "món ăn", "địa chỉ ăn"]],
+        "title_required_groups": [["phở", "bún chả", "cơm tấm", "bánh mì", "bún bò", "cơm hến", "mì quảng", "mỳ quảng", "cao lầu", "bún chả cá", "bún mắm", "bánh tráng cuốn", "bánh xèo", "nem lụi", "chả mực", "dê núi", "cơm cháy", "thắng cố", "phở chua", "nem nướng", "bánh căn", "bún quậy", "gỏi cá", "hải sản", "đặc sản", "quán ăn", "quán cà phê", "quán cafe", "nhà hàng", "food tour", "món ăn"]],
+        "priority_phrases": ["mì quảng", "bún chả cá", "bánh tráng cuốn", "bún mắm", "bánh xèo", "nem lụi", "quán ăn", "quán cà phê", "chợ cồn", "chợ hàn"],
+        "title_exclude": ["fine dining", "ẩm thực cao cấp", "phân khúc ẩm thực", "thị trường ẩm thực", "ngành ẩm thực", "hội chợ", "xúc tiến", "sàn giao dịch", "khai trương", "khuyến mãi"],
+        "exclude": ["bất động sản", "tuyển dụng"]
+      }
+    },
+    {
+      "profile_id": "net_dep_bong_da_hay",
+      "image_prompt": "Ưu tiên ảnh thật từ chính bài nguồn hoặc trang chính thức mà bài nguồn dẫn tới. Nếu không lấy được ảnh gốc phù hợp, tạo ảnh AI minh họa đúng động tác và bối cảnh trong bài; không bịa mặt cầu thủ, áo đội, tỷ số hoặc trận đấu. Nếu dịch vụ AI không tạo được ảnh hợp lệ, thử lấy lại ảnh gốc và giữ watermark, ghi rõ nguồn. Chỉ giữ bài Chờ ảnh khi cả hai phương án đều không có ảnh đạt.",
+      "image_strategy": "source_first",
+      "display_name": "Nét đẹp bóng đá hay",
+      "prompt_file": "config/prompts/net_dep_bong_da_hay.md",
+      "aliases": ["Nét đẹp bóng đá hay", "Bàn thắng đẹp", "Pha bóng hay", "Khoảnh khắc bóng đá"],
+      "category_keywords": ["thể thao", "bóng đá", "giải trí"],
+      "media_search_query": "\"bàn thắng đẹp\" OR \"pha bóng hay\" OR \"cứu thua đẹp\" OR \"fair play bóng đá\" OR \"khoảnh khắc bóng đá\"",
+      "media_search_variants": [
+        "siêu phẩm bàn thắng bóng đá",
+        "cú sút xa bàn thắng bóng đá",
+        "cứu thua xuất sắc thủ môn bóng đá",
+        "bàn thắng đẹp V League",
+        "kiến tạo đẹp bóng đá",
+        "sút phạt đẹp bóng đá",
+        "pha phối hợp ghi bàn bóng đá",
+        "highlights bàn thắng bóng đá"
+      ],
+      "media_max_age_days": 30,
+      "fallback_filter": {
+        "all_groups": [["bóng đá", "cầu thủ", "đội tuyển", "v league", "ngoại hạng anh", "premier league", "world cup", "fifa", "afc", "champions league", "la liga", "liverpool", "manchester", "arsenal", "barcelona", "real madrid", "ronaldo", "messi", "thủ môn", "ghi bàn", "bàn thắng", "sút phạt"], ["bàn thắng", "pha bóng", "cứu thua", "kiến tạo", "fair play", "khoảnh khắc", "kỹ thuật", "siêu phẩm", "cú sút", "sút phạt", "xe đạp chổng ngược", "pha phối hợp", "highlights", "hat trick"]],
+        "priority_phrases": ["siêu phẩm", "cú sút xa", "sút phạt", "xe đạp chổng ngược", "bàn thắng đẹp", "cứu thua xuất sắc", "pha phối hợp", "kiến tạo"],
+        "deprioritize_sources": ["VTVgo"],
+        "title_exclude": ["23/24", "22/23", "21/22", "24/25", "bóng chuyền", "bóng rổ", "bóng bàn", "teqball", "tái xuất", "chuyển nhượng", "khai mạc", "bốc thăm"],
+        "exclude": ["soi kèo", "tỷ lệ cược", "nhà cái", "cá cược", "fc online", "efootball", "fvpl", "esports", "thể thao điện tử"]
+      }
+    }
+  ]
+}

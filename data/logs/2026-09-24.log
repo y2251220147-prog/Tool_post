@@ -1,0 +1,803 @@
+2026-09-24 20:35:30 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 20:35:32 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 20:35:33 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 20:50:18 [INFO] review_ui: 🚀 Bắt đầu đăng bài #50 lên UCircle...
+2026-09-24 20:50:18 [INFO] publisher: 🚀 Đang đăng bài #50 lên UCircle (Lần thử 1/1)...
+2026-09-24 20:50:24 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/9e158d37-a7f9-4669-8520-07f4d9bbd33f
+2026-09-24 20:50:28 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Mẹo hay mỗi ngày' (Circle - Xác nhận thành công)
+2026-09-24 20:50:30 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 20:50:31 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 20:50:31 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 20:50:31 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 20:50:31 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 20:50:36 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 20:50:38 [INFO] publisher: 🎉 Xuất bản thành công Post #50 -> ID: verified_50_1790257838
+2026-09-24 20:50:38 [INFO] review_ui: ✅ Đăng bài #50 thành công!
+2026-09-24 21:01:33 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 10688ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 21:01:34 [INFO] analyzer: Analyzing: Nuôi dưỡng đam mê bóng đá cộng đồng...
+2026-09-24 21:01:55 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 21:01:55 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Nuôi dưỡng đam mê bóng đá cộng đồng' (score=75).
+2026-09-24 21:01:55 [INFO] writer: ✍️ Writing: Nuôi dưỡng đam mê bóng đá cộng đồng...
+2026-09-24 21:01:55 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 59 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:02:00 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:02:10 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 44 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:02:10 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Nuôi dưỡng đam mê bóng đá cộng đồng'.
+2026-09-24 21:02:10 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #52...
+2026-09-24 21:02:56 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 43891ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 21:02:58 [WARNING] image_generator: Không tải được ảnh đại diện của bài gốc: Ảnh nguồn quá nhỏ: 300x300
+2026-09-24 21:02:58 [INFO] image_generator: 🎨 Không có ảnh nguồn phù hợp, tạo một ảnh AI dự phòng cho Post #52...
+2026-09-24 21:03:02 [INFO] image_generator: ✅ Đã tạo ảnh AI dự phòng: post_52_20260924_210302_253368_ai.jpg
+2026-09-24 21:03:02 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 21:19:08 [INFO] review_ui: 🚀 Bắt đầu đăng bài #52 lên UCircle...
+2026-09-24 21:19:08 [INFO] publisher: 🚀 Đang đăng bài #52 lên UCircle (Lần thử 1/1)...
+2026-09-24 21:19:09 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/b5c66623-ba26-4e5e-92b6-7aa1442b2caf
+2026-09-24 21:19:13 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Nét đẹp bóng đá' (Circle - Xác nhận thành công)
+2026-09-24 21:19:14 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 21:19:15 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 21:19:15 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 21:19:15 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 21:19:15 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 21:19:18 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 21:19:20 [INFO] publisher: 🎉 Xuất bản thành công Post #52 -> ID: verified_52_1790259560
+2026-09-24 21:19:20 [INFO] review_ui: ✅ Đăng bài #52 thành công!
+2026-09-24 21:19:46 [INFO] source_resolver: Đã giải liên kết Google News sang nguồn: www.24h.com.vn
+2026-09-24 21:19:47 [INFO] review_ui: Đã bổ sung 1653 từ từ trang nguồn cho article #3449.
+2026-09-24 21:19:47 [INFO] analyzer: Analyzing: Trực tiếp bóng đá Brighton - Arsenal: Raya cứu thua (Ngoại h...
+2026-09-24 21:20:18 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 21:20:18 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Trực tiếp bóng đá Brighton - Arsenal: Raya cứu thua (Ngoại h' (score=78).
+2026-09-24 21:20:18 [INFO] writer: ✍️ Writing: Trực tiếp bóng đá Brighton - Arsenal: Raya cứu thua (Ngoại h...
+2026-09-24 21:20:18 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 59 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:20:23 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:20:33 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 44 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:20:33 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Trực tiếp bóng đá Brighton - Arsenal: Raya cứu thua (Ngoại h'.
+2026-09-24 21:20:33 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #53...
+2026-09-24 21:20:33 [INFO] image_generator: ✅ Đã lấy ảnh đúng chủ đề từ bài gốc: post_53_20260924_212033_source.jpg
+2026-09-24 21:20:33 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 21:20:52 [INFO] review_ui: 🚀 Bắt đầu đăng bài #53 lên UCircle...
+2026-09-24 21:20:52 [INFO] publisher: 🚀 Đang đăng bài #53 lên UCircle (Lần thử 1/1)...
+2026-09-24 21:20:54 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/aababdcc-7e2d-44b0-b56c-b1636d774032
+2026-09-24 21:20:58 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Nét đẹp bóng đá hay' (Circle - Xác nhận thành công)
+2026-09-24 21:20:59 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 21:21:00 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 21:21:00 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 21:21:00 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 21:21:00 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 21:21:15 [WARNING] publisher: ⚠️ Lần thử 1 thất bại: Không nhận được xác nhận đăng thành công từ UCircle; popup vẫn đang mở
+2026-09-24 21:21:15 [ERROR] publisher: ❌ Không thể đăng bài #53 sau 1 lần thử.
+2026-09-24 21:21:15 [WARNING] review_ui: ❌ Không thể đăng bài #53: Không nhận được xác nhận đăng thành công từ UCircle; popup vẫn đang mở
+2026-09-24 21:21:21 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:21:21 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:21:43 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:21:43 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:21:52 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:21:53 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:22:05 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:22:05 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:23:03 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:23:03 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 21:23:15 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpd5icaz5h\test.db
+2026-09-24 21:23:15 [INFO] analyzer: Analyzing: Lời khuyên cho gia đình dùng bình nóng lạnh...
+2026-09-24 21:23:15 [INFO] analyzer:   Score: 62/100 | Publish: True | Topic: đời sống
+2026-09-24 21:23:15 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpp54dlq6h\test.db
+2026-09-24 21:23:15 [INFO] analyzer: Analyzing: Kinh nghiệm ăn uống tại Đà Nẵng...
+2026-09-24 21:23:15 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): 504 DEADLINE_EXCEEDED: The read operation timed out
+2026-09-24 21:23:15 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Kinh nghiệm ăn uống tại Đà Nẵng' (score=74).
+2026-09-24 21:23:15 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpadc9z27b\test.db
+2026-09-24 21:23:15 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpmssbhp4z\test.db
+2026-09-24 21:23:15 [INFO] analyzer: Analyzing: Hướng dẫn cách bảo quản thực phẩm trong tủ lạnh...
+2026-09-24 21:23:15 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): 429 RESOURCE_EXHAUSTED
+2026-09-24 21:23:15 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Hướng dẫn cách bảo quản thực phẩm trong tủ lạnh' (score=80).
+2026-09-24 21:23:15 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpgy_3x8og\test.db
+2026-09-24 21:23:15 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpin0fl3eu\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpin0fl3eu\test.db
+2026-09-24 21:23:16 [INFO] review_ui: 🔄 Vòng #1: đưa đủ 6 Circle vào một lượt xử lý đa luồng; chỉ nghỉ dài khi đã đăng thành công đủ tất cả Circle.
+2026-09-24 21:23:16 [INFO] review_ui: 🔁 Lần thử #1: chuẩn bị 6 Circle chưa thành công.
+2026-09-24 21:23:16 [INFO] review_ui: ⚠️ circle_6: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 21:23:16 [INFO] review_ui: ⚠️ circle_4: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 21:23:16 [INFO] review_ui: 📝 circle_2: đã chuẩn bị bài vừa tạo #201.
+2026-09-24 21:23:16 [INFO] review_ui: ⚠️ circle_5: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 21:23:16 [INFO] review_ui: 📝 circle_3: đã chuẩn bị bài vừa tạo #301.
+2026-09-24 21:23:16 [INFO] review_ui: 📝 circle_1: đã chuẩn bị bài vừa tạo #101.
+2026-09-24 21:23:16 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 21:23:16 [INFO] review_ui: ✅ circle_1 · bài #101: đã đăng và xác minh (1/6 Circle).
+2026-09-24 21:23:16 [INFO] review_ui: ✅ circle_2 · bài #201: đã đăng và xác minh (2/6 Circle).
+2026-09-24 21:23:16 [INFO] review_ui: ✅ circle_3 · bài #301: đã đăng và xác minh (3/6 Circle).
+2026-09-24 21:23:16 [INFO] review_ui: ⏳ Còn 3/6 Circle chưa thành công; chờ 1.0 phút rồi chỉ thử lại các Circle này.
+2026-09-24 21:23:16 [INFO] review_ui: 🔁 Lần thử #2: chuẩn bị 3 Circle chưa thành công.
+2026-09-24 21:23:16 [INFO] review_ui: 📝 circle_4: đã chuẩn bị bài vừa tạo #402.
+2026-09-24 21:23:16 [INFO] review_ui: 📝 circle_6: đã chuẩn bị bài vừa tạo #602.
+2026-09-24 21:23:16 [INFO] review_ui: 📝 circle_5: đã chuẩn bị bài vừa tạo #502.
+2026-09-24 21:23:16 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 21:23:16 [INFO] review_ui: ✅ circle_4 · bài #402: đã đăng và xác minh (4/6 Circle).
+2026-09-24 21:23:16 [INFO] review_ui: ✅ circle_5 · bài #502: đã đăng và xác minh (5/6 Circle).
+2026-09-24 21:23:16 [INFO] review_ui: ✅ circle_6 · bài #602: đã đăng và xác minh (6/6 Circle).
+2026-09-24 21:23:16 [INFO] review_ui: 🏁 Hoàn tất vòng #1: đã đăng và xác minh đủ 6/6 Circle. Bây giờ mới nghỉ 30.0 phút.
+2026-09-24 21:23:16 [INFO] review_ui: ⏹ Đã dừng hẳn tại điểm an toàn. Checkpoint được giữ để Tiếp tục.
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpn0hmpm99\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpiwij_y_j\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp4jni0qrg\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp28bseuxj\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpesjswssb\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpaht99eb5\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp74iwss7j\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpg35c62qn\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp3f5a8xus\test.db
+2026-09-24 21:23:16 [ERROR] circle_selector: Không thể quét tin cho Circle circle_bong_da: 503 UNAVAILABLE
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpjzva9ky_\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6y1ryw2d\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp64_mjk5i\test.db
+2026-09-24 21:23:16 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpxbys0yor\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpq5hh0n1r\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpbmivz97f\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpbk3kbtm4\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp5fe0pvfo\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmphcnpzsbi\test.db
+2026-09-24 21:23:17 [INFO] publisher: 🚀 Đang đăng bài #100 lên UCircle (Lần thử 1/1)...
+2026-09-24 21:23:17 [INFO] publisher: 🎉 Xuất bản thành công Post #100 -> ID: post-test
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpegdks9io\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpwimic156\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp2kxeo0he\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpw3et2shh\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpfd4eicq1\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6acj4d8v\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmprem80d3y\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpm327ivzp\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp825ec9kh\test.db
+2026-09-24 21:23:17 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp_br77q3z\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpdg5qktjt\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpffhoimgl\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmppe92lhw3\test.db
+2026-09-24 21:23:18 [WARNING] publisher: Bài #102 chưa có ảnh hợp lệ nên không được phép đăng.
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp_j17mrdv\test.db
+2026-09-24 21:23:18 [WARNING] publisher: Circle 'Circle thử nghiệm' chưa bật tùy chọn Đăng bài trên dashboard.
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpco6kwb6k\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpx9pfqcf4\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmppgdzm8kg\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6rzfctad\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpyhr7e_x4\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpsas77kp2\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp5oclq0jv\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpolbqubs9\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmplufb2zwi\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpcr2qranx\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp7ff2ew_c\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmphant989z\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpsfnrau1i\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpdiwj8gy3\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp89y2oe1y\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpdu0f5is5\test.db
+2026-09-24 21:23:18 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpfhwhij_9\test.db
+2026-09-24 21:23:18 [INFO] validator: 🔎 Validation Post: score=50, status=REJECTED, reasons=['Thiếu ảnh hợp lệ; bài không được phép đăng']
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpcbtb2l0m\test.db
+2026-09-24 21:23:18 [INFO] writer: ✍️ Writing: Hướng dẫn bảo quản rau củ đúng cách...
+2026-09-24 21:23:18 [ERROR] writer: ❌ Writer lỗi (attempt 1): 503 UNAVAILABLE
+2026-09-24 21:23:18 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Hướng dẫn bảo quản rau củ đúng cách'.
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp1oj5k12m\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp2o0bap1e\test.db
+2026-09-24 21:23:18 [INFO] writer: ✍️ Writing: Bàn thắng đẹp của đội tuyển Việt Nam...
+2026-09-24 21:23:18 [INFO] writer:   ✅ Written: 'Cú sút xa tạo nên bàn thắng đẹp cho đội tuyển Việt'
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp2h9if90i\test.db
+2026-09-24 21:23:18 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpwbp26vuu\test.db
+2026-09-24 21:35:06 [INFO] review_ui: 🚀 Bắt đầu đăng bài #53 lên UCircle...
+2026-09-24 21:35:06 [INFO] publisher: 🚀 Đang đăng bài #53 lên UCircle (Lần thử 1/1)...
+2026-09-24 21:35:08 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/aababdcc-7e2d-44b0-b56c-b1636d774032
+2026-09-24 21:35:15 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Nét đẹp bóng đá hay' (Circle - Xác nhận thành công)
+2026-09-24 21:35:16 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 21:35:17 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 21:35:17 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 21:35:17 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 21:35:17 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 21:35:20 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 21:35:22 [INFO] publisher: 🎉 Xuất bản thành công Post #53 -> ID: verified_53_1790260522
+2026-09-24 21:35:22 [INFO] review_ui: ✅ Đăng bài #53 thành công!
+2026-09-24 21:37:54 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 3953ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 21:37:55 [INFO] analyzer: Analyzing: 'Thanh niên sống đẹp' tôn vinh hành động tử tế vì cộng đồng...
+2026-09-24 21:38:19 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}
+2026-09-24 21:38:19 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho ''Thanh niên sống đẹp' tôn vinh hành động tử tế vì cộng đồng' (score=75).
+2026-09-24 21:38:19 [INFO] writer: ✍️ Writing: 'Thanh niên sống đẹp' tôn vinh hành động tử tế vì cộng đồng...
+2026-09-24 21:38:19 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 59 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:38:24 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:38:34 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 44 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:38:34 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho ''Thanh niên sống đẹp' tôn vinh hành động tử tế vì cộng đồng'.
+2026-09-24 21:38:34 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #54...
+2026-09-24 21:39:20 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 44032ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 21:39:21 [WARNING] image_generator: Không tải được ảnh đại diện của bài gốc: Ảnh nguồn quá nhỏ: 300x300
+2026-09-24 21:39:21 [INFO] image_generator: 🎨 Không có ảnh nguồn phù hợp, tạo một ảnh AI dự phòng cho Post #54...
+2026-09-24 21:39:25 [INFO] image_generator: ✅ Đã tạo ảnh AI dự phòng: post_54_20260924_213925_695855_ai.jpg
+2026-09-24 21:39:25 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 21:39:31 [INFO] review_ui: 🚀 Bắt đầu đăng bài #54 lên UCircle...
+2026-09-24 21:39:31 [INFO] publisher: 🚀 Đang đăng bài #54 lên UCircle (Lần thử 1/1)...
+2026-09-24 21:39:32 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/e19c1e0a-69c0-4657-83c6-187df3b3565f
+2026-09-24 21:39:36 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Quà tặng cuộc sống' (Circle - Xác nhận thành công)
+2026-09-24 21:39:37 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 21:39:38 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 21:39:38 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 21:39:38 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 21:39:38 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 21:39:42 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 21:39:43 [INFO] publisher: 🎉 Xuất bản thành công Post #54 -> ID: verified_54_1790260783
+2026-09-24 21:39:43 [INFO] review_ui: ✅ Đăng bài #54 thành công!
+2026-09-24 21:40:25 [ERROR] circle_selector: Không thể quét tin cho Circle circle_tintuc24h: gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}
+2026-09-24 21:40:38 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 11078ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 21:40:39 [INFO] analyzer: Analyzing: TOÀN VĂN: Nghị quyết 57-NQ/TW về đột phá phát triển khoa học...
+2026-09-24 21:40:39 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): Gemini tạm nghỉ 46 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:40:44 [ERROR] analyzer: Gemini Analyzer loi (attempt 2): Gemini tạm nghỉ 41 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:40:54 [ERROR] analyzer: Gemini Analyzer loi (attempt 3): Gemini tạm nghỉ 31 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:40:54 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'TOÀN VĂN: Nghị quyết 57-NQ/TW về đột phá phát triển khoa học' (score=75).
+2026-09-24 21:40:54 [INFO] writer: ✍️ Writing: TOÀN VĂN: Nghị quyết 57-NQ/TW về đột phá phát triển khoa học...
+2026-09-24 21:40:54 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 31 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:40:59 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 26 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:41:09 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 16 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 21:41:09 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'TOÀN VĂN: Nghị quyết 57-NQ/TW về đột phá phát triển khoa học'.
+2026-09-24 21:41:09 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #55...
+2026-09-24 21:41:55 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 44140ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 21:41:56 [WARNING] image_generator: Không tải được ảnh đại diện của bài gốc: Ảnh nguồn quá nhỏ: 300x300
+2026-09-24 21:41:56 [INFO] image_generator: 🎨 Không có ảnh nguồn phù hợp, tạo một ảnh AI dự phòng cho Post #55...
+2026-09-24 21:41:59 [INFO] image_generator: ✅ Đã tạo ảnh AI dự phòng: post_55_20260924_214159_749331_ai.jpg
+2026-09-24 21:41:59 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 21:42:36 [INFO] review_ui: 🚀 Bắt đầu đăng bài #55 lên UCircle...
+2026-09-24 21:42:36 [INFO] publisher: 🚀 Đang đăng bài #55 lên UCircle (Lần thử 1/1)...
+2026-09-24 21:42:36 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-24 21:42:41 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Tin Tức 24h' (Circle - Xác nhận thành công)
+2026-09-24 21:42:42 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 21:42:43 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 21:42:43 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 21:42:43 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 21:42:43 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 21:42:47 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 21:42:48 [INFO] publisher: 🎉 Xuất bản thành công Post #55 -> ID: verified_55_1790260968
+2026-09-24 21:42:48 [INFO] review_ui: ✅ Đăng bài #55 thành công!
+2026-09-24 22:06:06 [INFO] source_resolver: Đã giải liên kết Google News sang nguồn: cafef.vn
+2026-09-24 22:06:06 [INFO] review_ui: Đã bổ sung 1741 từ từ trang nguồn cho article #3543.
+2026-09-24 22:06:06 [INFO] analyzer: Analyzing: Một chú mèo ở quán cà phê Đà Nẵng bất ngờ thành “ngôi sao” q...
+2026-09-24 22:06:27 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 22:06:27 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Một chú mèo ở quán cà phê Đà Nẵng bất ngờ thành “ngôi sao” q' (score=78).
+2026-09-24 22:06:27 [INFO] writer: ✍️ Writing: Một chú mèo ở quán cà phê Đà Nẵng bất ngờ thành “ngôi sao” q...
+2026-09-24 22:06:27 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 59 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:06:32 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:06:42 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 44 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:06:42 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Một chú mèo ở quán cà phê Đà Nẵng bất ngờ thành “ngôi sao” q'.
+2026-09-24 22:06:43 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #56...
+2026-09-24 22:06:43 [INFO] image_generator: 🎨 Không có ảnh nguồn phù hợp, tạo một ảnh AI dự phòng cho Post #56...
+2026-09-24 22:06:46 [INFO] image_generator: ✅ Đã tạo ảnh AI dự phòng: post_56_20260924_220646_163072_ai.jpg
+2026-09-24 22:06:46 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:06:51 [INFO] review_ui: 🚀 Bắt đầu đăng bài #56 lên UCircle...
+2026-09-24 22:06:51 [INFO] publisher: 🚀 Đang đăng bài #56 lên UCircle (Lần thử 1/1)...
+2026-09-24 22:06:51 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/e3500793-72a2-4c0e-b7b0-4d865eddcbe3
+2026-09-24 22:06:56 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Đà Nẵng ăn gì' (Circle - Xác nhận thành công)
+2026-09-24 22:06:57 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 22:06:58 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 22:06:58 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 22:06:58 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 22:06:58 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 22:07:01 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 22:07:02 [INFO] publisher: 🎉 Xuất bản thành công Post #56 -> ID: verified_56_1790262422
+2026-09-24 22:07:02 [INFO] review_ui: ✅ Đăng bài #56 thành công!
+2026-09-24 22:11:27 [INFO] source_resolver: Đã giải liên kết Google News sang nguồn: eva.vn
+2026-09-24 22:11:27 [INFO] review_ui: Đã bổ sung 442 từ từ trang nguồn cho article #3995.
+2026-09-24 22:11:27 [INFO] analyzer: Analyzing: 3 cách khử mùi thức ăn trong lò vi sóng bằng nguyên liệu có ...
+2026-09-24 22:11:32 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 22:11:32 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho '3 cách khử mùi thức ăn trong lò vi sóng bằng nguyên liệu có ' (score=78).
+2026-09-24 22:11:32 [INFO] writer: ✍️ Writing: 3 cách khử mùi thức ăn trong lò vi sóng bằng nguyên liệu có ...
+2026-09-24 22:11:32 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 59 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:11:37 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:11:47 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 44 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:11:47 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho '3 cách khử mùi thức ăn trong lò vi sóng bằng nguyên liệu có '.
+2026-09-24 22:11:47 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #57...
+2026-09-24 22:11:48 [INFO] image_generator: ✅ Đã lấy ảnh đúng chủ đề từ bài gốc: post_57_20260924_221148_source.jpg
+2026-09-24 22:11:48 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:11:54 [INFO] review_ui: 🚀 Bắt đầu đăng bài #57 lên UCircle...
+2026-09-24 22:11:54 [INFO] publisher: 🚀 Đang đăng bài #57 lên UCircle (Lần thử 1/1)...
+2026-09-24 22:11:54 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/9e158d37-a7f9-4669-8520-07f4d9bbd33f
+2026-09-24 22:11:58 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Mẹo hay mỗi ngày' (Circle - Xác nhận thành công)
+2026-09-24 22:11:59 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 22:12:00 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 22:12:00 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 22:12:00 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 22:12:00 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 22:12:04 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 22:12:06 [INFO] publisher: 🎉 Xuất bản thành công Post #57 -> ID: verified_57_1790262726
+2026-09-24 22:12:06 [INFO] review_ui: ✅ Đăng bài #57 thành công!
+2026-09-24 22:13:07 [INFO] review_ui: 🔁 Lần thử #159: chuẩn bị 1 Circle chưa thành công.
+2026-09-24 22:13:21 [INFO] source_resolver: Đã giải liên kết Google News sang nguồn: vnexpress.net
+2026-09-24 22:13:21 [INFO] review_ui: Đã bổ sung 1303 từ từ trang nguồn cho article #3534.
+2026-09-24 22:13:21 [INFO] analyzer: Analyzing: Tiểu thương Đà Nẵng tăng doanh thu nhờ 'quán ăn số' trên Gra...
+2026-09-24 22:13:24 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 22:13:24 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Tiểu thương Đà Nẵng tăng doanh thu nhờ 'quán ăn số' trên Gra' (score=78).
+2026-09-24 22:13:24 [INFO] writer: ✍️ Writing: Tiểu thương Đà Nẵng tăng doanh thu nhờ 'quán ăn số' trên Gra...
+2026-09-24 22:13:24 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 59 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:13:29 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:13:39 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 44 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:13:39 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Tiểu thương Đà Nẵng tăng doanh thu nhờ 'quán ăn số' trên Gra'.
+2026-09-24 22:13:39 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #58...
+2026-09-24 22:13:40 [INFO] image_generator: ✅ Đã lấy ảnh đúng chủ đề từ bài gốc: post_58_20260924_221339_source.jpg
+2026-09-24 22:13:40 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:13:40 [INFO] review_ui: 📝 Đà Nẵng ăn gì: đã chuẩn bị bài vừa tạo #58.
+2026-09-24 22:13:40 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:13:40 [INFO] publisher: 🚀 Đang đăng bài #58 lên UCircle (Lần thử 1/3)...
+2026-09-24 22:13:40 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/e3500793-72a2-4c0e-b7b0-4d865eddcbe3
+2026-09-24 22:13:45 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Đà Nẵng ăn gì' (Circle - Xác nhận thành công)
+2026-09-24 22:13:46 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 22:13:47 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 22:13:47 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 22:13:47 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 22:13:47 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 22:13:50 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 22:13:52 [INFO] publisher: 🎉 Xuất bản thành công Post #58 -> ID: verified_58_1790262831
+2026-09-24 22:13:52 [INFO] review_ui: ✅ Đà Nẵng ăn gì · bài #58: đã đăng và xác minh (6/6 Circle).
+2026-09-24 22:13:52 [INFO] review_ui: 🏁 Hoàn tất vòng #1: đã đăng và xác minh đủ 6/6 Circle. Bây giờ mới nghỉ 60.0 phút.
+2026-09-24 22:16:05 [INFO] review_ui: ⏹ Đã dừng hẳn tại điểm an toàn. Checkpoint được giữ để Tiếp tục.
+2026-09-24 22:16:44 [INFO] review_ui: ▶️ Tiếp tục thời gian nghỉ còn lại 3469 giây của vòng #1.
+2026-09-24 22:17:00 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:01 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:01 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:06 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:06 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:06 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:06 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:13 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:13 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:13 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:13 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:23 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:23 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:24 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:24 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:32 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:32 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:33 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:33 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:46 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:46 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:46 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:17:46 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:18:31 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:18:31 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:18:31 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:18:31 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:20:55 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:20:55 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:20:56 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:20:56 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:21:23 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpid03zgm5\test.db
+2026-09-24 22:21:23 [INFO] analyzer: Analyzing: Lời khuyên cho gia đình dùng bình nóng lạnh...
+2026-09-24 22:21:23 [INFO] analyzer:   Score: 62/100 | Publish: True | Topic: đời sống
+2026-09-24 22:21:23 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp_8s8umpw\test.db
+2026-09-24 22:21:23 [INFO] analyzer: Analyzing: Kinh nghiệm ăn uống tại Đà Nẵng...
+2026-09-24 22:21:23 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): 504 DEADLINE_EXCEEDED: The read operation timed out
+2026-09-24 22:21:23 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Kinh nghiệm ăn uống tại Đà Nẵng' (score=74).
+2026-09-24 22:21:23 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpqplacjug\test.db
+2026-09-24 22:21:23 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpw78633zu\test.db
+2026-09-24 22:21:23 [INFO] analyzer: Analyzing: Hướng dẫn cách bảo quản thực phẩm trong tủ lạnh...
+2026-09-24 22:21:23 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): 429 RESOURCE_EXHAUSTED
+2026-09-24 22:21:23 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Hướng dẫn cách bảo quản thực phẩm trong tủ lạnh' (score=80).
+2026-09-24 22:21:23 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpinu2_fzs\test.db
+2026-09-24 22:21:23 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6bcf04ot\test.db
+2026-09-24 22:21:24 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6bcf04ot\test.db
+2026-09-24 22:21:24 [INFO] review_ui: 🔄 Vòng #1: đưa đủ 6 Circle vào một lượt xử lý đa luồng; chỉ nghỉ dài khi đã đăng thành công đủ tất cả Circle.
+2026-09-24 22:21:24 [INFO] review_ui: 🔁 Lần thử #1: chuẩn bị 6 Circle chưa thành công.
+2026-09-24 22:21:24 [INFO] review_ui: ⚠️ circle_6: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:21:24 [INFO] review_ui: 📝 circle_1: đã chuẩn bị bài vừa tạo #101.
+2026-09-24 22:21:24 [INFO] review_ui: ⚠️ circle_5: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:21:24 [INFO] review_ui: ⚠️ circle_4: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:21:24 [INFO] review_ui: 📝 circle_3: đã chuẩn bị bài vừa tạo #301.
+2026-09-24 22:21:24 [INFO] review_ui: 📝 circle_2: đã chuẩn bị bài vừa tạo #201.
+2026-09-24 22:21:24 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:21:24 [INFO] review_ui: ✅ circle_1 · bài #101: đã đăng và xác minh (1/6 Circle).
+2026-09-24 22:21:24 [INFO] review_ui: ✅ circle_2 · bài #201: đã đăng và xác minh (2/6 Circle).
+2026-09-24 22:21:24 [INFO] review_ui: ✅ circle_3 · bài #301: đã đăng và xác minh (3/6 Circle).
+2026-09-24 22:21:24 [INFO] review_ui: ⏳ Còn 3/6 Circle chưa thành công; chờ 1.0 phút rồi chỉ thử lại các Circle này.
+2026-09-24 22:21:24 [INFO] review_ui: 🔁 Lần thử #2: chuẩn bị 3 Circle chưa thành công.
+2026-09-24 22:21:24 [INFO] review_ui: 📝 circle_4: đã chuẩn bị bài vừa tạo #402.
+2026-09-24 22:21:24 [INFO] review_ui: 📝 circle_6: đã chuẩn bị bài vừa tạo #602.
+2026-09-24 22:21:24 [INFO] review_ui: 📝 circle_5: đã chuẩn bị bài vừa tạo #502.
+2026-09-24 22:21:24 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:21:24 [INFO] review_ui: ✅ circle_4 · bài #402: đã đăng và xác minh (4/6 Circle).
+2026-09-24 22:21:24 [INFO] review_ui: ✅ circle_5 · bài #502: đã đăng và xác minh (5/6 Circle).
+2026-09-24 22:21:24 [INFO] review_ui: ✅ circle_6 · bài #602: đã đăng và xác minh (6/6 Circle).
+2026-09-24 22:21:24 [INFO] review_ui: 🏁 Hoàn tất vòng #1: đã đăng và xác minh đủ 6/6 Circle. Bây giờ mới nghỉ 30.0 phút.
+2026-09-24 22:21:24 [INFO] review_ui: ⏹ Đã dừng hẳn tại điểm an toàn. Checkpoint được giữ để Tiếp tục.
+2026-09-24 22:21:24 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpj0jz39ql\test.db
+2026-09-24 22:21:24 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpjaqitb9n\test.db
+2026-09-24 22:21:24 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpr61yk187\test.db
+2026-09-24 22:21:24 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmplrys9unw\test.db
+2026-09-24 22:21:24 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpf8cl9u32\test.db
+2026-09-24 22:21:24 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpnsb16kj4\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpxxdz3vrd\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpmdpoqub7\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpliq7ev1k\test.db
+2026-09-24 22:21:25 [ERROR] circle_selector: Không thể quét tin cho Circle circle_bong_da: 503 UNAVAILABLE
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp09o3e951\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp50hdhyyb\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpzq9vqp9b\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpcu3z418t\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpglbfam2f\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpb6y5_c7i\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpk72k2gs_\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp2zj4_01i\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmptu_gpeju\test.db
+2026-09-24 22:21:25 [INFO] publisher: 🚀 Đang đăng bài #100 lên UCircle (Lần thử 1/1)...
+2026-09-24 22:21:25 [INFO] publisher: 🎉 Xuất bản thành công Post #100 -> ID: post-test
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp5tn81d38\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpcelj4xxm\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpbcpxn8zt\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmplim_obth\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp5ja9k8ag\test.db
+2026-09-24 22:21:25 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp3z403fcw\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpa5m_hbui\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpeskwald3\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpyz0_5ifj\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpnvbtpu2i\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpe590dj80\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpibuujx1p\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpazxftey1\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpxc6o6pi2\test.db
+2026-09-24 22:21:26 [WARNING] publisher: Bài #102 chưa có ảnh hợp lệ nên không được phép đăng.
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp8c9w_g2j\test.db
+2026-09-24 22:21:26 [WARNING] publisher: Circle 'Circle thử nghiệm' chưa bật tùy chọn Đăng bài trên dashboard.
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp85ozummw\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp3bk7us0f\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpg23q_dvb\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6a4n_5b1\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp_xx93h9h\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpdtlk9t2m\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp4e0c46_9\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmppq_1vsdl\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpz81j_s91\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpml96u7sg\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp9sjmu04z\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpsbm74y0f\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpoz_yf726\test.db
+2026-09-24 22:21:26 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6m4isaje\test.db
+2026-09-24 22:21:27 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp7ajpctnu\test.db
+2026-09-24 22:21:27 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpzxu2ycht\test.db
+2026-09-24 22:21:27 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:21:27 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpezsjmd6a\test.db
+2026-09-24 22:21:27 [INFO] validator: 🔎 Validation Post: score=50, status=REJECTED, reasons=['Thiếu ảnh hợp lệ; bài không được phép đăng']
+2026-09-24 22:21:27 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp9vpe8zse\test.db
+2026-09-24 22:21:27 [INFO] writer: ✍️ Writing: Hướng dẫn bảo quản rau củ đúng cách...
+2026-09-24 22:21:27 [ERROR] writer: ❌ Writer lỗi (attempt 1): 503 UNAVAILABLE
+2026-09-24 22:21:27 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Hướng dẫn bảo quản rau củ đúng cách'.
+2026-09-24 22:21:27 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp4jjgpjsq\test.db
+2026-09-24 22:21:27 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp3e5n0hqo\test.db
+2026-09-24 22:21:27 [INFO] writer: ✍️ Writing: Bàn thắng đẹp của đội tuyển Việt Nam...
+2026-09-24 22:21:27 [INFO] writer:   ✅ Written: 'Cú sút xa tạo nên bàn thắng đẹp cho đội tuyển Việt'
+2026-09-24 22:21:27 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpdmjqf1sa\test.db
+2026-09-24 22:21:27 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpazubtsvl\test.db
+2026-09-24 22:21:41 [INFO] review_ui: ▶️ Tiếp tục thời gian nghỉ còn lại 3451 giây của vòng #1.
+2026-09-24 22:21:58 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:21:58 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:21:58 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:21:58 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:22:09 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmppb8q89c_\test.db
+2026-09-24 22:22:09 [INFO] analyzer: Analyzing: Lời khuyên cho gia đình dùng bình nóng lạnh...
+2026-09-24 22:22:09 [INFO] analyzer:   Score: 62/100 | Publish: True | Topic: đời sống
+2026-09-24 22:22:09 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpo4w_pm3u\test.db
+2026-09-24 22:22:09 [INFO] analyzer: Analyzing: Kinh nghiệm ăn uống tại Đà Nẵng...
+2026-09-24 22:22:09 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): 504 DEADLINE_EXCEEDED: The read operation timed out
+2026-09-24 22:22:09 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Kinh nghiệm ăn uống tại Đà Nẵng' (score=74).
+2026-09-24 22:22:09 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpey7z2fal\test.db
+2026-09-24 22:22:09 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp3y40hofx\test.db
+2026-09-24 22:22:09 [INFO] analyzer: Analyzing: Hướng dẫn cách bảo quản thực phẩm trong tủ lạnh...
+2026-09-24 22:22:09 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): 429 RESOURCE_EXHAUSTED
+2026-09-24 22:22:09 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Hướng dẫn cách bảo quản thực phẩm trong tủ lạnh' (score=80).
+2026-09-24 22:22:09 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpr6v7ux_o\test.db
+2026-09-24 22:22:09 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpbf7lpuwr\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpbf7lpuwr\test.db
+2026-09-24 22:22:10 [INFO] review_ui: 🔄 Vòng #1: đưa đủ 6 Circle vào một lượt xử lý đa luồng; chỉ nghỉ dài khi đã đăng thành công đủ tất cả Circle.
+2026-09-24 22:22:10 [INFO] review_ui: 🔁 Lần thử #1: chuẩn bị 6 Circle chưa thành công.
+2026-09-24 22:22:10 [INFO] review_ui: ⚠️ circle_4: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:22:10 [INFO] review_ui: ⚠️ circle_5: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:22:10 [INFO] review_ui: 📝 circle_2: đã chuẩn bị bài vừa tạo #201.
+2026-09-24 22:22:10 [INFO] review_ui: 📝 circle_1: đã chuẩn bị bài vừa tạo #101.
+2026-09-24 22:22:10 [INFO] review_ui: 📝 circle_3: đã chuẩn bị bài vừa tạo #301.
+2026-09-24 22:22:10 [INFO] review_ui: ⚠️ circle_6: Lỗi tạm thời; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:22:10 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:22:10 [INFO] review_ui: ✅ circle_1 · bài #101: đã đăng và xác minh (1/6 Circle).
+2026-09-24 22:22:10 [INFO] review_ui: ✅ circle_2 · bài #201: đã đăng và xác minh (2/6 Circle).
+2026-09-24 22:22:10 [INFO] review_ui: ✅ circle_3 · bài #301: đã đăng và xác minh (3/6 Circle).
+2026-09-24 22:22:10 [INFO] review_ui: ⏳ Còn 3/6 Circle chưa thành công; chờ 1.0 phút rồi chỉ thử lại các Circle này.
+2026-09-24 22:22:10 [INFO] review_ui: 🔁 Lần thử #2: chuẩn bị 3 Circle chưa thành công.
+2026-09-24 22:22:10 [INFO] review_ui: 📝 circle_4: đã chuẩn bị bài vừa tạo #402.
+2026-09-24 22:22:10 [INFO] review_ui: 📝 circle_6: đã chuẩn bị bài vừa tạo #602.
+2026-09-24 22:22:10 [INFO] review_ui: 📝 circle_5: đã chuẩn bị bài vừa tạo #502.
+2026-09-24 22:22:10 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:22:10 [INFO] review_ui: ✅ circle_4 · bài #402: đã đăng và xác minh (4/6 Circle).
+2026-09-24 22:22:10 [INFO] review_ui: ✅ circle_5 · bài #502: đã đăng và xác minh (5/6 Circle).
+2026-09-24 22:22:10 [INFO] review_ui: ✅ circle_6 · bài #602: đã đăng và xác minh (6/6 Circle).
+2026-09-24 22:22:10 [INFO] review_ui: 🏁 Hoàn tất vòng #1: đã đăng và xác minh đủ 6/6 Circle. Bây giờ mới nghỉ 30.0 phút.
+2026-09-24 22:22:10 [INFO] review_ui: ⏹ Đã dừng hẳn tại điểm an toàn. Checkpoint được giữ để Tiếp tục.
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpimcnckct\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmptrllchvb\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpzrgu4ga2\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpxd899s8j\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmptcg1fcgt\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6ud4ssae\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpxhg4dk38\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp3d01r562\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpco69_5zd\test.db
+2026-09-24 22:22:10 [ERROR] circle_selector: Không thể quét tin cho Circle circle_bong_da: 503 UNAVAILABLE
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpqil1xy_t\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpnczqgvj9\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpqfyfy5dp\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp0_895mu7\test.db
+2026-09-24 22:22:10 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpo1z__d1o\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp8iq0zgug\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpnk8anwbh\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp56gq6028\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpn8vgi620\test.db
+2026-09-24 22:22:11 [INFO] publisher: 🚀 Đang đăng bài #100 lên UCircle (Lần thử 1/1)...
+2026-09-24 22:22:11 [INFO] publisher: 🎉 Xuất bản thành công Post #100 -> ID: post-test
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpkuuoiob6\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpz1r91zs1\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpqw2xjqnt\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpw54zo9i9\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp91du7e1t\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp_wb5y1ma\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp767xsx4x\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpzcn7iq1_\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpofck1trz\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpepkmbp77\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp6w4lzdge\test.db
+2026-09-24 22:22:11 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpv05lg1ya\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpcdclrti9\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp409k1br6\test.db
+2026-09-24 22:22:12 [WARNING] publisher: Bài #102 chưa có ảnh hợp lệ nên không được phép đăng.
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpskecg4d5\test.db
+2026-09-24 22:22:12 [WARNING] publisher: Circle 'Circle thử nghiệm' chưa bật tùy chọn Đăng bài trên dashboard.
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp_vv63lc7\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpva6ji73e\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp87j4tlvh\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpkpg6sr3p\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp3v2fu2af\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmplu9g1pvt\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp810cg5wv\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpiko19pnq\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp3t48zkfi\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpkicpyrz0\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpvi2o56dp\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp55__ry86\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp14moc6qt\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp44habvd1\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpasqykmxz\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpuy3j0upq\test.db
+2026-09-24 22:22:12 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpy6u3ap5v\test.db
+2026-09-24 22:22:12 [INFO] validator: 🔎 Validation Post: score=50, status=REJECTED, reasons=['Thiếu ảnh hợp lệ; bài không được phép đăng']
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp26txjlgi\test.db
+2026-09-24 22:22:12 [INFO] writer: ✍️ Writing: Hướng dẫn bảo quản rau củ đúng cách...
+2026-09-24 22:22:12 [ERROR] writer: ❌ Writer lỗi (attempt 1): 503 UNAVAILABLE
+2026-09-24 22:22:12 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Hướng dẫn bảo quản rau củ đúng cách'.
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmp2jr4t3cu\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpp2zywj6f\test.db
+2026-09-24 22:22:12 [INFO] writer: ✍️ Writing: Bàn thắng đẹp của đội tuyển Việt Nam...
+2026-09-24 22:22:12 [INFO] writer:   ✅ Written: 'Cú sút xa tạo nên bàn thắng đẹp cho đội tuyển Việt'
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpppilyfvo\test.db
+2026-09-24 22:22:12 [INFO] storage: Database initialized: C:\Users\Dell\AppData\Local\Temp\tmpelvvc0ai\test.db
+2026-09-24 22:24:31 [INFO] review_ui: 🔄 Vòng #1: đưa đủ 6 Circle vào một lượt xử lý đa luồng; chỉ nghỉ dài khi đã đăng thành công đủ tất cả Circle.
+2026-09-24 22:24:31 [INFO] review_ui: 🔁 Lần thử #1: chuẩn bị 6 Circle chưa thành công.
+2026-09-24 22:25:01 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:25:02 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:25:02 [INFO] storage: Database initialized: D:\Auto_tool\AutoUpFeed_tintuc24h\data\automation.db
+2026-09-24 22:25:39 [INFO] review_ui: 🔁 Lần thử #2: chuẩn bị 6 Circle chưa thành công.
+2026-09-24 22:26:11 [INFO] source_resolver: Đã giải liên kết Google News sang nguồn: baohaiphong.vn
+2026-09-24 22:26:11 [INFO] source_resolver: Đã giải liên kết Google News sang nguồn: bongdaplus.vn
+2026-09-24 22:26:11 [INFO] review_ui: Đã bổ sung 457 từ từ trang nguồn cho article #3889.
+2026-09-24 22:26:11 [INFO] analyzer: Analyzing: Hơn 300 cầu thủ nhí đua tài Giải bóng đá cộng đồng...
+2026-09-24 22:26:11 [INFO] review_ui: Đã bổ sung 613 từ từ trang nguồn cho article #3457.
+2026-09-24 22:26:11 [INFO] analyzer: Analyzing: 'Tiếp Lửa Bóng Đá Việt Nam': Những khoảnh khắc tiếp thêm độn...
+2026-09-24 22:26:30 [ERROR] circle_selector: Không thể quét tin cho Circle circle_meo_hay_moi_ngay_9e158d37: gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 22:26:30 [INFO] review_ui: ⚠️ Mẹo hay mỗi ngày: Circle chưa có tin phù hợp mới để tạo bài. Nguồn vừa quét: news_search: tìm 25, lưu mới 0, 3 truy vấn, youtube: tìm 5, lưu mới 0, facebook: tìm 0, lưu mới 0.; giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:26:36 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}
+2026-09-24 22:26:36 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Hơn 300 cầu thủ nhí đua tài Giải bóng đá cộng đồng' (score=78).
+2026-09-24 22:26:36 [INFO] writer: ✍️ Writing: Hơn 300 cầu thủ nhí đua tài Giải bóng đá cộng đồng...
+2026-09-24 22:26:39 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 57 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:26:44 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 51 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:26:50 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}
+2026-09-24 22:26:50 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho ''Tiếp Lửa Bóng Đá Việt Nam': Những khoảnh khắc tiếp thêm độn' (score=78).
+2026-09-24 22:26:50 [INFO] writer: ✍️ Writing: 'Tiếp Lửa Bóng Đá Việt Nam': Những khoảnh khắc tiếp thêm độn...
+2026-09-24 22:26:50 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 59 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:26:54 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 56 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:26:54 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Hơn 300 cầu thủ nhí đua tài Giải bóng đá cộng đồng'.
+2026-09-24 22:26:54 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #59...
+2026-09-24 22:26:54 [INFO] image_generator: ✅ Đã lấy ảnh đúng chủ đề từ bài gốc: post_59_20260924_222654_source.jpg
+2026-09-24 22:26:54 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:26:54 [INFO] review_ui: 📝 Nét đẹp bóng đá: đã chuẩn bị bài vừa tạo #59.
+2026-09-24 22:26:55 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:26:55 [INFO] source_resolver: Đã giải liên kết Google News sang nguồn: cafef.vn
+2026-09-24 22:26:56 [INFO] review_ui: Đã bổ sung 1750 từ từ trang nguồn cho article #3490.
+2026-09-24 22:26:56 [INFO] analyzer: Analyzing: Hợp lực vì cộng đồng: Không ai giữ bản quyền lòng tốt...
+2026-09-24 22:26:56 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:01 [ERROR] analyzer: Gemini Analyzer loi (attempt 2): Gemini tạm nghỉ 49 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:05 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 44 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:05 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho ''Tiếp Lửa Bóng Đá Việt Nam': Những khoảnh khắc tiếp thêm độn'.
+2026-09-24 22:27:06 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #60...
+2026-09-24 22:27:07 [ERROR] circle_selector: Không thể quét tin cho Circle circle_tintuc24h: Gemini tạm nghỉ 43 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:07 [INFO] image_generator: ✅ Đã lấy ảnh đúng chủ đề từ bài gốc: post_60_20260924_222707_source.jpg
+2026-09-24 22:27:07 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:27:07 [INFO] review_ui: 📝 Nét đẹp bóng đá hay: đã chuẩn bị bài vừa tạo #60.
+2026-09-24 22:27:11 [ERROR] analyzer: Gemini Analyzer loi (attempt 3): Gemini tạm nghỉ 39 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:11 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Hợp lực vì cộng đồng: Không ai giữ bản quyền lòng tốt' (score=78).
+2026-09-24 22:27:11 [INFO] writer: ✍️ Writing: Hợp lực vì cộng đồng: Không ai giữ bản quyền lòng tốt...
+2026-09-24 22:27:14 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 36 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:19 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 31 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:19 [INFO] source_resolver: Đã giải liên kết Google News sang nguồn: vtvgo.vn
+2026-09-24 22:27:19 [INFO] review_ui: Đã bổ sung 39 từ từ trang nguồn cho article #4042.
+2026-09-24 22:27:19 [INFO] analyzer: Analyzing: Một công đôi việc - HURRYKNG...
+2026-09-24 22:27:19 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): Gemini tạm nghỉ 31 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:24 [ERROR] analyzer: Gemini Analyzer loi (attempt 2): Gemini tạm nghỉ 25 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:29 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 21 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:29 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Hợp lực vì cộng đồng: Không ai giữ bản quyền lòng tốt'.
+2026-09-24 22:27:29 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #61...
+2026-09-24 22:27:29 [INFO] image_generator: 🎨 Không có ảnh nguồn phù hợp, tạo một ảnh AI dự phòng cho Post #61...
+2026-09-24 22:27:32 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 10907ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 22:27:32 [INFO] analyzer: Analyzing: Đà Nẵng: Thưởng thức ẩm thực Việt, khám phá văn hóa qua nhữn...
+2026-09-24 22:27:32 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): Gemini tạm nghỉ 17 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:33 [INFO] image_generator: ✅ Đã tạo ảnh AI dự phòng: post_61_20260924_222733_442991_ai.jpg
+2026-09-24 22:27:33 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:27:33 [INFO] review_ui: 📝 Quà tặng cuộc sống: đã chuẩn bị bài vừa tạo #61.
+2026-09-24 22:27:34 [ERROR] analyzer: Gemini Analyzer loi (attempt 3): Gemini tạm nghỉ 15 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:34 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Một công đôi việc - HURRYKNG' (score=78).
+2026-09-24 22:27:34 [INFO] writer: ✍️ Writing: Một công đôi việc - HURRYKNG...
+2026-09-24 22:27:34 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 15 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:37 [ERROR] analyzer: Gemini Analyzer loi (attempt 2): Gemini tạm nghỉ 12 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:39 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 10 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:47 [ERROR] analyzer: Gemini Analyzer loi (attempt 3): Gemini tạm nghỉ 2 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:27:47 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Đà Nẵng: Thưởng thức ẩm thực Việt, khám phá văn hóa qua nhữn' (score=75).
+2026-09-24 22:27:47 [INFO] writer: ✍️ Writing: Đà Nẵng: Thưởng thức ẩm thực Việt, khám phá văn hóa qua nhữn...
+2026-09-24 22:27:47 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 2 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:28:02 [ERROR] writer: ❌ Writer lỗi (attempt 2): gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 22:28:02 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Đà Nẵng: Thưởng thức ẩm thực Việt, khám phá văn hóa qua nhữn'.
+2026-09-24 22:28:02 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #62...
+2026-09-24 22:28:12 [ERROR] writer: ❌ Writer lỗi (attempt 3): gemini-3.5-flash-lite: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 22:28:12 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Một công đôi việc - HURRYKNG'.
+2026-09-24 22:28:12 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #63...
+2026-09-24 22:28:12 [INFO] image_generator: ✅ Đã lấy ảnh đúng chủ đề từ bài gốc: post_63_20260924_222812_source.jpg
+2026-09-24 22:28:13 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:28:13 [INFO] review_ui: 📝 Tin Tức 24h: đã chuẩn bị bài vừa tạo #63.
+2026-09-24 22:28:48 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 44188ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 22:28:49 [WARNING] image_generator: Không tải được ảnh đại diện của bài gốc: Ảnh nguồn quá nhỏ: 300x300
+2026-09-24 22:28:49 [INFO] image_generator: 🎨 Không có ảnh nguồn phù hợp, tạo một ảnh AI dự phòng cho Post #62...
+2026-09-24 22:28:51 [INFO] image_generator: ✅ Đã tạo ảnh AI dự phòng: post_62_20260924_222851_785375_ai.jpg
+2026-09-24 22:28:51 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:28:51 [INFO] review_ui: 📝 Đà Nẵng ăn gì: đã chuẩn bị bài vừa tạo #62.
+2026-09-24 22:28:51 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:28:51 [INFO] publisher: 🚀 Đang đăng bài #59 lên UCircle (Lần thử 1/3)...
+2026-09-24 22:28:52 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/b5c66623-ba26-4e5e-92b6-7aa1442b2caf
+2026-09-24 22:28:56 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Nét đẹp bóng đá' (Circle - Xác nhận thành công)
+2026-09-24 22:28:57 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 22:28:58 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 22:28:58 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 22:28:58 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 22:28:58 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 22:29:03 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 22:29:05 [INFO] publisher: 🎉 Xuất bản thành công Post #59 -> ID: verified_59_1790263745
+2026-09-24 22:29:05 [INFO] review_ui: ✅ Nét đẹp bóng đá · bài #59: đã đăng và xác minh (1/6 Circle).
+2026-09-24 22:29:05 [INFO] publisher: 🚀 Đang đăng bài #60 lên UCircle (Lần thử 1/3)...
+2026-09-24 22:29:05 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/aababdcc-7e2d-44b0-b56c-b1636d774032
+2026-09-24 22:29:10 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Nét đẹp bóng đá hay' (Circle - Xác nhận thành công)
+2026-09-24 22:29:11 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 22:29:12 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 22:29:12 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 22:29:12 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 22:29:12 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 22:29:14 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 22:29:16 [INFO] publisher: 🎉 Xuất bản thành công Post #60 -> ID: verified_60_1790263756
+2026-09-24 22:29:16 [INFO] review_ui: ✅ Nét đẹp bóng đá hay · bài #60: đã đăng và xác minh (2/6 Circle).
+2026-09-24 22:29:16 [INFO] publisher: 🚀 Đang đăng bài #61 lên UCircle (Lần thử 1/3)...
+2026-09-24 22:29:16 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/e19c1e0a-69c0-4657-83c6-187df3b3565f
+2026-09-24 22:29:20 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Quà tặng cuộc sống' (Circle - Xác nhận thành công)
+2026-09-24 22:29:21 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 22:29:22 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 22:29:23 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 22:29:23 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 22:29:23 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 22:29:30 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 22:29:31 [INFO] publisher: 🎉 Xuất bản thành công Post #61 -> ID: verified_61_1790263771
+2026-09-24 22:29:31 [INFO] review_ui: ✅ Quà tặng cuộc sống · bài #61: đã đăng và xác minh (3/6 Circle).
+2026-09-24 22:29:31 [INFO] publisher: 🚀 Đang đăng bài #63 lên UCircle (Lần thử 1/3)...
+2026-09-24 22:29:32 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/1f5d2f8a-3c61-4494-8809-9749b599a86c
+2026-09-24 22:29:36 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Tin Tức 24h' (Circle - Xác nhận thành công)
+2026-09-24 22:29:37 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 22:29:38 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 22:29:38 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 22:29:38 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 22:29:38 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 22:29:41 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 22:29:43 [INFO] publisher: 🎉 Xuất bản thành công Post #63 -> ID: verified_63_1790263783
+2026-09-24 22:29:43 [INFO] review_ui: ✅ Tin Tức 24h · bài #63: đã đăng và xác minh (4/6 Circle).
+2026-09-24 22:29:43 [WARNING] publisher: Chưa thể đăng Post #62: Đã đạt giới hạn số bài trong giờ (2/2)
+2026-09-24 22:29:43 [INFO] review_ui: ❌ Đà Nẵng ăn gì · bài #62: Đã đạt giới hạn số bài trong giờ (2/2); giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:29:43 [INFO] review_ui: ⏳ Còn 2/6 Circle chưa thành công; chờ 2.0 phút rồi chỉ thử lại các Circle này.
+2026-09-24 22:31:44 [INFO] review_ui: 🔁 Lần thử #3: chuẩn bị 2 Circle chưa thành công.
+2026-09-24 22:31:44 [INFO] review_ui: 📝 Đà Nẵng ăn gì: đã chuẩn bị bài Chờ đăng #62.
+2026-09-24 22:32:11 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 11016ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 22:32:12 [INFO] analyzer: Analyzing: Top Chef: Đầu bếp nhà hàng Michelin bật mí cách nâng tầm món...
+2026-09-24 22:32:22 [ERROR] analyzer: Gemini Analyzer loi (attempt 1): gemini-3.5-flash-lite: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '; gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': '
+2026-09-24 22:32:22 [WARNING] analyzer: Gemini chưa sẵn sàng; dùng Analyzer dự phòng cho 'Top Chef: Đầu bếp nhà hàng Michelin bật mí cách nâng tầm món' (score=75).
+2026-09-24 22:32:22 [INFO] writer: ✍️ Writing: Top Chef: Đầu bếp nhà hàng Michelin bật mí cách nâng tầm món...
+2026-09-24 22:32:22 [ERROR] writer: ❌ Writer lỗi (attempt 1): Gemini tạm nghỉ 59 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:32:27 [ERROR] writer: ❌ Writer lỗi (attempt 2): Gemini tạm nghỉ 54 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:32:37 [ERROR] writer: ❌ Writer lỗi (attempt 3): Gemini tạm nghỉ 44 giây do dịch vụ đang quá tải; dùng chế độ dự phòng.
+2026-09-24 22:32:37 [WARNING] writer: Gemini chưa sẵn sàng; đã tạo bản nháp dự phòng cho 'Top Chef: Đầu bếp nhà hàng Michelin bật mí cách nâng tầm món'.
+2026-09-24 22:32:37 [INFO] image_generator: 📰 Đang tìm ảnh đại diện từ bài gốc cho Post #64...
+2026-09-24 22:33:23 [WARNING] source_resolver: Không giải được liên kết Google News: Timeout 44031ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+2026-09-24 22:33:24 [WARNING] image_generator: Không tải được ảnh đại diện của bài gốc: Ảnh nguồn quá nhỏ: 300x300
+2026-09-24 22:33:24 [INFO] image_generator: 🎨 Không có ảnh nguồn phù hợp, tạo một ảnh AI dự phòng cho Post #64...
+2026-09-24 22:33:28 [INFO] image_generator: ✅ Đã tạo ảnh AI dự phòng: post_64_20260924_223328_934429_ai.jpg
+2026-09-24 22:33:29 [INFO] validator: 🔎 Validation Post: score=100, status=READY, reasons=[]
+2026-09-24 22:33:29 [INFO] review_ui: 📝 Mẹo hay mỗi ngày: đã chuẩn bị bài vừa tạo #64.
+2026-09-24 22:33:29 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:33:29 [INFO] publisher: 🚀 Đang đăng bài #64 lên UCircle (Lần thử 1/3)...
+2026-09-24 22:33:29 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/9e158d37-a7f9-4669-8520-07f4d9bbd33f
+2026-09-24 22:33:33 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Mẹo hay mỗi ngày' (Circle - Xác nhận thành công)
+2026-09-24 22:33:34 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 22:33:35 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 22:33:35 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 22:33:35 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 22:33:35 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 22:33:41 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 22:33:42 [INFO] publisher: 🎉 Xuất bản thành công Post #64 -> ID: verified_64_1790264022
+2026-09-24 22:33:42 [INFO] review_ui: ✅ Mẹo hay mỗi ngày · bài #64: đã đăng và xác minh (5/6 Circle).
+2026-09-24 22:33:42 [WARNING] publisher: Chưa thể đăng Post #62: Đã đạt giới hạn số bài trong giờ (2/2)
+2026-09-24 22:33:42 [INFO] review_ui: ❌ Đà Nẵng ăn gì · bài #62: Đã đạt giới hạn số bài trong giờ (2/2); giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:33:42 [INFO] review_ui: ⏳ Còn 1/6 Circle chưa thành công; chờ 4.0 phút rồi chỉ thử lại các Circle này.
+2026-09-24 22:37:45 [INFO] review_ui: 🔁 Lần thử #4: chuẩn bị 1 Circle chưa thành công.
+2026-09-24 22:37:45 [INFO] review_ui: 📝 Đà Nẵng ăn gì: đã chuẩn bị bài Chờ đăng #62.
+2026-09-24 22:37:45 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:37:45 [WARNING] publisher: Chưa thể đăng Post #62: Đã đạt giới hạn số bài trong giờ (2/2)
+2026-09-24 22:37:45 [INFO] review_ui: ❌ Đà Nẵng ăn gì · bài #62: Đã đạt giới hạn số bài trong giờ (2/2); giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:37:45 [INFO] review_ui: ⏳ Còn 1/6 Circle chưa thành công; chờ 8.0 phút rồi chỉ thử lại các Circle này.
+2026-09-24 22:45:50 [INFO] review_ui: 🔁 Lần thử #5: chuẩn bị 1 Circle chưa thành công.
+2026-09-24 22:45:50 [INFO] review_ui: 📝 Đà Nẵng ăn gì: đã chuẩn bị bài Chờ đăng #62.
+2026-09-24 22:45:50 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 22:45:50 [WARNING] publisher: Chưa thể đăng Post #62: Đã đạt giới hạn số bài trong giờ (2/2)
+2026-09-24 22:45:50 [INFO] review_ui: ❌ Đà Nẵng ăn gì · bài #62: Đã đạt giới hạn số bài trong giờ (2/2); giữ trong hàng thử lại của lượt hiện tại.
+2026-09-24 22:45:50 [INFO] review_ui: ⏳ Còn 1/6 Circle chưa thành công; chờ 15.0 phút rồi chỉ thử lại các Circle này.
+2026-09-24 23:00:59 [INFO] review_ui: 🔁 Lần thử #6: chuẩn bị 1 Circle chưa thành công.
+2026-09-24 23:00:59 [INFO] review_ui: 📝 Đà Nẵng ăn gì: đã chuẩn bị bài Chờ đăng #62.
+2026-09-24 23:00:59 [INFO] review_ui: 🚀 Bắt đầu đăng các bài đã chuẩn bị trong lần thử này.
+2026-09-24 23:00:59 [INFO] publisher: 🚀 Đang đăng bài #62 lên UCircle (Lần thử 1/3)...
+2026-09-24 23:01:00 [INFO] publisher: 🌐 Đang mở UCircle: https://ucircle.net/app/c/e3500793-72a2-4c0e-b7b0-4d865eddcbe3
+2026-09-24 23:01:07 [INFO] publisher:   [+] ĐÃ CHỌN TƯ CÁCH ĐĂNG: 'Đà Nẵng ăn gì' (Circle - Xác nhận thành công)
+2026-09-24 23:01:08 [INFO] publisher:   [+] Đã nhập nội dung bài viết vào editor
+2026-09-24 23:01:09 [INFO] publisher: 📎 Đính kèm 1 ảnh vào bài viết...
+2026-09-24 23:01:09 [INFO] publisher:   [+] Đã đính kèm 1 ảnh vào file input
+2026-09-24 23:01:09 [INFO] publisher:   [+] Ảnh đã hiển thị preview hoàn tất.
+2026-09-24 23:01:09 [INFO] publisher: 🚀 Bấm nút Đăng bài...
+2026-09-24 23:01:15 [INFO] publisher: Popup soạn thảo đã đóng; đang xác minh bài trên Circle...
+2026-09-24 23:01:16 [INFO] publisher: 🎉 Xuất bản thành công Post #62 -> ID: verified_62_1790265676
+2026-09-24 23:01:16 [INFO] review_ui: ✅ Đà Nẵng ăn gì · bài #62: đã đăng và xác minh (6/6 Circle).
+2026-09-24 23:01:16 [INFO] review_ui: 🏁 Hoàn tất vòng #1: đã đăng và xác minh đủ 6/6 Circle. Bây giờ mới nghỉ 60.0 phút.
+2026-09-24 23:19:03 [INFO] review_ui: ⏹ Đã dừng hẳn tại điểm an toàn. Checkpoint được giữ để Tiếp tục.
